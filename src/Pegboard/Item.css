@@ -1,0 +1,23 @@
+.item {
+    background-color: #ebebeb;
+    border: #d48181 solid 1px;
+    filter: drop-shadow(0.5px .5px 0.4px rgb(216, 162, 162));
+    border-radius: 2px;
+    position: absolute;
+    width: 220px;
+    height: 200px;
+    z-index: 100;
+    
+}
+
+.item1 {
+    rotate: 6deg;
+    right: 150px;
+    top: 100px;
+}
+
+.item2 {
+    rotate: -6deg;
+    left: 200px;
+    bottom: 50px;
+}

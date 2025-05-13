@@ -1,0 +1,7 @@
+.peg {
+    height: 20px;
+    width: 9px;
+    border: #d48181 solid 1px;
+    filter: drop-shadow(0.5px .5px 0.4px rgb(216, 162, 162));
+    border-radius: 20px;
+}
