@@ -14,30 +14,56 @@ export default function PersonalityQuiz() {
         SWE: 0,
         Vis: 0,
     });
-    const [selectedAnswer, setSelectedAnswer] = useState<QuizOption | null>(
+
+    const [answers, setAnswers] = useState(() => {
+        // Load saved answers from localStorage
+        if (typeof window !== "undefined") {
+            const saved = localStorage.getItem("quizAnswers");
+            return saved
+                ? JSON.parse(saved)
+                : Array(QuizQuestions.length).fill(null);
+        }
+        return Array(QuizQuestions.length).fill(null);
+    });
+
+    // Save answers to localStorage when they change
+    useEffect(() => {
+        localStorage.setItem("quizAnswers", JSON.stringify(answers));
+    }, [answers]);
+
+    const [selectedOption, setSelectedOption] = useState<QuizOption | null>(
         null
     );
 
     useEffect(() => {
-        console.log(selectedAnswer);
-    }, [selectedAnswer]);
+        console.log(selectedOption);
+    }, [selectedOption]);
 
     useEffect(() => {
         console.log(rolePoints);
     }, [rolePoints]);
 
+    const selectOption = (option: QuizOption) => {
+        // Toggle selection - if clicking the same option, unselect it
+        const newValue = selectedOption?.id === option.id ? null : option;
+        setSelectedOption(newValue);
+
+        const newAnswers = [...answers];
+        newAnswers[currentQuestionIndex] = newValue;
+        setAnswers(newAnswers);
+    };
+
     // continue button -> move to the next question
     const handleContinue = () => {
         setRolePoints((prevPoints) => {
-            if (!selectedAnswer) return prevPoints;
+            if (!selectedOption) return prevPoints;
 
             return {
                 ...prevPoints,
-                [selectedAnswer.role]:
-                    prevPoints[selectedAnswer.role] + selectedAnswer.points,
+                [selectedOption.role]:
+                    prevPoints[selectedOption.role] + selectedOption.points,
             };
         });
-        setSelectedAnswer(null);
 
         if (currentQuestionIndex < QuizQuestions.length - 1) {
             setCurrentQuestionIndex(currentQuestionIndex + 1); // Move to next question
@@ -64,12 +90,12 @@ export default function PersonalityQuiz() {
                         <li
                             key={option.id}
                             className={
-                                selectedAnswer &&
-                                selectedAnswer.id === option.id
+                                selectedOption &&
+                                selectedOption.id === option.id
                                     ? "selected"
                                     : ""
                             }
-                            onClick={() => setSelectedAnswer(option)}
+                            onClick={() => selectOption(option)}
                         >
                             <a href="#" className="quizOptions">
                                 {option.text}
@@ -92,7 +118,7 @@ export default function PersonalityQuiz() {
                     onClick={handleContinue}
                     disabled={
                         currentQuestionIndex === QuizQuestions.length - 1 ||
-                        selectedAnswer === null
+                        selectedOption === null
                     }
                 >
                     Continue
