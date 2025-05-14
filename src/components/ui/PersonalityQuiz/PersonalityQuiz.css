@@ -1,12 +1,12 @@
-.questionNum{
+.questionNum {
     text-align: center;
-    color: #484A69;
+    color: #484a69;
 }
 
-.question-title{
+.question-title {
     font-size: clamp(1.5rem, 3vw, 4rem);
     text-wrap: wrap;
-    color: #484A69;
+    color: #484a69;
     /* text-align: left; */
     /* border: 2px solid salmon; */
     max-width: 600px;
@@ -16,33 +16,31 @@
     list-style-type: none;
     padding: 0;
     margin: 0;
-  }
+}
 
-  .quiz-options li {
+.quiz-options li {
     margin-bottom: 1rem;
-  }
-  
-  .quiz-options a {
+}
+
+.quiz-options a {
     font-size: 1rem;
     display: block;
     padding: 1rem;
-    border-bottom: 3px dashed #E4E4ED;
+    border-bottom: 3px dashed #e4e4ed;
     color: #000;
     text-decoration: none;
     transition: background-color 0.3s;
-  }
-  
-  .quiz-options a:hover {
-    background-color: #E4E4ED;
-  }
-  
+}
 
+.quiz-options a:hover {
+    background-color: #e4e4ed;
+}
 
-.continueBtn{
+.continueBtn {
     position: absolute;
     bottom: 3%;
     left: 55%;
-    background-color: #484A69;
+    background-color: #484a69;
     color: white;
     padding: 1rem 1.5rem;
     font-size: 1rem;
@@ -52,13 +50,13 @@
     cursor: pointer;
 }
 
-.backBtn{
+.backBtn {
     position: absolute;
     bottom: 3%;
     right: 55%;
     background-color: white;
-    color: #484A69;
-    border: 2px solid #484A69;
+    color: #484a69;
+    border: 2px solid #484a69;
     padding: 1rem 2rem;
     font-size: 1rem;
     text-wrap: nowrap;
@@ -66,15 +64,17 @@
     cursor: pointer;
 }
 
-
 .quiz-buttons {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 15%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15%;
 }
-
 
 .backBtn:disabled,
 .continueBtn:disabled {
-  cursor: not-allowed;
+    cursor: not-allowed;
+}
+
+.selected {
+    background-color: red;
 }
