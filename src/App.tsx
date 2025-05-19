@@ -1,6 +1,7 @@
-import { useState } from 'react';
+import { useState } from "react";
 import RightArrow from './assets/icons/right-arrow.svg?react';
-import './App.scss';
+import Pegboard from "./components/ui/Pegboard/Pegboard";
+import "./App.css";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -13,6 +14,7 @@ function App() {
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
       </div>
+      <Pegboard color="#FFF2DC" />
       <h2>Testing Font</h2>
       <select name="fonts">
         <option value="Role 1">Role 1</option>
