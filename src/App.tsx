@@ -1,32 +1,50 @@
 import { useState } from "react";
 import RightArrow from './assets/icons/right-arrow.svg?react';
 import Pegboard from "./components/ui/Pegboard/Pegboard";
+import Dropdown from "./components/ui/Dropdown/Dropdown";
+import "keen-slider/keen-slider.min.css";
+import { useKeenSlider } from "keen-slider/react";
+import { useState, useEffect } from "react";
+
+const slideColors = [
+    "#FFF2DC",
+    "#FEE8EB",
+    "#E7F3DD",
+    "#DCEEFF",
+    "#FFE8DC",
+    "#E2F5F9",
+];
 import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0);
-  return (
-    <main id="home-page">
-      <h1>UP-Grade 2025</h1>
-      <div>
-        <button onClick={() => setCount(count => count + 1)}>count is {count}</button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <Pegboard color="#FFF2DC" />
-      <h2>Testing Font</h2>
-      <select name="fonts">
-        <option value="Role 1">Role 1</option>
-        <option value="Role 2">Role 2</option>
-        <option value="Role 3">Role 3</option>
-      </select>
-      <div className="icon-container">
-        <h2>Testing Icon</h2>
-        <RightArrow color="red" />
-      </div>
-    </main>
-  );
+    const [selectedIndex, setSelectedIndex] = useState(0);
+    const [sliderRef, instanceRef] = useKeenSlider({
+        slideChanged() {
+            console.log("slide changed");
+        },
+    });
+
+    useEffect(() => {
+        if (instanceRef.current) {
+            instanceRef.current.moveToIdx(selectedIndex);
+        }
+    }, [selectedIndex, instanceRef]);
+
+    return (
+        <>
+            <Dropdown
+                selected={selectedIndex + 1}
+                onChange={(val) => setSelectedIndex(val - 1)}
+            />
+            <div ref={sliderRef} className="keen-slider">
+                {slideColors.map((color, idx) => (
+                    <div key={idx} className="keen-slider__slide">
+                        <Pegboard color={color} />
+                    </div>
+                ))}
+            </div>
+        </>
+    );
 }
 
 export default App;
