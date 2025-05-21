@@ -1,4 +1,4 @@
-import { useState } from "react";
+import "./App.scss";
 import RightArrow from './assets/icons/right-arrow.svg?react';
 import Pegboard from "./components/ui/Pegboard/Pegboard";
 import Dropdown from "./components/ui/Dropdown/Dropdown";

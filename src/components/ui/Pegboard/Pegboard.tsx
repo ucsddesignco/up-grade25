@@ -1,4 +1,4 @@
-import "./Pegbaord.css";
+import "./Pegboard.css";
 
 interface PegboardProps {
   color?: string;
