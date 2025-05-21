@@ -1,11 +1,11 @@
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
-import "./index.css";
-import App from "./App.tsx";
-import { BrowserRouter, Route, Routes } from "react-router";
-import PersonalityQuiz from "./pages/PersonalityQuiz/PersonalityQuiz.tsx";
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import './global.scss';
+import App from './App.tsx';
+import { BrowserRouter, Route, Routes } from 'react-router';
+import PersonalityQuiz from './pages/PersonalityQuiz/PersonalityQuiz.tsx';
 
-createRoot(document.getElementById("root")!).render(
+createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <BrowserRouter>
       <Routes>
@@ -13,5 +13,5 @@ createRoot(document.getElementById("root")!).render(
         <Route path="/quiz" element={<PersonalityQuiz />} />
       </Routes>
     </BrowserRouter>
-  </StrictMode>,
+  </StrictMode>
 );
