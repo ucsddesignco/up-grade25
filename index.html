@@ -4,27 +4,24 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/logo.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<<<<<<< Updated upstream
     <title>UP-Grade 2025: Design Co</title>
-=======
-    <title>UP-Grade 2025</title>
-    <link rel="stylesheet" href="./dropdown.css">
->>>>>>> Stashed changes
+
+    <link rel="stylesheet" href="../up-grade25/src/assets/dropdownStyles.css">
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
 
-    <label for "role-select"></label>
-    <select name = "roles" id = "role-select">
-
-    <option value = "software-engineering">Software Engineering</option>
-    <option value = "visual-design">Visual Design</option>
-    <option value = "project-management">Project Management</option>
-    <option value = "ux-research">UX Research</option>
-    <option value = "product-marketing">Product Marketing</option>
-    <option value = "ux-design">UX Design</option>
-    </select>
+    <div class="dropdown">
+      <ul class="dropdown-menu">
+        <li class="role software-engineering">Software Engineering</li>
+        <li class="role visual-design">Visual Design</li>
+        <li class="role project-management">Project Management</li>
+        <li class="role ux-research">UX Research</li>
+        <li class="role product-marketing">Product Marketing</li>
+        <li class="role ux-design">UX Design</li>
+      </ul>
+    </div>
 
   </body>
 </html>

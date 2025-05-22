@@ -4,6 +4,8 @@ import './global.scss';
 import App from './App.tsx';
 import { BrowserRouter, Route, Routes } from 'react-router';
 import PersonalityQuiz from './pages/PersonalityQuiz/PersonalityQuiz.tsx';
+import './dropdown';        
+import './assets/dropdownStyles.scss'; 
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
