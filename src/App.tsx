@@ -1,34 +1,29 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
+import { useState } from 'react';
+import RightArrow from './assets/icons/right-arrow.svg?react';
+import './App.scss';
 
 function App() {
   const [count, setCount] = useState(0);
-
   return (
-    <>
+    <main id="home-page">
+      <h1>UP-Grade 2025</h1>
       <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
+        <button onClick={() => setCount(count => count + 1)}>count is {count}</button>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+      <h2>Testing Font</h2>
+      <select name="fonts">
+        <option value="Role 1">Role 1</option>
+        <option value="Role 2">Role 2</option>
+        <option value="Role 3">Role 3</option>
+      </select>
+      <div className="icon-container">
+        <h2>Testing Icon</h2>
+        <RightArrow color="red" />
+      </div>
+    </main>
   );
 }
 

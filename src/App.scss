@@ -1,0 +1,24 @@
+#home-page {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  select {
+    max-width: 300px;
+    width: 100%;
+    margin-inline: auto;
+    font-family: 'Funnel Display';
+    padding: 0.5rem;
+  }
+
+  .icon-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+  }
+}
