@@ -148,7 +148,6 @@ export default function Pegboard({ color = "#EBEAE8" }: PegboardProps) {
             </pattern>
           </defs>
         </svg>
-        a
       </div>
     </>
   );

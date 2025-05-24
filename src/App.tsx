@@ -1,6 +1,5 @@
 import "./App.scss";
-import RightArrow from './assets/icons/right-arrow.svg?react';
-import Pegboard from "./components/ui/Pegboard/Pegboard";
+import PegboardFilled from "./components/ui/Pegboard/PegboardFilled.tsx";
 import Dropdown from "./components/ui/Dropdown/Dropdown";
 import "keen-slider/keen-slider.min.css";
 import { useKeenSlider } from "keen-slider/react";
@@ -8,13 +7,12 @@ import { useState } from "react";
 
 const slideColors = [
   "#FFF2DC",
-  "#FEE8EB",
-  "#E7F3DD",
   "#DCEEFF",
   "#FFE8DC",
+  "#FEE8EB",
   "#E2F5F9",
+  "#E7F3DD",
 ];
-import "./App.css";
 
 function App() {
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -40,7 +38,7 @@ function App() {
       <div ref={sliderRef} className="keen-slider">
         {slideColors.map((color, idx) => (
           <div key={"pegboard" + idx} className="keen-slider__slide">
-            <Pegboard color={color} />
+            <PegboardFilled color={color} boardIndex={idx} />
           </div>
         ))}
       </div>
