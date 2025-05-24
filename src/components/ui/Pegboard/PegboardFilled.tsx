@@ -67,23 +67,57 @@ const componentRegistry = {
 const layouts = {
   mobile: [
     {
+        component: 'Photo',
+        x: '-27px',
+        y:'685px'
+    },
+    {
+        component: 'Ruler',
+        x: '466px',
+        y: '443px',
+    },
+    {
+        component: 'Sticky',
+        x: '96.6px',
+        y: '54px'
+    },
+    {
       component: 'Shelf',
-      x: '20px',
-      y: 'calc(100% - 128px)', // Adjust based on mobile dimensions
-      width: '254px', // Scaled down for mobile
-      height: '40px'
+      x: '-7px',
+      y: '546px', 
+    },
+    {
+      component: 'Unique',
+      x: '24px', 
+      y: '349px',
     }
-    // Add other components for mobile
   ],
   tablet: [
     {
+        component: 'Photo',
+        x: '63px',
+        y:'494px'
+    },
+    {
+        component: 'Ruler',
+        x: '466px',
+        y: '443px',
+    },
+    {
+        component: 'Sticky',
+        x: '380px',
+        y: '53.2px'
+    },
+    {
       component: 'Shelf',
-      x: '40px',
-      y: 'calc(100% - 128px)', // Adjust based on tablet dimensions
-      width: '400px', // Scaled for tablet
-      height: '60px'
+      x: '41px',
+      y: '306px', 
+    },
+    {
+      component: 'Unique',
+      x: '72px', 
+      y: '109px',
     }
-    // Add other components for tablet
   ],
   desktop: [
     {
@@ -99,7 +133,7 @@ const layouts = {
     {
         component: 'Sticky',
         x: '765px',
-        y: '53px'
+        y: '53.2px'
     },
     {
       component: 'Shelf',
@@ -165,8 +199,6 @@ const PegboardFilled: React.FC<PegboardFilledProps> = ({ color, boardIndex }) =>
           position: 'absolute',
           left: position.x,
           top: position.y,
-          width: position.width,
-          height: position.height,
           zIndex: 2, // Above the pegboard
         }}
       >
