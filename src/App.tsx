@@ -1,12 +1,14 @@
 import { useState } from 'react';
 import RightArrow from './assets/icons/right-arrow.svg?react';
 import './App.scss';
+import Overview from './Overview/Overview';
 
 function App() {
   const [count, setCount] = useState(0);
   return (
     <main id="home-page">
       <h1>UP-Grade 2025</h1>
+      <Overview />
       <div>
         <button onClick={() => setCount(count => count + 1)}>count is {count}</button>
         <p>
