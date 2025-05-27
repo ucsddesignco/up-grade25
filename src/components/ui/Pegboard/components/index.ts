@@ -4,6 +4,9 @@ export { default as PhotoOrange } from './PhotoOrange';
 export { default as PhotoPink } from './PhotoPink';
 export { default as PhotoTeal } from './PhotoTeal';
 export { default as PhotoYellow } from './PhotoYellow';
+export { default as Ruler } from './Ruler';
+export { default as Sticky } from './Sticky';
+
 
 
 export { default as RulerBlue } from './RulerBlue';

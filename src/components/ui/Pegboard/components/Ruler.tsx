@@ -1,10 +1,15 @@
 import * as React from 'react';
 import type { SVGProps } from 'react';
-const SvgRuler = (props: SVGProps<SVGSVGElement>) => (
+
+interface RulerProps extends SVGProps<SVGSVGElement> {
+  color?: string
+}
+
+const SvgRuler = ({ color = "#F1A210", ...props }: RulerProps) => (
   <svg xmlns="http://www.w3.org/2000/svg" width={73} height={380} fill="none" {...props}>
     <g clipPath="url(#Ruler_svg__a)">
       <path
-        fill="#F1A210"
+        fill={color}
         fillRule="evenodd"
         d="M2.492 377.991h67.996v-364H2.492v364m22.996-345c0-6.075 4.925-11 11-11s11 4.925 11 11-4.925 11-11 11-11-4.925-11-11"
         clipRule="evenodd"

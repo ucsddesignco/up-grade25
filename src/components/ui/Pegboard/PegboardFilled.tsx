@@ -2,12 +2,9 @@ import React from 'react';
 import Pegboard from './Pegboard';
 import {
   PhotoBlue, PhotoGreen, PhotoOrange, PhotoPink, PhotoTeal, PhotoYellow,
-  RulerBlue, RulerGreen, RulerOrange, RulerPink,RulerTeal,RulerYellow,
   UniqueBlue, UniqueGreen, UniqueOrange, UniquePink, UniqueTeal, UniqueYellow,
-  StickyBlue, StickyGreen, StickyOrange, StickyPink, StickyTeal, StickyYellow,
-  Shelf,  
-} from './components';
-
+  Shelf, Ruler as BaseRuler, Sticky as BaseSticky
+} from './components'
 
 interface ComponentPosition {
   component: string;
@@ -20,47 +17,22 @@ interface PegboardFilledProps {
   boardIndex: number;
 }
 
+const roleColors = [
+  "#F1A210",
+  "#49A0EB",
+  "#FF8B39",
+  "#F95984",
+  "#10B9DF",
+  "#8BB660",
+];
+
 // Define component variants for each board
 const componentVariants = {
-    Photo: ['PhotoYellow', 'PhotoBlue', 'PhotoOrange', 'PhotoPink', 'PhotoTeal', 'PhotoGreen'],
-    Ruler: ['RulerYellow','RulerBlue', 'RulerOrange', 'RulerPink', 'RulerTeal', 'RulerGreen'],
-    Sticky: ['StickyYellow','StickyBlue', 'StickyOrange', 'StickyPink', 'StickyTeal', 'StickyGreen'],
-    Shelf: ['Shelf', 'Shelf', 'Shelf', 'Shelf', 'Shelf', 'Shelf'],
-    Unique: ['UniqueYellow','UniqueBlue', 'UniqueOrange', 'UniquePink', 'UniqueTeal', 'UniqueGreen']
-};
-
-// Component registry - map component names to actual components
-const componentRegistry = {
-  PhotoYellow: PhotoYellow,
-  PhotoBlue: PhotoBlue,
-  PhotoOrange: PhotoOrange,
-  PhotoPink: PhotoPink,
-  PhotoTeal: PhotoTeal,
-  PhotoGreen: PhotoGreen,
-
-  RulerYellow: RulerYellow,
-  RulerBlue: RulerBlue,
-  RulerOrange: RulerOrange,
-  RulerPink: RulerPink,
-  RulerTeal: RulerTeal,
-  RulerGreen: RulerGreen,
-
-  StickyYellow: StickyYellow,
-  StickyBlue: StickyBlue,
-  StickyOrange: StickyOrange,
-  StickyPink: StickyPink,
-  StickyTeal: StickyTeal,
-  StickyGreen: StickyGreen,
-
-  Shelf: Shelf,
-
-  UniqueYellow: UniqueYellow,
-  UniqueBlue: UniqueBlue,
-  UniqueOrange: UniqueOrange,
-  UniquePink: UniquePink,
-  UniqueTeal: UniqueTeal,
-  UniqueGreen: UniqueGreen,
-
+  Photo: [PhotoYellow, PhotoBlue, PhotoOrange, PhotoPink, PhotoTeal, PhotoGreen],
+  Ruler: roleColors,
+  Sticky: roleColors,
+  Shelf: [Shelf, Shelf, Shelf, Shelf, Shelf, Shelf],
+  Unique: [UniqueYellow, UniqueBlue, UniqueOrange, UniquePink, UniqueTeal, UniqueGreen]
 };
 
 // Layout positions for each breakpoint
@@ -171,6 +143,8 @@ const useBreakpoint = () => {
   return breakpoint;
 };
 
+const Ruler = ({ color }: { color: string }) => <BaseRuler color={color} />;
+const Sticky = ({ color }: { color: string }) => <BaseSticky color={color} />;
 const PegboardFilled: React.FC<PegboardFilledProps> = ({ color, boardIndex }) => {
   const breakpoint = useBreakpoint();
   const currentLayout = layouts[breakpoint];
@@ -185,8 +159,17 @@ const PegboardFilled: React.FC<PegboardFilledProps> = ({ color, boardIndex }) =>
     }
 
     const variantName = variants[boardIndex];
-    const ComponentToRender = componentRegistry[variantName as keyof typeof componentRegistry];
     
+    let ComponentToRender;
+
+    let componentProps = {};
+    if (baseComponentName === 'Ruler' || baseComponentName === 'Sticky') {
+      ComponentToRender = baseComponentName === 'Ruler' ? Ruler : Sticky;
+      componentProps = { color: variantName };
+    } else {
+      ComponentToRender = variantName;
+    }
+
     if (!ComponentToRender) {
       console.warn(`Component ${variantName} not found in registry`);
       return null;
@@ -203,6 +186,7 @@ const PegboardFilled: React.FC<PegboardFilledProps> = ({ color, boardIndex }) =>
         }}
       >
         <ComponentToRender
+        {...componentProps}
           style={{
             width: '100%',
             height: '100%',
