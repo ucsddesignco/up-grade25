@@ -1,46 +1,76 @@
+.quiz-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 0.7rem;
+    margin: 3rem 1rem 0 1rem;
+    border: 1px solid red;
+  }
+
+
+.quizQuestContainer{
+    /* background-color: rgb(238, 223, 254); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    
+}
+
 .questionNum {
     text-align: center;
     color: #484a69;
+    font-size: 1.4rem;
 }
 
 .question-title {
+    margin-top: 1.5rem;
     font-size: clamp(1.5rem, 3vw, 4rem);
     text-wrap: wrap;
     color: #484a69;
     /* text-align: left; */
     /* border: 2px solid salmon; */
     max-width: 600px;
+    text-align: center;
+    line-height: clamp(1.5rem, 3vw, 4rem);
+}
+
+.quiz-options{
+    margin-top: 2rem;
 }
 
 .quiz-options ul {
+    /* background-color: rebeccapurple; */
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
 
-.quiz-options li {
-    margin-bottom: 1rem;
-}
+
 
 .quiz-options a {
     font-size: 1rem;
     display: block;
     padding: 1rem;
-    border-bottom: 3px dashed #e4e4ed;
-    color: #000;
+    border-bottom: 4px dashed #353C51;
+    color: #353C51;
     text-decoration: none;
     transition: background-color 0.3s;
+    text-align: center;
 }
+
+.quiz-options li:last-child a {
+    border-bottom: none;
+}
+
 
 .quiz-options a:hover {
     background-color: #e4e4ed;
 }
 
 .continueBtn {
-    position: absolute;
-    bottom: 3%;
-    left: 55%;
-    background-color: #484a69;
+    background-color: #353C51;
     color: white;
     padding: 1rem 1.5rem;
     font-size: 1rem;
@@ -51,9 +81,6 @@
 }
 
 .backBtn {
-    position: absolute;
-    bottom: 3%;
-    right: 55%;
     background-color: white;
     color: #484a69;
     border: 2px solid #484a69;
@@ -67,14 +94,23 @@
 .quiz-buttons {
     display: flex;
     justify-content: space-between;
-    margin-top: 15%;
+    margin-top: 2rem;
+    gap: 2rem;
 }
 
-.backBtn:disabled,
-.continueBtn:disabled {
+.backBtn:disabled {
     cursor: not-allowed;
 }
 
-.selected {
-    background-color: red;
+.continueBtn:disabled{
+    cursor: not-allowed;
+    opacity: 0.3;
 }
+
+.selected{
+    border-top: solid;
+    border-bottom: solid;
+    border-left: 4px dashed #353C51;
+    border-right: 4px dashed #353C51;
+}
+

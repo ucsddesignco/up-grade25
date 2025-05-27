@@ -1,0 +1,79 @@
+.cta-container {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+    /* background-color: rebeccapurple; */
+  }
+  
+  .faqContainer,
+  .applyContainer {
+    position: relative;
+    width: fit-content;
+    text-align: center;
+  }
+  
+  .faqCard,
+  .applyCard {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  .faqContainer h1,
+  .faqContainer .faqBtn,
+  .applyContainer h1,
+  .applyContainer .applyBtn {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgb(0, 0, 0); 
+  }
+  
+  .faqContainer h1 {
+    top: 15%;
+    left: 60%;
+    font-size: 2.5rem;
+    line-height: clamp(2.4rem, 3vw, 4rem);
+    /* background-color: rebeccapurple; */
+    width: 300px;
+    text-align: left;
+
+  }
+  
+  .faqContainer .faqBtn {
+    top: 62%;
+    left: 70%;
+    list-style: none;
+    background-color: #353C51;
+    padding: 1rem 2rem;
+    width: 8rem;
+    color: white;
+    text-transform: uppercase;
+    text-wrap: nowrap;
+  }
+  
+  .applyContainer h1 {
+    top: 15%;
+    left: 60%;
+    font-size: 2.5rem;
+    line-height: clamp(2.4rem, 3vw, 4rem);
+    width: 300px;
+    text-align: left;
+    color: white;
+
+  }
+  
+  .applyContainer .applyBtn {
+    top: 66%;
+    left: 68%;
+    list-style: none;
+    background-color: #ffffff;
+    padding: 0.7rem 2rem;
+    width: 9.6rem;
+    color: rgb(0, 0, 0);
+    text-wrap: nowrap;
+    text-transform: uppercase;
+  }
+  

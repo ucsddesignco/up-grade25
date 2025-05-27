@@ -18,6 +18,9 @@
 }
 
 .start-btn{
+    display: flex;
+    list-style: none;
+    align-items: center;
     position: absolute;
     bottom: 2rem;
     left: 50%;

@@ -1,0 +1,77 @@
+.main-titles{
+   /* border: 2px solid salmon; */
+   color: black;
+   text-align: center;
+   padding: 1rem;
+   color: #353C51;
+}
+
+.role-title{
+   font-size: 5rem;
+}
+
+.subtitle{
+   font-size: 1.1rem;
+}
+
+.quiz-titles{
+   margin-top: 4rem;
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   justify-content: center;
+   align-items: center;
+   margin-bottom: 5rem;
+   gap: 1rem;
+}
+
+.subtitle2{
+   color: #646676;
+}
+
+.quiz-btn{
+   background-color: #353C51;
+   color: white;             
+   width: 194px;              
+   height: 44px;             
+   display: flex;           
+   align-items: center;       
+   justify-content: center;   
+   margin: 0 auto;           
+   list-style: none;    
+   transition: 0.3s;
+}
+
+.arrow{
+   /* background-color: red; */
+   width: 15rem;
+   border: 4px dashed;
+   color: #EBEAE8;
+}
+
+.quiz-btn:hover{
+   cursor: pointer;
+   background-color: #646676;
+}
+
+.pegboard-container{
+   width: 294px;
+   height: 2027px;
+   /* border: 2px solid red; */
+   position: relative;
+   /* helps it be centered of the page */
+   margin-inline: auto;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   gap: 2rem;
+}
+
+.boardSVG{
+   position: absolute;
+   /* shortcut for everything to be zero */
+   inset: 0; 
+   z-index: -1;
+}
+

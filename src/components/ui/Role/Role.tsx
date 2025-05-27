@@ -9,7 +9,7 @@ interface RoleProps {
 export default function Role({title, SVG}: RoleProps) {
   return (
     <div className="roleComp">
-      <h2 className="roleTitle">Role {title}
+      <h2 className="roleTitle">{title}
       </h2>
       {SVG}
     </div>

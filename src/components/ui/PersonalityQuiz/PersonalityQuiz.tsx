@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./PersonalityQuiz.css";
+import QuizVector from "./QuizVector";
 import { QuizQuestions } from "./constants";
 import type { QuizOption } from "./constants";
 
@@ -79,11 +80,12 @@ export default function PersonalityQuiz() {
 
     return (
         <section className="quiz-section">
-            <h4 className="questionNum">
-                Q{currentQuestionIndex + 1}/{QuizQuestions.length}
-            </h4>
+            <div className="quizQuestContainer">
+                <QuizVector/>
+                <h4 className="questionNum">Q{currentQuestionIndex + 1}/{QuizQuestions.length}</h4>
+                <QuizVector/>
+            </div>
             <h1 className="question-title">{currentQuestion.question}</h1>
-
             <div className="quiz-options">
                 <ul>
                     {currentQuestion.option.map((option) => (
@@ -104,7 +106,6 @@ export default function PersonalityQuiz() {
                     ))}
                 </ul>
             </div>
-
             <div className="quiz-buttons">
                 <button
                     className="backBtn"
@@ -114,16 +115,19 @@ export default function PersonalityQuiz() {
                     Back
                 </button>
                 <button
-                    className="continueBtn"
-                    onClick={handleContinue}
-                    disabled={
-                        currentQuestionIndex === QuizQuestions.length - 1 ||
-                        selectedOption === null
-                    }
+                className="continueBtn"
+                onClick={handleContinue}
+                disabled={selectedOption === null}
                 >
-                    Continue
+                    {currentQuestionIndex === QuizQuestions.length - 1 && selectedOption
+                    ? "Reveal Result"
+                    : "Continue"}
                 </button>
+
+
             </div>
         </section>
     );
 }
+
+
