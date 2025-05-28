@@ -1,16 +1,15 @@
-.resultCard{
-    margin-top: 3rem;
-    display: flex;
-    justify-self: center;
-    align-items: center;
-    text-align: center;
-    flex-direction: column;
-    gap: 1rem;
-    border-top: 4px solid black;
-    border-bottom: 4px solid black;
-    border-left: 4px dashed black;
-    border-right: 4px dashed black;
-    width: 304px;
-   height: 460; 
-
+.resultCard {
+  margin-top: 3rem;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  gap: 1rem;
+  border-top: 4px solid black;
+  border-bottom: 4px solid black;
+  border-left: 4px dashed black;
+  border-right: 4px dashed black;
+  width: 304px;
+  height: 460;
 }

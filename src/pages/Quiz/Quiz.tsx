@@ -6,10 +6,9 @@ export default function Quiz() {
 
   return (
     <>
-  
-        <PersonalityQuiz /> 
+      <PersonalityQuiz />
 
-        {/* <section className="p-quiz">
+      {/* <section className="p-quiz">
           <h1 className="quiz-title">
             Ready to find out which skills you can UP-Grade this summer?
           </h1>
@@ -17,7 +16,6 @@ export default function Quiz() {
             Let's start! <FaArrowRight/>
           </li>
         </section> */}
- 
     </>
   );
 }

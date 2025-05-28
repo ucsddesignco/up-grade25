@@ -1,70 +1,68 @@
-.skillSection{
-    margin-top: 4rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
+.skillSection {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
 }
 
-.skillsContainer ul{
-    padding: 0rem 1rem;
-    margin-top: 1rem;
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1rem;
+.skillsContainer ul {
+  padding: 0rem 1rem;
+  margin-top: 1rem;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
-.skillsContainer h4{
-    font-size: 1.5rem;
+.skillsContainer h4 {
+  font-size: 1.5rem;
 }
 
-.skillsContainer li{
-    background-color: #F95984;
-    color: white;
-    padding: 0.5rem;
+.skillsContainer li {
+  background-color: #f95984;
+  color: white;
+  padding: 0.5rem;
 }
 
-
-.leadContainer{
-    margin-top: 4rem;
+.leadContainer {
+  margin-top: 4rem;
 }
 
-.leadContainer h4{
-    font-size: 1.5rem;
+.leadContainer h4 {
+  font-size: 1.5rem;
 }
 
-.leadContainer ul{
-    list-style: none;
+.leadContainer ul {
+  list-style: none;
 }
 
-.leadContainer ul{
-    padding: 0rem 1rem;
-    margin-top: 1rem;
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1rem;
+.leadContainer ul {
+  padding: 0rem 1rem;
+  margin-top: 1rem;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
-.leadContainer li{
-    background-color: #F95984;
-    color: white;
-    padding: 0.5rem;
+.leadContainer li {
+  background-color: #f95984;
+  color: white;
+  padding: 0.5rem;
 }
 
-.industryContainer{
-    margin-top: 4rem;
-    padding: 0 1rem;
-    text-align: center;
+.industryContainer {
+  margin-top: 4rem;
+  padding: 0 1rem;
+  text-align: center;
 }
 
-.industryContainer h4{
-    font-size: 1.5rem;
-
+.industryContainer h4 {
+  font-size: 1.5rem;
 }

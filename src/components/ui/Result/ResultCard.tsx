@@ -1,17 +1,16 @@
-
-import './ResultCard.css'
+import './ResultCard.css';
 // import ROLE_LIST from './..//Role/constRoleData'
-import { Brush } from '../Role/roleSVGComponents'
+import { Brush } from '../Role/roleSVGComponents';
 
 export default function ResultCard() {
   return (
     <>
-    <div className="resultCard">
+      <div className="resultCard">
         <p>You could be a...</p>
         <h1>Visual Designer</h1>
-        <Brush/>
+        <Brush />
         <p>General description will go right here. General description will go right here. </p>
-    </div>
+      </div>
     </>
-  )
+  );
 }

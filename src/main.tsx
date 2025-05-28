@@ -15,7 +15,6 @@ createRoot(document.getElementById('root')!).render(
         <Route path="/quiz" element={<Quiz />} />
         <Route path="/roles" element={<Roles />} />
         <Route path="/result" element={<Result />} />
-
       </Routes>
     </BrowserRouter>
   </StrictMode>
