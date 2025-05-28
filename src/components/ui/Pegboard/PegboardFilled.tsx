@@ -3,8 +3,10 @@ import Pegboard from './Pegboard';
 import {
   PhotoBlue, PhotoGreen, PhotoOrange, PhotoPink, PhotoTeal, PhotoYellow,
   UniqueBlue, UniqueGreen, UniqueOrange, UniquePink, UniqueTeal, UniqueYellow,
-  Shelf, Ruler as BaseRuler, Sticky as BaseSticky
+  Shelf, ShelfMobile, Ruler as BaseRuler, Sticky as BaseSticky
 } from './components'
+import stickyText from './stickyText.json';
+
 
 interface ComponentPosition {
   component: string;
@@ -42,11 +44,6 @@ const layouts = {
         component: 'Photo',
         x: '-27px',
         y:'685px'
-    },
-    {
-        component: 'Ruler',
-        x: '466px',
-        y: '443px',
     },
     {
         component: 'Sticky',
@@ -144,7 +141,16 @@ const useBreakpoint = () => {
 };
 
 const Ruler = ({ color }: { color: string }) => <BaseRuler color={color} />;
-const Sticky = ({ color }: { color: string }) => <BaseSticky color={color} />;
+const Sticky = ({ color, title, body, titleFontSize, bodyFontSize }: { 
+  color: string; 
+  title?: string; 
+  body?: string; 
+  titleFontSize?: string; 
+  bodyFontSize?: string; 
+  textAlign?: string; 
+}) => <BaseSticky color={color} title={title} body={body} titleFontSize={titleFontSize} bodyFontSize={bodyFontSize} />;
+
+
 const PegboardFilled: React.FC<PegboardFilledProps> = ({ color, boardIndex }) => {
   const breakpoint = useBreakpoint();
   const currentLayout = layouts[breakpoint];
@@ -160,14 +166,32 @@ const PegboardFilled: React.FC<PegboardFilledProps> = ({ color, boardIndex }) =>
 
     const variantName = variants[boardIndex];
     
-    let ComponentToRender;
-
+    let ComponentToRender: React.ComponentType<any>;
     let componentProps = {};
     if (baseComponentName === 'Ruler' || baseComponentName === 'Sticky') {
       ComponentToRender = baseComponentName === 'Ruler' ? Ruler : Sticky;
       componentProps = { color: variantName };
+      
+      // Add text props for Sticky component
+      if (baseComponentName === 'Sticky') {
+        const stickyTextData = stickyText.stickyText.find(item => item.id === boardIndex);
+        if (stickyTextData) {
+          componentProps = {
+            ...componentProps,
+            title: stickyTextData.title,
+            body: stickyTextData.body,
+            titleFontSize: stickyTextData.titleFontSize,
+            bodyFontSize: stickyTextData.bodyFontSize,
+          };
+        }
+      } 
     } else {
-      ComponentToRender = variantName;
+        // Handle Shelf variant swap based on breakpoint
+        if (baseComponentName === 'Shelf') {
+          ComponentToRender = breakpoint === 'mobile' ? ShelfMobile : Shelf;
+        } else {
+          ComponentToRender = variantName as React.ComponentType<any>;
+        }
     }
 
     if (!ComponentToRender) {
@@ -186,7 +210,7 @@ const PegboardFilled: React.FC<PegboardFilledProps> = ({ color, boardIndex }) =>
         }}
       >
         <ComponentToRender
-        {...componentProps}
+          {...componentProps}
           style={{
             width: '100%',
             height: '100%',
