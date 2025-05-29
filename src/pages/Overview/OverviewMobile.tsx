@@ -1,8 +1,8 @@
 import "./OverviewMobile.css"
 
-// import CalendarIcon from "./assets/icons/icon-calendar.svg"
-// import WeeksIcon from "./assets/icons/icon-weeks.svg"
-// import ClockIcon from "./assets/icons/icon-clock.svg"
+import CalendarIcon from "../../assets/icons/icon-calendar.svg"
+import WeeksIcon from "../../assets/icons/icon-weeks.svg"
+import ClockIcon from "../../assets/icons/icon-clock.svg"
 import Phone from "../../components/Overview/mobile/Phone.tsx";
 import Clock from "../../components/Overview/mobile/Clock.tsx";
 import Paintbrush from "../../components/Overview/mobile/Paintbrush.tsx";
@@ -47,6 +47,20 @@ export default function OverviewMobile() {
             <Clock className="mobile-svg"/>
 
             <h2 className="mobile-heading1">Timeline</h2>
+            <div className="mobile-timeline-section">
+                <div className="mobile-timeline-item">
+                    <img src={CalendarIcon}></img>
+                    <p>June 30 - Sept 5</p>  
+                    </div>
+                <div className="mobile-timeline-item">
+                    <img src={WeeksIcon}></img><p>10 Weeks</p> 
+                </div>
+                <div className="mobile-timeline-item">
+                    <img src={ClockIcon}></img> 
+                    <p>12-15 hours per week</p> 
+                </div>
+            </div>
+            
             <p className="mobile-body">{OverviewText["timeline-text"]}</p>
 
             <h2 className="mobile-expectation">{OverviewText.expectation}</h2>

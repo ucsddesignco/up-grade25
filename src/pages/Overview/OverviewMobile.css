@@ -64,6 +64,17 @@
     margin: 40px 0;
 }
 
+.mobile-timeline-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-timeline-item {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
 .mobile-callouts {
     margin: 0;
     width: 100%;
