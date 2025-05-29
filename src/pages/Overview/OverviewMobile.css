@@ -3,7 +3,7 @@
     padding: 80px 24px;
     flex-direction: column;
     align-items: center;
-    gap: 80px;
+    gap: 40px;
 }
 
 .mobile-title {
@@ -14,6 +14,7 @@
     font-weight: 700;
     line-height: 100%; /* 64px */
     letter-spacing: 0.64px;
+    padding: 0 0 40px 0;
 }
 
 .mobile-heading1 {
@@ -57,4 +58,42 @@
     gap: 12px;
     background-color: #353C51;
     color: #FFFFFE;
+}
+
+.mobile-svg {
+    margin: 40px 0;
+}
+
+.mobile-callouts {
+    margin: 0;
+    width: 100%;
+}
+
+.callout {
+    border: #353C51 4px;
+    border-style: solid dashed solid dashed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    margin: 0 0 40px 0;
+    padding: 20px 24px 24px 24px;
+}
+
+.callout>h1 {
+    font-family: "Funnel Display";
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.callout>p {
+    font-family: "Funnel Display";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: capitalize;
 }
