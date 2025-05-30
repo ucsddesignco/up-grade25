@@ -11,7 +11,7 @@ export default function Pegboard({ color = "#EBEAE8" }: PegboardProps) {
         <div id="mobile-pegboard-grid" />
         <svg
           width="294"
-          height="1494"
+          height="1010"
           viewBox="0 0 294 1494"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
