@@ -1,10 +1,10 @@
 .cta-container {
   margin-top: 5rem;
   display: flex;
+  justify-content: center;
   flex-direction: column;
   gap: 3rem;
   align-items: center;
-  /* background-color: rebeccapurple; */
 }
 
 .faqContainer,
@@ -12,13 +12,6 @@
   position: relative;
   width: fit-content;
   text-align: center;
-}
-
-.faqCard,
-.applyCard {
-  display: block;
-  width: 100%;
-  height: auto;
 }
 
 .faqContainer h1,
@@ -36,7 +29,6 @@
   left: 60%;
   font-size: 2.5rem;
   line-height: clamp(2.4rem, 3vw, 4rem);
-  /* background-color: rebeccapurple; */
   width: 300px;
   text-align: left;
 }
@@ -73,4 +65,68 @@
   color: rgb(0, 0, 0);
   text-wrap: nowrap;
   text-transform: uppercase;
+}
+
+
+.faqCardMedium, .applyCardMedium{
+  display: none;
+}
+
+
+@media (min-width: 769px){
+  .faqContainer{
+    width: 444px;
+    height: 202px;
+  }
+
+  .faqCard{
+    display: none;
+  }
+
+  .faqCardMedium{
+    display: block;
+  }
+
+  .applyContainer{
+    width: 444px;
+    height: 202px;
+  }
+
+  .applyCard{
+    display: none;
+  }
+
+  .applyCardMedium{
+    display: block;
+  }
+
+  .faqContainer h1 {
+    top: 15%;
+    left: 45%;
+  }
+
+  .faqContainer .faqBtn {
+    top: 62%;
+    left: 77%;
+    width: 9.8rem;
+  }
+  
+  .applyContainer h1 {
+    top: 15%;
+    left: 45%;
+  }
+  
+  .applyContainer .applyBtn {
+    top: 66%;
+    left: 77%;
+  }
+
+}
+
+
+@media (min-width: 1440px){
+  .cta-container {
+    flex-direction: row;
+  }
+  
 }

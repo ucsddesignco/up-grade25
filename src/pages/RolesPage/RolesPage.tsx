@@ -1,5 +1,5 @@
 import './RolesPage.css';
-import { PhonePegboard } from '../../components/ui/Role/roleSVGComponents';
+import { DesktopPegboard, PhonePegboard, TabletPegboard } from '../../components/ui/Role/roleSVGComponents';
 import Role from '../../components/ui/Role/Role';
 import { ROLE_LIST } from '../../components/ui/Role/constRoleData';
 import CTACards from '../../components/ui/CTACards/CTACards';
@@ -15,11 +15,12 @@ export default function Roles() {
       <div className="quiz-titles">
         <h4 className="subtitle2">Not sure what role to try?</h4>
         <li className="quiz-btn">Take A Brief Quiz</li>
-        <div className="arrow"></div>
       </div>
 
       <div className="pegboard-container">
-        <PhonePegboard className="boardSVG" />
+        <PhonePegboard className="phonePegboard" />
+        <TabletPegboard className="tabletPegboard"/>
+        <DesktopPegboard className="desktopPegboard"/>
         {ROLE_LIST.map(role => (
           <Role title={role.role} SVG={role.SVG} />
         ))}
