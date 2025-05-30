@@ -1,5 +1,5 @@
 import React from 'react';
-import Pegboard from './Pegboard';
+import PegboardEmpty from './PegboardEmpty';
 import {
   PhotoBlue, PhotoGreen, PhotoOrange, PhotoPink, PhotoTeal, PhotoYellow,
   UniqueBlue, UniqueGreen, UniqueOrange, UniquePink, UniqueTeal, UniqueYellow,
@@ -222,7 +222,7 @@ const PegboardFilled: React.FC<PegboardFilledProps> = ({ color, boardIndex }) =>
 
   return (
     <div style={{ position: 'relative', width: '100%', height: '100%' }}>
-      <Pegboard color={color} />
+      <PegboardEmpty color={color} />
       {currentLayout.map((position, index) => (
         <React.Fragment key={index}>
           {renderComponent(position)}

@@ -1,0 +1,21 @@
+.quizVectorContainer {
+  padding-block: 4px;
+  width: 100%;
+  height: 100%;
+
+  .quizVector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border-left: 4px solid #353c51;
+    border-right: 4px solid #353c51;
+
+    &__line {
+      background-color: #353c51;
+      width: 100%;
+      height: 4px;
+    }
+  }
+}
