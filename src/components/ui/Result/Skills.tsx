@@ -16,7 +16,9 @@ export default function Skills({ role }: SkillsProps) {
           <h4>Skills you'd develop: </h4>
           <ul>
             {ROLE.skills.map(skill => (
-              <li key={role + skill}>{skill}</li>
+              <li key={role + skill} style={{ backgroundColor: ROLE.color }}>
+                {skill}
+              </li>
             ))}
           </ul>
         </div>
@@ -25,7 +27,9 @@ export default function Skills({ role }: SkillsProps) {
           <h4>What you'd lead: </h4>
           <ul>
             {ROLE.lead.map(lead => (
-              <li key={role + lead}>{lead}</li>
+              <li key={role + lead} style={{ backgroundColor: ROLE.color }}>
+                {lead}
+              </li>
             ))}
           </ul>
         </div>
