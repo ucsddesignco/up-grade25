@@ -11,12 +11,15 @@
 
 .quiz-title {
   color: black;
-  font-weight: 400;
+  font-weight: 200;
   position: relative;
   top: -10%;
 }
 
 .start-btn {
+  display: flex;
+  list-style: none;
+  align-items: center;
   position: absolute;
   bottom: 2rem;
   left: 50%;
