@@ -7,6 +7,7 @@ import {
 import Role from '../../components/ui/Role/Role';
 import { ROLE_LIST } from '../../components/ui/Role/constRoleData';
 import CTACards from '../../components/ui/CTACards/CTACards';
+import type { role } from '../../components/ui/PersonalityQuiz/constants';
 
 export default function Roles() {
   return (
@@ -25,8 +26,8 @@ export default function Roles() {
         <PhonePegboard className="phonePegboard" />
         <TabletPegboard className="tabletPegboard" />
         <DesktopPegboard className="desktopPegboard" />
-        {ROLE_LIST.map(role => (
-          <Role title={role.role} SVG={role.SVG} />
+        {Object.entries(ROLE_LIST).map(([key, role]) => (
+          <Role key={role.role} roleKey={key as role} title={role.role} SVG={role.SVG} />
         ))}
       </div>
 

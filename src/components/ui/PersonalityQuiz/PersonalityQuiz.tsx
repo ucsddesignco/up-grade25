@@ -3,17 +3,15 @@ import './PersonalityQuiz.scss';
 import QuizVector from './QuizVector/QuizVector';
 import { QuizQuestions } from './constants';
 import type { QuizOption, role } from './constants';
-import Result from '../../../pages/ResultPage/Result';
+import { useNavigate } from 'react-router';
 
 export default function PersonalityQuiz() {
+  const navigate = useNavigate();
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswers, setSelectedAnswers] = useState<(QuizOption | null)[]>(
     Array(QuizQuestions.length).fill(null)
   );
   const [selectedOption, setSelectedOption] = useState<QuizOption | null>(null);
-  const [topRole, setTopRole] = useState<role | null>(null);
-  const [showResult, setShowResult] = useState<boolean>(false);
-
   const selectOption = (option: QuizOption) => {
     setSelectedAnswers(prevAnswers => {
       const newAnswers = [...prevAnswers];
@@ -48,7 +46,7 @@ export default function PersonalityQuiz() {
       UXR: 0,
       UXD: 0,
       SWE: 0,
-      Vis: 0
+      VIS: 0
     };
 
     // Sum up scores from all answers
@@ -75,8 +73,9 @@ export default function PersonalityQuiz() {
   }
 
   function handleReveal() {
-    setTopRole(getTopRole(selectedAnswers));
-    setShowResult(true);
+    const topRole = getTopRole(selectedAnswers);
+    console.log('TOP ROLE: ', topRole);
+    navigate(`/roles/${topRole}`);
   }
 
   useEffect(() => {
@@ -85,67 +84,57 @@ export default function PersonalityQuiz() {
   }, [selectedAnswers, currentQuestionIndex]);
 
   return (
-    <>
-      {!showResult ? (
-        <section id="quiz-section">
-          <div className="quiz-container">
-            <div className="quiz-header">
-              <div className="quizQuestContainer">
-                <QuizVector />
-                <h4 className="questionNum">
-                  Q{currentQuestionIndex + 1}/{QuizQuestions.length}
-                </h4>
-                <QuizVector />
-              </div>
-              <h3 className="question-title">{QuizQuestions[currentQuestionIndex].question}</h3>
-            </div>
-            <div className="quiz-options">
-              <ul>
-                {QuizQuestions[currentQuestionIndex].option.map(option => (
-                  <li
-                    key={option.id}
-                    className={selectedOption && selectedOption.id === option.id ? 'selected' : ''}
-                    onClick={() => selectOption(option)}
-                  >
-                    <a href="#" className="quizOptions">
-                      {option.text}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="quiz-buttons">
-              <button
-                className="backBtn"
-                onClick={handleBack}
-                disabled={currentQuestionIndex === 0}
-              >
-                Back
-              </button>
-
-              {currentQuestionIndex !== QuizQuestions.length - 1 ? (
-                <button
-                  className="continueBtn"
-                  onClick={handleContinue}
-                  disabled={selectedOption === null}
-                >
-                  Continue
-                </button>
-              ) : (
-                <button
-                  className="continueBtn"
-                  onClick={handleReveal}
-                  disabled={selectedOption === null}
-                >
-                  Reveal Result
-                </button>
-              )}
-            </div>
+    <section id="quiz-section">
+      <div className="quiz-container">
+        <div className="quiz-header">
+          <div className="quizQuestContainer">
+            <QuizVector />
+            <h4 className="questionNum">
+              Q{currentQuestionIndex + 1}/{QuizQuestions.length}
+            </h4>
+            <QuizVector />
           </div>
-        </section>
-      ) : (
-        <Result role={topRole ?? 'PMM'} />
-      )}
-    </>
+          <h3 className="question-title">{QuizQuestions[currentQuestionIndex].question}</h3>
+        </div>
+        <div className="quiz-options">
+          <ul>
+            {QuizQuestions[currentQuestionIndex].option.map(option => (
+              <li
+                key={option.id}
+                className={selectedOption && selectedOption.id === option.id ? 'selected' : ''}
+                onClick={() => selectOption(option)}
+              >
+                <a href="#" className="quizOptions">
+                  {option.text}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="quiz-buttons">
+          <button className="backBtn" onClick={handleBack} disabled={currentQuestionIndex === 0}>
+            Back
+          </button>
+
+          {currentQuestionIndex !== QuizQuestions.length - 1 ? (
+            <button
+              className="continueBtn"
+              onClick={handleContinue}
+              disabled={selectedOption === null}
+            >
+              Continue
+            </button>
+          ) : (
+            <button
+              className="continueBtn"
+              onClick={handleReveal}
+              disabled={selectedOption === null}
+            >
+              Reveal Result
+            </button>
+          )}
+        </div>
+      </div>
+    </section>
   );
 }
