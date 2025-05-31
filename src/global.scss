@@ -1,3 +1,8 @@
+:root {
+  --XL: 40px;
+  --XS: 8px;
+}
+
 *,
 *::before,
 *::after {
@@ -10,6 +15,14 @@
   font-style: normal;
   font-weight: 700;
   src: url('./assets/fonts/funnel-display-bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Funnel Display';
+  font-style: normal;
+  font-weight: 500;
+  src: url('./assets/fonts/funnel-display-medium.woff2') format('woff2');
 }
 
 @font-face {

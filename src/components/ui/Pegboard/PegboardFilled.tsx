@@ -150,9 +150,7 @@ const useBreakpoint = () => {
 const Ruler = ({ color }: { color: string }) => <BaseRuler color={color} />;
 const Sticky = ({
   color,
-  title,
   body,
-  titleFontSize,
   bodyFontSize
 }: {
   color: string;
@@ -161,15 +159,7 @@ const Sticky = ({
   titleFontSize?: string;
   bodyFontSize?: string;
   textAlign?: string;
-}) => (
-  <BaseSticky
-    color={color}
-    title={title}
-    body={body}
-    titleFontSize={titleFontSize}
-    bodyFontSize={bodyFontSize}
-  />
-);
+}) => <BaseSticky color={color} body={body} bodyFontSize={bodyFontSize} />;
 
 const PegboardFilled: React.FC<PegboardFilledProps> = ({ color, boardIndex }) => {
   const breakpoint = useBreakpoint();
