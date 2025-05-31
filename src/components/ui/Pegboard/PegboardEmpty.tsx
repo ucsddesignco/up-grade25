@@ -1,10 +1,10 @@
-import "./PegboardEmpty.css";
+import './PegboardEmpty.css';
 
 interface PegboardProps {
   color?: string;
 }
 
-export default function Pegboard({ color = "#EBEAE8" }: PegboardProps) {
+export default function Pegboard({ color = '#EBEAE8' }: PegboardProps) {
   return (
     <>
       <div id="mobile-pegboard">
@@ -17,23 +17,8 @@ export default function Pegboard({ color = "#EBEAE8" }: PegboardProps) {
           xmlns="http://www.w3.org/2000/svg"
         >
           <rect x="2" y="2" width="290" height="1490" rx="6" fill={color} />
-          <rect
-            x="2"
-            y="2"
-            width="290"
-            height="1490"
-            rx="6"
-            fill="url(#pattern0_6943_33621)"
-          />
-          <rect
-            x="2"
-            y="2"
-            width="290"
-            height="1490"
-            rx="6"
-            stroke="#353C51"
-            strokeWidth="4"
-          />
+          <rect x="2" y="2" width="290" height="1490" rx="6" fill="url(#pattern0_6943_33621)" />
+          <rect x="2" y="2" width="290" height="1490" rx="6" stroke="#353C51" strokeWidth="4" />
           <defs>
             <pattern
               id="pattern0_6943_33621"
@@ -43,14 +28,7 @@ export default function Pegboard({ color = "#EBEAE8" }: PegboardProps) {
               height="3.2128514056224895%"
               patternContentUnits="objectBoundingBox"
             >
-              <rect
-                x="9923"
-                y="32447"
-                width="8"
-                height="12"
-                rx="4"
-                fill="#353C51"
-              />
+              <rect x="9923" y="32447" width="8" height="12" rx="4" fill="#353C51" />
             </pattern>
           </defs>
         </svg>
@@ -64,23 +42,8 @@ export default function Pegboard({ color = "#EBEAE8" }: PegboardProps) {
           xmlns="http://www.w3.org/2000/svg"
         >
           <rect x="2" y="2" width="626" height="871" rx="6" fill={color} />
-          <rect
-            x="2"
-            y="2"
-            width="626"
-            height="871"
-            rx="6"
-            fill="url(#pattern0_6943_33622)"
-          />
-          <rect
-            x="2"
-            y="2"
-            width="626"
-            height="871"
-            rx="6"
-            stroke="#353C51"
-            strokeWidth="4"
-          />
+          <rect x="2" y="2" width="626" height="871" rx="6" fill="url(#pattern0_6943_33622)" />
+          <rect x="2" y="2" width="626" height="871" rx="6" stroke="#353C51" strokeWidth="4" />
           <defs>
             <pattern
               id="pattern0_6943_33622"
@@ -90,14 +53,7 @@ export default function Pegboard({ color = "#EBEAE8" }: PegboardProps) {
               height="5.4857142857142858%"
               patternContentUnits="objectBoundingBox"
             >
-              <rect
-                x="9263"
-                y="32447"
-                width="8"
-                height="12"
-                rx="4"
-                fill="#353C51"
-              />
+              <rect x="9263" y="32447" width="8" height="12" rx="4" fill="#353C51" />
             </pattern>
           </defs>
         </svg>
@@ -111,23 +67,8 @@ export default function Pegboard({ color = "#EBEAE8" }: PegboardProps) {
           xmlns="http://www.w3.org/2000/svg"
         >
           <rect x="2" y="2" width="1201" height="678" rx="6" fill={color} />
-          <rect
-            x="2"
-            y="2"
-            width="1201"
-            height="678"
-            rx="6"
-            fill="url(#pattern0_6943_33623)"
-          />
-          <rect
-            x="2"
-            y="2"
-            width="1201"
-            height="678"
-            rx="6"
-            stroke="#353C51"
-            strokeWidth="4"
-          />
+          <rect x="2" y="2" width="1201" height="678" rx="6" fill="url(#pattern0_6943_33623)" />
+          <rect x="2" y="2" width="1201" height="678" rx="6" stroke="#353C51" strokeWidth="4" />
           <defs>
             <pattern
               id="pattern0_6943_33623"
@@ -137,14 +78,7 @@ export default function Pegboard({ color = "#EBEAE8" }: PegboardProps) {
               height="7.0381231671554261%"
               patternContentUnits="objectBoundingBox"
             >
-              <rect
-                x="8267"
-                y="32447"
-                width="8"
-                height="12"
-                rx="4"
-                fill="#353C51"
-              />
+              <rect x="8267" y="32447" width="8" height="12" rx="4" fill="#353C51" />
             </pattern>
           </defs>
         </svg>

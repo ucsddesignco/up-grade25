@@ -7,7 +7,6 @@ export { default as PhotoYellow } from './PhotoYellow';
 export { default as Ruler } from './Ruler';
 export { default as Sticky } from './Sticky';
 
-
 export { default as Shelf } from './Shelf';
 export { default as ShelfMobile } from './ShelfMobile';
 

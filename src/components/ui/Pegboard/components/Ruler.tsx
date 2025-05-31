@@ -1,11 +1,10 @@
-import * as React from 'react';
 import type { SVGProps } from 'react';
 
 interface RulerProps extends SVGProps<SVGSVGElement> {
-  color?: string
+  color?: string;
 }
 
-const SvgRuler = ({ color = "#F1A210", ...props }: RulerProps) => (
+const SvgRuler = ({ color = '#F1A210', ...props }: RulerProps) => (
   <svg xmlns="http://www.w3.org/2000/svg" width={73} height={380} fill="none" {...props}>
     <g clipPath="url(#Ruler_svg__a)">
       <path

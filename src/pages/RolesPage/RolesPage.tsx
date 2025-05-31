@@ -1,5 +1,9 @@
 import './RolesPage.css';
-import { DesktopPegboard, PhonePegboard, TabletPegboard } from '../../components/ui/Role/roleSVGComponents';
+import {
+  DesktopPegboard,
+  PhonePegboard,
+  TabletPegboard
+} from '../../components/ui/Role/roleSVGComponents';
 import Role from '../../components/ui/Role/Role';
 import { ROLE_LIST } from '../../components/ui/Role/constRoleData';
 import CTACards from '../../components/ui/CTACards/CTACards';
@@ -19,8 +23,8 @@ export default function Roles() {
 
       <div className="pegboard-container">
         <PhonePegboard className="phonePegboard" />
-        <TabletPegboard className="tabletPegboard"/>
-        <DesktopPegboard className="desktopPegboard"/>
+        <TabletPegboard className="tabletPegboard" />
+        <DesktopPegboard className="desktopPegboard" />
         {ROLE_LIST.map(role => (
           <Role title={role.role} SVG={role.SVG} />
         ))}

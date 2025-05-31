@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { FaArrowUpRightFromSquare } from "react-icons/fa6";
+import { useState } from 'react';
+import { FaArrowUpRightFromSquare } from 'react-icons/fa6';
 import './Quiz.css';
 import PersonalityQuiz from '../../components/ui/PersonalityQuiz/PersonalityQuiz';
 

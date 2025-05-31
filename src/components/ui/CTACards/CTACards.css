@@ -67,36 +67,35 @@
   text-transform: uppercase;
 }
 
-
-.faqCardMedium, .applyCardMedium{
+.faqCardMedium,
+.applyCardMedium {
   display: none;
 }
 
-
-@media (min-width: 769px){
-  .faqContainer{
+@media (min-width: 769px) {
+  .faqContainer {
     width: 444px;
     height: 202px;
   }
 
-  .faqCard{
+  .faqCard {
     display: none;
   }
 
-  .faqCardMedium{
+  .faqCardMedium {
     display: block;
   }
 
-  .applyContainer{
+  .applyContainer {
     width: 444px;
     height: 202px;
   }
 
-  .applyCard{
+  .applyCard {
     display: none;
   }
 
-  .applyCardMedium{
+  .applyCardMedium {
     display: block;
   }
 
@@ -110,23 +109,20 @@
     left: 77%;
     width: 9.8rem;
   }
-  
+
   .applyContainer h1 {
     top: 15%;
     left: 45%;
   }
-  
+
   .applyContainer .applyBtn {
     top: 66%;
     left: 77%;
   }
-
 }
 
-
-@media (min-width: 1440px){
+@media (min-width: 1440px) {
   .cta-container {
     flex-direction: row;
   }
-  
 }

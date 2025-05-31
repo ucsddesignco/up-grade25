@@ -45,7 +45,7 @@ export const ROLE_LIST = [
     lead: ['Interviews & Tests', 'Data Analysis', 'Validating Product Direction'],
     impact: `UX Researchers illuminate what people need, not just what designers 
     assume. Their insights anchor product decisions in real-world context,
-     helping designers avoid bias, build with empathy, and prioritize users. `
+     helping designers avoid bias, build with empathy, and prioritize users.`
   },
   {
     role: 'Visual Designer',

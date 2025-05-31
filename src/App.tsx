@@ -1,9 +1,8 @@
-import "./App.scss";
-import Home from "./pages/Home/Home"
-
+import './App.scss';
+import Home from './pages/Home/Home';
 
 function App() {
-  return(
+  return (
     <div>
       <Home />
     </div>

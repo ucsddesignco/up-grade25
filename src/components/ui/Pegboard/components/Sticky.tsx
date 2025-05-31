@@ -1,4 +1,3 @@
-import * as React from 'react';
 import type { SVGProps } from 'react';
 
 interface StickyProps extends SVGProps<SVGSVGElement> {
@@ -61,7 +60,14 @@ const SvgSticky = ({
   };
 
   return (
-    <svg width="221" height="271" viewBox="0 0 221 271" fill="none" {...props} style={{rotate: '2deg'}}>
+    <svg
+      width="221"
+      height="271"
+      viewBox="0 0 221 271"
+      fill="none"
+      {...props}
+      style={{ rotate: '2deg' }}
+    >
       <g clipPath="url(#clip0_8480_11049)">
         <path
           d="M218.645 36.7568H2.64507L2.64453 268.757H168.645L218.645 218.757V36.7568Z"

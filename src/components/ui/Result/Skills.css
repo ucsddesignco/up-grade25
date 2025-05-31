@@ -1,5 +1,4 @@
-
-.skillBoxes{
+.skillBoxes {
   margin-top: 4rem;
   display: flex;
   justify-content: center;
@@ -8,7 +7,7 @@
   text-align: center;
 }
 
-.industrySection{
+.industrySection {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,8 +15,8 @@
   text-align: center;
 }
 
-
-.skillsContainer ul, .leadContainer ul {
+.skillsContainer ul,
+.leadContainer ul {
   width: 300px;
   padding: 0rem 1rem;
   margin-top: 1rem;
@@ -29,11 +28,13 @@
   gap: 1rem;
 }
 
-.skillsContainer h4, .leadContainer h4 {
+.skillsContainer h4,
+.leadContainer h4 {
   font-size: 1.5rem;
 }
 
-.skillsContainer li, .leadContainer li {
+.skillsContainer li,
+.leadContainer li {
   background-color: #f95984;
   color: white;
   padding: 0.5rem;
@@ -43,8 +44,8 @@
   margin-top: 4rem;
 }
 
-
-.industryContainer, .otherRolesContainer {
+.industryContainer,
+.otherRolesContainer {
   margin-top: 4rem;
   padding: 0 1rem;
   text-align: center;
@@ -59,7 +60,7 @@
   color: #646676;
 }
 
-.otherRolesContainer li{
+.otherRolesContainer li {
   list-style: none;
   background-color: #353c51;
   margin-top: 2rem;
@@ -69,31 +70,29 @@
   margin-inline: auto;
 }
 
-.otherRolesContainer a{
+.otherRolesContainer a {
   font-size: 1.2rem;
   font-weight: 500;
   width: fit-content;
 }
 
-.industryContainer p{
+.industryContainer p {
   margin-top: 1rem;
 }
 
-
-@media (min-width: 769px){
-  .skillBoxes{
+@media (min-width: 769px) {
+  .skillBoxes {
     flex-direction: row;
     flex-wrap: nowrap;
     gap: 2rem;
   }
 
-  .leadContainer{
+  .leadContainer {
     margin-top: 0;
   }
 
-  .industryContainer p{
+  .industryContainer p {
     margin: 1rem 3rem;
     max-width: 800px;
   }
-
 }

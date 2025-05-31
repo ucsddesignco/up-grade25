@@ -8,7 +8,7 @@ export default function Result() {
     <section className="result-section">
       <ResultCard />
       <Skills />
-      <CTACards/>
+      <CTACards />
     </section>
   );
 }

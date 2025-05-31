@@ -2,7 +2,6 @@ import './Skills.css';
 export default function Skills() {
   return (
     <div className="skillSection">
-
       <div className="skillBoxes">
         <div className="skillsContainer">
           <h4>Skills you'd develop: </h4>
@@ -28,21 +27,19 @@ export default function Skills() {
         <div className="industryContainer">
           <h4>Industry Impact:</h4>
           <p>
-            Visual Designers nurture the cultural relationship between users and products. Their work
-            influences perception, usability, and identity. It can be the difference-maker between a
-            good and a delightful experience.
+            Visual Designers nurture the cultural relationship between users and products. Their
+            work influences perception, usability, and identity. It can be the difference-maker
+            between a good and a delightful experience.
           </p>
         </div>
 
         <div className="otherRolesContainer">
           <h4>Not the right one for you?</h4>
-          <li><a>View Other Roles</a></li>
+          <li>
+            <a>View Other Roles</a>
+          </li>
         </div>
       </div>
-    
-    
     </div>
-
-
   );
 }
