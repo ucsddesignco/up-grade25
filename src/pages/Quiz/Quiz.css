@@ -1,0 +1,42 @@
+.p-quiz {
+  position: relative;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 1rem;
+}
+
+.quiz-title {
+  color: black;
+  font-weight: 200;
+  position: relative;
+  top: -10%;
+}
+
+.start-btn {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #484a69;
+  color: white;
+  padding: 1rem 5rem;
+  font-size: 1.25rem;
+  text-wrap: nowrap;
+  border: transparent 2px solid;
+  transition: 0.5s;
+}
+
+.start-btn:hover {
+  cursor: pointer;
+  color: white;
+  border: 2px solid black;
+  background-color: #ababab;
+  cursor: pointer;
+}

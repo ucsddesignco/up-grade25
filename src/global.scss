@@ -1,0 +1,160 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Funnel Display';
+  font-style: normal;
+  font-weight: 700;
+  src: url('./assets/fonts/funnel-display-bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Funnel Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./assets/fonts/funnel-sans-regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Funnel Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url('./assets/fonts/funnel-sans-bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Funnel Sans';
+  font-style: normal;
+  font-weight: 500;
+  src: url('./assets/fonts/funnel-sans-medium.woff2') format('woff2');
+}
+
+* {
+  margin: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+html {
+  font-family:
+    'Funnel Sans',
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Open Sans',
+    'Helvetica Neue',
+    sans-serif;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family:
+    'Funnel Display',
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Open Sans',
+    'Helvetica Neue',
+    sans-serif;
+  text-wrap: balance;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+h1 {
+  font-size: 56px;
+  font-style: normal;
+  font-weight: 700;
+
+  @media (min-width: 768px) {
+    font-size: 80px;
+  }
+}
+
+h2 {
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+
+  @media (min-width: 768px) {
+    font-size: 56px;
+  }
+}
+
+h3 {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+
+  @media (min-width: 768px) {
+    font-size: 32px;
+  }
+}
+
+h4 {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+#root {
+  isolation: isolate;
+}
