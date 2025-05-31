@@ -2,7 +2,7 @@ export type role = 'PMM' | 'PM' | 'UXR' | 'UXD' | 'SWE' | 'Vis';
 export interface QuizOption {
   id: string;
   text: string;
-  pointDist: {[key in role]:number};
+  pointDist: Record<role, number>;
 }
 
 export interface QuizQuesiton {
@@ -19,61 +19,61 @@ export const QuizQuestions: QuizQuesiton[] = [
       {
         id: 'a',
         text: 'Bringing designs to life through code',
-        pointDist : {
-          'UXR': 5,
-          'UXD': 3,
-          'PM': 1,
-          'SWE': 0,
-          'Vis': 0,
-          'PMM': 0,
+        pointDist: {
+          UXR: 5,
+          UXD: 3,
+          PM: 1,
+          SWE: 0,
+          Vis: 0,
+          PMM: 0
         }
       },
       {
         id: 'b',
         text: 'Mapping out intuitive user flows',
-        pointDist : {
-          'UXR': 5,
-          'UXD': 3,
-          'PM': 1,
-          'SWE': 0,
-          'Vis': 5,
-          'PMM': 0,
+        pointDist: {
+          UXR: 5,
+          UXD: 3,
+          PM: 1,
+          SWE: 0,
+          Vis: 5,
+          PMM: 0
         }
       },
       {
         id: 'c',
         text: 'Crafting the look and feel',
-        pointDist : {
-          'UXR': 5,
-          'UXD': 3,
-          'PM': 1,
-          'SWE': 0,
-          'Vis': 0,
-          'PMM': 0,
+        pointDist: {
+          UXR: 5,
+          UXD: 3,
+          PM: 1,
+          SWE: 0,
+          Vis: 0,
+          PMM: 0
         }
       },
       {
         id: 'd',
         text: 'Keeping the team organized',
-        pointDist : {
-          'UXR': 5,
-          'UXD': 3,
-          'PM': 1,
-          'SWE': 0,
-          'Vis': 0,
-          'PMM': 0,
+        pointDist: {
+          UXR: 5,
+          UXD: 3,
+          PM: 1,
+          SWE: 0,
+          Vis: 0,
+          PMM: 0
         }
       },
       {
         id: 'e',
         text: 'Shaping the message and content',
-        pointDist : {
-          'UXR': 5,
-          'UXD': 3,
-          'PM': 1,
-          'SWE': 0,
-          'Vis': 0,
-          'PMM': 0,
+        pointDist: {
+          UXR: 5,
+          UXD: 3,
+          PM: 1,
+          SWE: 0,
+          Vis: 0,
+          PMM: 0
         }
       }
     ]
@@ -83,64 +83,64 @@ export const QuizQuestions: QuizQuesiton[] = [
     id: '2',
     question: 'What do you prefer when it comes to design?',
     option: [
-      { 
-        id: 'a', 
+      {
+        id: 'a',
         text: 'Minimalism',
-        pointDist : {
-          'UXR': 5,
-          'UXD': 3,
-          'PM': 1,
-          'SWE': 0,
-          'Vis': 0,
-          'PMM': 0,
+        pointDist: {
+          UXR: 5,
+          UXD: 3,
+          PM: 1,
+          SWE: 0,
+          Vis: 0,
+          PMM: 0
         }
-        },
+      },
       {
         id: 'b',
         text: 'Bold and colorful designs',
-        pointDist : {
-          'UXR': 5,
-          'UXD': 3,
-          'PM': 1,
-          'SWE': 0,
-          'Vis': 0,
-          'PMM': 0,
+        pointDist: {
+          UXR: 5,
+          UXD: 3,
+          PM: 1,
+          SWE: 0,
+          Vis: 0,
+          PMM: 0
         }
       },
-      { 
-        id: 'c', 
-        text: 'Retro vibes', 
-        pointDist : {
-          'UXR': 5,
-          'UXD': 3,
-          'PM': 1,
-          'SWE': 0,
-          'Vis': 0,
-          'PMM': 0,
+      {
+        id: 'c',
+        text: 'Retro vibes',
+        pointDist: {
+          UXR: 5,
+          UXD: 3,
+          PM: 1,
+          SWE: 0,
+          Vis: 0,
+          PMM: 0
         }
       },
       {
         id: 'd',
         text: 'Sleek and modern aesthetics',
-        pointDist : {
-          'UXR': 5,
-          'UXD': 3,
-          'PM': 1,
-          'SWE': 0,
-          'Vis': 0,
-          'PMM': 0,
+        pointDist: {
+          UXR: 5,
+          UXD: 3,
+          PM: 1,
+          SWE: 0,
+          Vis: 0,
+          PMM: 0
         }
       },
-      { 
-        id: 'e', 
-        text: 'Whimsical and playful', 
-        pointDist : {
-          'UXR': 5,
-          'UXD': 3,
-          'PM': 1,
-          'SWE': 0,
-          'Vis': 0,
-          'PMM': 0,
+      {
+        id: 'e',
+        text: 'Whimsical and playful',
+        pointDist: {
+          UXR: 5,
+          UXD: 3,
+          PM: 1,
+          SWE: 0,
+          Vis: 0,
+          PMM: 0
         }
       }
     ]
@@ -153,61 +153,61 @@ export const QuizQuestions: QuizQuesiton[] = [
       {
         id: 'a',
         text: 'Brainstorming with others',
-        pointDist : {
-          'UXR': 5,
-          'UXD': 3,
-          'PM': 1,
-          'SWE': 0,
-          'Vis': 0,
-          'PMM': 0,
+        pointDist: {
+          UXR: 5,
+          UXD: 3,
+          PM: 1,
+          SWE: 0,
+          Vis: 0,
+          PMM: 0
         }
       },
       {
         id: 'b',
         text: 'Researching the issue deeply',
-        pointDist : {
-          'UXR': 5,
-          'UXD': 3,
-          'PM': 1,
-          'SWE': 0,
-          'Vis': 0,
-          'PMM': 0,
+        pointDist: {
+          UXR: 5,
+          UXD: 3,
+          PM: 1,
+          SWE: 0,
+          Vis: 0,
+          PMM: 0
         }
       },
       {
         id: 'c',
         text: 'Testing different approaches',
-        pointDist : {
-          'UXR': 5,
-          'UXD': 3,
-          'PM': 1,
-          'SWE': 0,
-          'Vis': 0,
-          'PMM': 0,
+        pointDist: {
+          UXR: 5,
+          UXD: 3,
+          PM: 1,
+          SWE: 0,
+          Vis: 0,
+          PMM: 0
         }
       },
       {
         id: 'd',
         text: 'Breaking the problem into smaller pieces',
-        pointDist : {
-          'UXR': 5,
-          'UXD': 3,
-          'PM': 1,
-          'SWE': 0,
-          'Vis': 0,
-          'PMM': 0,
+        pointDist: {
+          UXR: 5,
+          UXD: 3,
+          PM: 1,
+          SWE: 0,
+          Vis: 0,
+          PMM: 0
         }
       },
       {
         id: 'e',
         text: 'Trusting my gut instinct',
-        pointDist : {
-          'UXR': 5,
-          'UXD': 3,
-          'PM': 1,
-          'SWE': 0,
-          'Vis': 0,
-          'PMM': 0,
+        pointDist: {
+          UXR: 5,
+          UXD: 3,
+          PM: 1,
+          SWE: 0,
+          Vis: 0,
+          PMM: 0
         }
       }
     ]
@@ -220,61 +220,61 @@ export const QuizQuestions: QuizQuesiton[] = [
       {
         id: 'a',
         text: 'I love working with a team and sharing ideas',
-        pointDist : {
-          'UXR': 5,
-          'UXD': 3,
-          'PM': 1,
-          'SWE': 0,
-          'Vis': 0,
-          'PMM': 0,
+        pointDist: {
+          UXR: 5,
+          UXD: 3,
+          PM: 1,
+          SWE: 0,
+          Vis: 0,
+          PMM: 0
         }
       },
       {
         id: 'b',
         text: 'I prefer working alone to maintain control',
-        pointDist : {
-          'UXR': 5,
-          'UXD': 3,
-          'PM': 1,
-          'SWE': 0,
-          'Vis': 0,
-          'PMM': 0,
+        pointDist: {
+          UXR: 5,
+          UXD: 3,
+          PM: 1,
+          SWE: 0,
+          Vis: 0,
+          PMM: 0
         }
       },
       {
         id: 'c',
         text: 'I’m comfortable in both settings',
-        pointDist : {
-          'UXR': 5,
-          'UXD': 3,
-          'PM': 1,
-          'SWE': 0,
-          'Vis': 0,
-          'PMM': 0,
+        pointDist: {
+          UXR: 5,
+          UXD: 3,
+          PM: 1,
+          SWE: 0,
+          Vis: 0,
+          PMM: 0
         }
       },
       {
         id: 'd',
         text: 'I prefer to lead the team',
-        pointDist : {
-          'UXR': 5,
-          'UXD': 3,
-          'PM': 1,
-          'SWE': 0,
-          'Vis': 0,
-          'PMM': 0,
+        pointDist: {
+          UXR: 5,
+          UXD: 3,
+          PM: 1,
+          SWE: 0,
+          Vis: 0,
+          PMM: 0
         }
       },
       {
         id: 'e',
         text: 'I’m flexible depending on the project',
-        pointDist : {
-          'UXR': 5,
-          'UXD': 3,
-          'PM': 1,
-          'SWE': 0,
-          'Vis': 0,
-          'PMM': 0,
+        pointDist: {
+          UXR: 5,
+          UXD: 3,
+          PM: 1,
+          SWE: 0,
+          Vis: 0,
+          PMM: 0
         }
       }
     ]
@@ -287,61 +287,61 @@ export const QuizQuestions: QuizQuesiton[] = [
       {
         id: 'a',
         text: 'A creative and collaborative space',
-        pointDist : {
-          'UXR': 5,
-          'UXD': 3,
-          'PM': 1,
-          'SWE': 0,
-          'Vis': 0,
-          'PMM': 0,
+        pointDist: {
+          UXR: 5,
+          UXD: 3,
+          PM: 1,
+          SWE: 0,
+          Vis: 0,
+          PMM: 0
         }
       },
       {
         id: 'b',
         text: 'A quiet and focused environment',
-        pointDist : {
-          'UXR': 5,
-          'UXD': 3,
-          'PM': 1,
-          'SWE': 0,
-          'Vis': 0,
-          'PMM': 0,
+        pointDist: {
+          UXR: 5,
+          UXD: 3,
+          PM: 1,
+          SWE: 0,
+          Vis: 0,
+          PMM: 0
         }
       },
       {
         id: 'c',
         text: 'A dynamic and fast-paced office',
-        pointDist : {
-          'UXR': 5,
-          'UXD': 3,
-          'PM': 1,
-          'SWE': 0,
-          'Vis': 0,
-          'PMM': 0,
+        pointDist: {
+          UXR: 5,
+          UXD: 3,
+          PM: 1,
+          SWE: 0,
+          Vis: 0,
+          PMM: 0
         }
       },
       {
         id: 'd',
         text: 'A remote and flexible work setup',
-        pointDist : {
-          'UXR': 5,
-          'UXD': 3,
-          'PM': 1,
-          'SWE': 0,
-          'Vis': 0,
-          'PMM': 0,
+        pointDist: {
+          UXR: 5,
+          UXD: 3,
+          PM: 1,
+          SWE: 0,
+          Vis: 0,
+          PMM: 0
         }
       },
       {
         id: 'e',
         text: 'A balance of quiet and collaboration',
-        pointDist : {
-          'UXR': 5,
-          'UXD': 3,
-          'PM': 1,
-          'SWE': 0,
-          'Vis': 0,
-          'PMM': 0,
+        pointDist: {
+          UXR: 5,
+          UXD: 3,
+          PM: 1,
+          SWE: 0,
+          Vis: 0,
+          PMM: 0
         }
       }
     ]
