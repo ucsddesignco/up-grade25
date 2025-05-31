@@ -1,0 +1,23 @@
+.MuiAccordion-root.overall-accordion{
+    &:before {
+      display: none,
+    }
+    
+    border-radius: 0 !important;
+    margin-bottom: 16px;
+
+    background-color: #32673f;
+
+    //when dropdown is expanded
+    &.Mui-expanded {
+      border-radius: 0 !important;
+      margin-bottom: 16px;
+    }       
+    
+    
+}
+
+#answer{
+    text-align: left;
+    
+}

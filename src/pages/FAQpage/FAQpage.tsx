@@ -1,5 +1,4 @@
 import './FAQstyle.scss';
-import * as React from 'react';;
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
@@ -39,25 +38,41 @@ export default function FAQPage() {
       }
   ];
 
+  function renderFAQ(){
+    return (
+      <>
+        <h1>Frequently Asked Questions</h1>
+        {faqItems.map((item, index) => (
+          <Accordion className='overall-accordion'
+            key={index} 
+          >
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls={`content-${index}`}
+              id={`content-header-${index}`}
+            >
+              <Typography id='question'>
+                {item.question}
+              </Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Typography id='answer'>
+                {item.answer}
+              </Typography>
+            </AccordionDetails>
+          </Accordion>
+        ))}
+      </>
+    );
+
+  }
+
   return (
-    <div>
-      <h1>Frequently Asked Questions</h1>
-      <Accordion defaultExpanded>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel1-content"
-          id="panel1-header"
-        >
-          <Typography component="span">Expanded by default</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-    </div>
-  );
+    renderFAQ()
+  )
+    
 }
+
+
+
 
