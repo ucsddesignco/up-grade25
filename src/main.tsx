@@ -5,6 +5,7 @@ import App from './App';
 import { BrowserRouter, Route, Routes } from 'react-router';
 import Roles from './pages/RolesPage/RolesPage.tsx';
 import Quiz from './pages/Quiz/Quiz.tsx';
+import Result from './pages/ResultPage/Result.tsx';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -13,6 +14,7 @@ createRoot(document.getElementById('root')!).render(
         <Route path="/" element={<App />} />
         <Route path="/quiz" element={<Quiz />} />
         <Route path="/roles" element={<Roles />} />
+        <Route path="/roles/:roleId" element={<Result />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>

@@ -1,6 +1,18 @@
+import React from 'react';
+import type { role } from '../PersonalityQuiz/constants';
 import { Brush, Clock, Glass, MeasuringTape, Tape, Telephone } from './roleSVGComponents';
 
-export const ROLE_LIST = {
+export interface RoleDetails {
+  role: string;
+  SVG: React.ReactElement;
+  color: string;
+  description: string;
+  skills: string[];
+  lead: string[];
+  impact: string;
+}
+
+export const ROLE_LIST: Record<role, RoleDetails> = {
   PM: {
     role: 'Project Manager',
     SVG: <Clock />,
@@ -47,7 +59,7 @@ export const ROLE_LIST = {
     assume. Their insights anchor product decisions in real-world context,
      helping designers avoid bias, build with empathy, and prioritize users.`
   },
-  Vis: {
+  VIS: {
     role: 'Visual Designer',
     SVG: <Brush />,
     color: '#F95984',

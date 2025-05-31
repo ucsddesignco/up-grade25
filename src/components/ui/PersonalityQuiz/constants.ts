@@ -1,4 +1,4 @@
-export type role = 'PMM' | 'PM' | 'UXR' | 'UXD' | 'SWE' | 'Vis';
+export type role = 'PMM' | 'PM' | 'UXR' | 'UXD' | 'SWE' | 'VIS';
 export interface QuizOption {
   id: string;
   text: string;
@@ -24,7 +24,7 @@ export const QuizQuestions: QuizQuesiton[] = [
           UXD: 3,
           PM: 1,
           SWE: 0,
-          Vis: 0,
+          VIS: 0,
           PMM: 0
         }
       },
@@ -36,7 +36,7 @@ export const QuizQuestions: QuizQuesiton[] = [
           UXD: 3,
           PM: 1,
           SWE: 0,
-          Vis: 5,
+          VIS: 5,
           PMM: 0
         }
       },
@@ -48,7 +48,7 @@ export const QuizQuestions: QuizQuesiton[] = [
           UXD: 3,
           PM: 1,
           SWE: 0,
-          Vis: 0,
+          VIS: 0,
           PMM: 0
         }
       },
@@ -60,7 +60,7 @@ export const QuizQuestions: QuizQuesiton[] = [
           UXD: 3,
           PM: 1,
           SWE: 0,
-          Vis: 0,
+          VIS: 0,
           PMM: 0
         }
       },
@@ -72,7 +72,7 @@ export const QuizQuestions: QuizQuesiton[] = [
           UXD: 3,
           PM: 1,
           SWE: 0,
-          Vis: 0,
+          VIS: 0,
           PMM: 0
         }
       }
@@ -91,7 +91,7 @@ export const QuizQuestions: QuizQuesiton[] = [
           UXD: 3,
           PM: 1,
           SWE: 0,
-          Vis: 0,
+          VIS: 0,
           PMM: 0
         }
       },
@@ -103,7 +103,7 @@ export const QuizQuestions: QuizQuesiton[] = [
           UXD: 3,
           PM: 1,
           SWE: 0,
-          Vis: 0,
+          VIS: 0,
           PMM: 0
         }
       },
@@ -115,7 +115,7 @@ export const QuizQuestions: QuizQuesiton[] = [
           UXD: 3,
           PM: 1,
           SWE: 0,
-          Vis: 0,
+          VIS: 0,
           PMM: 0
         }
       },
@@ -127,7 +127,7 @@ export const QuizQuestions: QuizQuesiton[] = [
           UXD: 3,
           PM: 1,
           SWE: 0,
-          Vis: 0,
+          VIS: 0,
           PMM: 0
         }
       },
@@ -139,7 +139,7 @@ export const QuizQuestions: QuizQuesiton[] = [
           UXD: 3,
           PM: 1,
           SWE: 0,
-          Vis: 0,
+          VIS: 0,
           PMM: 0
         }
       }
@@ -158,7 +158,7 @@ export const QuizQuestions: QuizQuesiton[] = [
           UXD: 3,
           PM: 1,
           SWE: 0,
-          Vis: 0,
+          VIS: 0,
           PMM: 0
         }
       },
@@ -170,7 +170,7 @@ export const QuizQuestions: QuizQuesiton[] = [
           UXD: 3,
           PM: 1,
           SWE: 0,
-          Vis: 0,
+          VIS: 0,
           PMM: 0
         }
       },
@@ -182,7 +182,7 @@ export const QuizQuestions: QuizQuesiton[] = [
           UXD: 3,
           PM: 1,
           SWE: 0,
-          Vis: 0,
+          VIS: 0,
           PMM: 0
         }
       },
@@ -194,7 +194,7 @@ export const QuizQuestions: QuizQuesiton[] = [
           UXD: 3,
           PM: 1,
           SWE: 0,
-          Vis: 0,
+          VIS: 0,
           PMM: 0
         }
       },
@@ -206,7 +206,7 @@ export const QuizQuestions: QuizQuesiton[] = [
           UXD: 3,
           PM: 1,
           SWE: 0,
-          Vis: 0,
+          VIS: 0,
           PMM: 0
         }
       }
@@ -225,7 +225,7 @@ export const QuizQuestions: QuizQuesiton[] = [
           UXD: 3,
           PM: 1,
           SWE: 0,
-          Vis: 0,
+          VIS: 0,
           PMM: 0
         }
       },
@@ -237,7 +237,7 @@ export const QuizQuestions: QuizQuesiton[] = [
           UXD: 3,
           PM: 1,
           SWE: 0,
-          Vis: 0,
+          VIS: 0,
           PMM: 0
         }
       },
@@ -249,7 +249,7 @@ export const QuizQuestions: QuizQuesiton[] = [
           UXD: 3,
           PM: 1,
           SWE: 0,
-          Vis: 0,
+          VIS: 0,
           PMM: 0
         }
       },
@@ -261,7 +261,7 @@ export const QuizQuestions: QuizQuesiton[] = [
           UXD: 3,
           PM: 1,
           SWE: 0,
-          Vis: 0,
+          VIS: 0,
           PMM: 0
         }
       },
@@ -273,7 +273,7 @@ export const QuizQuestions: QuizQuesiton[] = [
           UXD: 3,
           PM: 1,
           SWE: 0,
-          Vis: 0,
+          VIS: 0,
           PMM: 0
         }
       }
@@ -292,7 +292,7 @@ export const QuizQuestions: QuizQuesiton[] = [
           UXD: 3,
           PM: 1,
           SWE: 0,
-          Vis: 0,
+          VIS: 0,
           PMM: 0
         }
       },
@@ -304,7 +304,7 @@ export const QuizQuestions: QuizQuesiton[] = [
           UXD: 3,
           PM: 1,
           SWE: 0,
-          Vis: 0,
+          VIS: 0,
           PMM: 0
         }
       },
@@ -316,7 +316,7 @@ export const QuizQuestions: QuizQuesiton[] = [
           UXD: 3,
           PM: 1,
           SWE: 0,
-          Vis: 0,
+          VIS: 0,
           PMM: 0
         }
       },
@@ -328,7 +328,7 @@ export const QuizQuestions: QuizQuesiton[] = [
           UXD: 3,
           PM: 1,
           SWE: 0,
-          Vis: 0,
+          VIS: 0,
           PMM: 0
         }
       },
@@ -340,7 +340,7 @@ export const QuizQuestions: QuizQuesiton[] = [
           UXD: 3,
           PM: 1,
           SWE: 0,
-          Vis: 0,
+          VIS: 0,
           PMM: 0
         }
       }
