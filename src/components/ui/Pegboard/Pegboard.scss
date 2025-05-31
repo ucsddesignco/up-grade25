@@ -1,0 +1,30 @@
+#pegboard-section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  #title-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-inline: auto;
+    gap: 0.25rem;
+
+    @media (min-width: 1440px) {
+      flex-direction: row;
+      height: calc(2lh + 3.5rem);
+      gap: 2rem;
+      align-items: center;
+    }
+
+    h2 {
+      font-size: 2.375rem;
+      font-weight: 500;
+    }
+  }
+
+  .keen-slider__slide > div {
+    margin-inline: auto;
+    width: fit-content !important;
+  }
+}
