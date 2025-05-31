@@ -7,7 +7,11 @@ interface ButtonProps {
 }
 
 const Button = ({ text, className, onClick }: ButtonProps) => {
-  return <button onClick={onClick} className={`cta-button ${className}`}>{text}</button>;
+  return (
+    <button onClick={onClick} className={`cta-button ${className}`}>
+      {text}
+    </button>
+  );
 };
 
 export default Button;

@@ -159,13 +159,7 @@ const Sticky = ({
   titleFontSize?: string;
   bodyFontSize?: string;
   textAlign?: string;
-}) => (
-  <BaseSticky
-    color={color}
-    body={body}
-    bodyFontSize={bodyFontSize}
-  />
-);
+}) => <BaseSticky color={color} body={body} bodyFontSize={bodyFontSize} />;
 
 const PegboardFilled: React.FC<PegboardFilledProps> = ({ color, boardIndex }) => {
   const breakpoint = useBreakpoint();

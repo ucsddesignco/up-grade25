@@ -44,7 +44,7 @@ export default function OverviewMobile() {
       <p className="mobile-body">{OverviewText['task-text2']}</p>
 
       <h2 style={{ fontSize: '20px', color: '#646676' }}>Not sure what role to try?</h2>
-      <Button text="TAKE A BRIEF QUIZ"  />
+      <Button text="TAKE A BRIEF QUIZ" />
       <img className="mobile-arrow" src={ArrowMeasure}></img>
 
       <h2 className="mobile-heading2">{OverviewText['build-fast']}</h2>
