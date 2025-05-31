@@ -1,0 +1,109 @@
+.border-element {
+  border: 4px solid hsla(225, 21%, 26%, 1);
+  border-left: none;
+  border-right: none;
+  --dot-height: 14px;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 4px;
+    background-image: linear-gradient(to bottom, #333 50%, transparent 50%);
+    background-size: 4px var(--dot-height);
+    background-repeat: repeat-y;
+    height: 100%;
+    transition: background-size 0.3s ease-in-out;
+  }
+
+  &::before {
+    z-index: 1;
+    left: 0;
+  }
+
+  &::after {
+    right: 0;
+  }
+}
+
+.dropdown-container {
+  display: flex;
+  align-items: center;
+
+  .selected-role {
+    font-size: 1.5rem;
+    height: calc(1lh + 2rem);
+    margin-inline: auto;
+    width: 296px;
+
+    transition: height 0.3s ease-in-out;
+    position: relative;
+
+    &.expanded {
+      --dot-height: 13px;
+      height: calc(2lh + 2rem);
+    }
+    overflow: hidden;
+    ul {
+      transition: transform 0.3s ease-in-out;
+      padding-left: 0;
+      display: flex;
+      flex-direction: column;
+
+      li {
+        text-align: left;
+        padding: 1rem 1.25rem;
+        list-style-type: none;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.05;
+        letter-spacing: 0.32px;
+
+        h2 {
+          font-size: 2rem !important;
+        }
+      }
+    }
+  }
+}
+
+.SelectTrigger {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.SelectViewport {
+  width: 296px;
+}
+
+.SelectContent {
+  border: 4px solid hsla(225, 21%, 26%, 1);
+  border-left: none;
+  border-right: none;
+}
+
+.SelectItem {
+  background-color: white;
+  padding: 1rem 1.25rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: 0.32px;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.12s;
+
+  &:hover {
+    background-color: #fee8eb;
+  }
+
+  &[data-state='checked'] {
+    background-color: #fee8eb;
+  }
+}
