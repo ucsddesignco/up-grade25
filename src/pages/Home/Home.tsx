@@ -6,11 +6,9 @@ import CalendarGrayIcon from '../../assets/icons/calendar-gray.svg';
 import WeeksIcon from '../../assets/icons/weeks.svg';
 import ClockIcon from '../../assets/icons/clock.svg';
 
-import FAQCardMobile from '../../components/ui/Home/svg-components/FaqCardMobile';
-import FAQCard from '../../components/ui/Home/svg-components/FaqCard';
-import ApplyCardMobile from '../../components/ui/Home/svg-components/ApplyCardMobile';
-import ApplyCard from '../../components/ui/Home/svg-components/ApplyCard';
 import DashedArrow from '../../components/DashedArrow/DashedArrow';
+import Button from '../../components/Button/Button';
+import CTACard from '../../components/CTACard/CTACard';
 
 function Home() {
   return (
@@ -19,10 +17,10 @@ function Home() {
         <HeroSection />
         <div className="tablet-columns quiz-link">
           <p style={{ fontSize: '20px', color: '#646676' }}>Not sure what role to try?</p>
-          <button className="quiz-button">TAKE A BRIEF QUIZ</button>
+          <Button text="TAKE A BRIEF QUIZ" />
         </div>
       </div>
-      <DashedArrow/>
+      <DashedArrow />
       <div className="expectation-section">
         <p className="home-header">What to Expect</p>
         <p className="expectation-text">
@@ -53,15 +51,15 @@ function Home() {
       </div>
       <div className="tablet-columns quiz-link">
         <p style={{ fontSize: '20px', color: '#646676' }}>Want to drill down on the details?</p>
-        <button className="quiz-button">READ OVERVIEW</button>
+        <Button text="READ OVERVIEW" />
       </div>
       <div className="mobile-cards">
-        <FAQCardMobile />
-        <ApplyCardMobile />
+        <CTACard variation="faq" />
+        <CTACard variation="apply" />
       </div>
       <div className="cards">
-        <FAQCard />
-        <ApplyCard />
+        <CTACard variation="faq" isDesktop={true} />
+        <CTACard variation="apply" isDesktop={true} />
       </div>
     </div>
   );

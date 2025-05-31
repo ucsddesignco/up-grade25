@@ -10,6 +10,11 @@
   text-transform: uppercase;
   transition: background-color 0.2s ease-in-out;
   cursor: pointer;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  font-family: "Funnel Display";
 
   &:is(:hover, :focus-visible) {
     background-color: #4f576d;

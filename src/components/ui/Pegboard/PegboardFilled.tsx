@@ -150,9 +150,7 @@ const useBreakpoint = () => {
 const Ruler = ({ color }: { color: string }) => <BaseRuler color={color} />;
 const Sticky = ({
   color,
-  title,
   body,
-  titleFontSize,
   bodyFontSize
 }: {
   color: string;
@@ -164,9 +162,7 @@ const Sticky = ({
 }) => (
   <BaseSticky
     color={color}
-    title={title}
     body={body}
-    titleFontSize={titleFontSize}
     bodyFontSize={bodyFontSize}
   />
 );
