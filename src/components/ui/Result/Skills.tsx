@@ -1,24 +1,32 @@
 import './Skills.css';
-export default function Skills() {
+import { ROLE_LIST } from '../Role/constRoleData';
+import type { role } from '../PersonalityQuiz/constants';
+
+interface SkillsProps {
+  role: role;
+}
+
+export default function Skills({ role }: SkillsProps) {
+  const ROLE = ROLE_LIST[role];
+
   return (
     <div className="skillSection">
       <div className="skillBoxes">
         <div className="skillsContainer">
           <h4>Skills you'd develop: </h4>
           <ul>
-            <li>Hiearchy</li>
-            <li>Attention to detail</li>
-            <li>Creative Direction</li>
-            <li>Consistency</li>
+            {ROLE.skills.map(skill => (
+              <li key={role + skill}>{skill}</li>
+            ))}
           </ul>
         </div>
 
         <div className="leadContainer">
           <h4>What you'd lead: </h4>
           <ul>
-            <li>Visual Identity</li>
-            <li>Design Systems</li>
-            <li>Visual Quality Assurance (VQA)</li>
+            {ROLE.lead.map(lead => (
+              <li key={role + lead}>{lead}</li>
+            ))}
           </ul>
         </div>
       </div>
@@ -26,11 +34,7 @@ export default function Skills() {
       <div className="industrySection">
         <div className="industryContainer">
           <h4>Industry Impact:</h4>
-          <p>
-            Visual Designers nurture the cultural relationship between users and products. Their
-            work influences perception, usability, and identity. It can be the difference-maker
-            between a good and a delightful experience.
-          </p>
+          <p>{ROLE.impact}</p>
         </div>
 
         <div className="otherRolesContainer">
