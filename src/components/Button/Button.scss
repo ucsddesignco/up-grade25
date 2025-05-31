@@ -1,0 +1,17 @@
+.cta-button {
+  border: none;
+  display: flex;
+  padding: 12px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  background-color: #353c51;
+  color: #fffffe;
+  text-transform: uppercase;
+  transition: background-color 0.2s ease-in-out;
+  cursor: pointer;
+
+  &:is(:hover, :focus-visible) {
+    background-color: #4f576d;
+  }
+}

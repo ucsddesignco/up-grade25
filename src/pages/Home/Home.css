@@ -41,7 +41,6 @@ body {
   gap: 16px;
   width: 100%;
   padding-top: 24px;
-  border-bottom: #ebeae8 dashed 4px;
 }
 .tablet-columns > p {
   color: var(--color-content-secondary, #646676);

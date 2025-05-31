@@ -9,6 +9,7 @@ import DesktopSVG1 from '../../components/Overview/desktop/DesktopSvg';
 import DesktopSVG2 from '../../components/Overview/desktop/DesktopSvg2';
 import FaqCard from '../../components/Overview/FaqCard';
 import ApplyCard from '../../components/Overview/ApplyCard';
+import Button from '../../components/Button/Button';
 
 export default function OverviewDesktop() {
   return (
@@ -55,7 +56,7 @@ export default function OverviewDesktop() {
 
       <div className="desktop-columns quiz-link">
         <h2 style={{ fontSize: '20px', color: '#646676' }}>Not sure what role to try?</h2>
-        <button className="quiz-button">TAKE A BRIEF QUIZ</button>
+        <Button text="TAKE A BRIEF QUIZ" />
       </div>
 
       <div className="desktop-columns">

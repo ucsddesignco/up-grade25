@@ -1,4 +1,4 @@
-import './OverviewTablet.css';
+import './OverviewTablet.scss';
 import OverviewText from './OverviewText.json';
 
 import CalendarIcon from '../../assets/icons/icon-calendar.svg';
@@ -12,7 +12,7 @@ import ApplyCard from '../../components/Overview/ApplyCard';
 
 export default function OverviewTablet() {
   return (
-    <div className="overview-tablet-container">
+    <main id="overview-tablet-container">
       <h1 className="tablet-title">Overview</h1>
       <h2 className="tablet-heading1">About</h2>
       <p className="tablet-body">{OverviewText.about}</p>
@@ -101,6 +101,6 @@ export default function OverviewTablet() {
       </div>
       <FaqCard />
       <ApplyCard />
-    </div>
+    </main>
   );
 }

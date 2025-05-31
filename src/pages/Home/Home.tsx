@@ -10,6 +10,7 @@ import FAQCardMobile from '../../components/ui/Home/svg-components/FaqCardMobile
 import FAQCard from '../../components/ui/Home/svg-components/FaqCard';
 import ApplyCardMobile from '../../components/ui/Home/svg-components/ApplyCardMobile';
 import ApplyCard from '../../components/ui/Home/svg-components/ApplyCard';
+import DashedArrow from '../../components/DashedArrow/DashedArrow';
 
 function Home() {
   return (
@@ -21,6 +22,7 @@ function Home() {
           <button className="quiz-button">TAKE A BRIEF QUIZ</button>
         </div>
       </div>
+      <DashedArrow/>
       <div className="expectation-section">
         <p className="home-header">What to Expect</p>
         <p className="expectation-text">
