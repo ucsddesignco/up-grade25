@@ -7,14 +7,7 @@ import type { QuizOption } from './constants';
 export default function PersonalityQuiz() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const currentQuestion = QuizQuestions[currentQuestionIndex];
-  const [rolePoints, setRolePoints] = useState({
-    PMM: 0,
-    PM: 0,
-    UXR: 0,
-    UXD: 0,
-    SWE: 0,
-    Vis: 0
-  });
+  const [selectedAnswers, setSelectedAnswers] = useState<QuizOption[]>([]);
 
   const [answers, setAnswers] = useState(() => {
     // Load saved answers from localStorage
@@ -36,9 +29,6 @@ export default function PersonalityQuiz() {
     console.log(selectedOption);
   }, [selectedOption]);
 
-  useEffect(() => {
-    console.log(rolePoints);
-  }, [rolePoints]);
 
   const selectOption = (option: QuizOption) => {
     // Toggle selection - if clicking the same option, unselect it
@@ -52,14 +42,12 @@ export default function PersonalityQuiz() {
 
   // continue button -> move to the next question
   const handleContinue = () => {
-    setRolePoints(prevPoints => {
-      if (!selectedOption) return prevPoints;
+    setSelectedAnswers(prevAnswers => 
+        [...prevAnswers,
+        selectedOption],
+    );
 
-      return {
-        ...prevPoints,
-        [selectedOption.role]: prevPoints[selectedOption.role] + selectedOption.points
-      };
-    });
+    console.log(selectedAnswers);
 
     if (currentQuestionIndex < QuizQuestions.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1); // Move to next question
