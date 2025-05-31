@@ -1,15 +1,21 @@
 import './ResultCard.css';
-// import ROLE_LIST from './..//Role/constRoleData'
-import { Brush } from '../Role/roleSVGComponents';
+import type { role } from '../PersonalityQuiz/constants';
+import { ROLE_LIST } from '../Role/constRoleData';
 
-export default function ResultCard() {
+interface ResultCardProps {
+  role: role;
+}
+
+export default function ResultCard({ role }: ResultCardProps) {
+  const ROLE = ROLE_LIST[role];
+
   return (
     <>
       <div className="resultCard">
         <p>You could be a...</p>
-        <h1>Visual Designer</h1>
-        <Brush />
-        <p>General description will go right here. General description will go right here. </p>
+        <h1>{ROLE.role}</h1>
+        {ROLE.SVG}
+        <p>{ROLE.description}</p>
       </div>
     </>
   );

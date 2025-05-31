@@ -3,7 +3,6 @@ import { createRoot } from 'react-dom/client';
 import './global.scss';
 import App from './App';
 import { BrowserRouter, Route, Routes } from 'react-router';
-import Result from './pages/ResultPage/Result.tsx';
 import Roles from './pages/RolesPage/RolesPage.tsx';
 import Quiz from './pages/Quiz/Quiz.tsx';
 import Overview from './pages/Overview/Overview.tsx';
