@@ -13,7 +13,7 @@ export default function ResultCard({ role }: ResultCardProps) {
     <>
       <div className="resultCard">
         <p>You could be a...</p>
-        <h1>{ROLE.role}</h1>
+        <h1 style={{ color: ROLE.color }}>{ROLE.role}</h1>
         {ROLE.SVG}
         <p>{ROLE.description}</p>
       </div>
