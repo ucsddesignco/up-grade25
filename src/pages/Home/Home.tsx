@@ -1,10 +1,8 @@
 import './Home.css';
-import Pegboard from '../../components/ui/Pegboard/Pegboard';
+import HeroSection from '../../components/ui/Pegboard/HeroSection';
 import QuizVector from '../../components/ui/PersonalityQuiz/QuizVector/QuizVector';
 
 import CalendarGrayIcon from '../../assets/icons/calendar-gray.svg';
-import ToolIcon from '../../assets/icons/tool.svg';
-import MessageIcon from '../../assets/icons/message.svg';
 import WeeksIcon from '../../assets/icons/weeks.svg';
 import ClockIcon from '../../assets/icons/clock.svg';
 
@@ -17,35 +15,7 @@ function Home() {
   return (
     <div className="home-container">
       <div>
-        <div className="icon-section">
-          <div className="icon-line">
-            <img src={CalendarGrayIcon}></img>
-            <p>June 30 - Sept 5, 2025 (10 weeks)</p>
-          </div>
-          <div className="icon-line">
-            <img src={ToolIcon}></img>
-            <p>Refine a skill that matters to you.</p>
-          </div>
-          <div className="icon-line">
-            <img src={MessageIcon}></img>
-            <p>Join a team of UCSD students to ideate and innovate.</p>
-          </div>
-        </div>
-        <div className="icon-section-desktop">
-          <div className="icon-line">
-            <img src={CalendarGrayIcon}></img>
-            <p>June 30 - Sept 5, 2025 (10 weeks)</p>
-          </div>
-          <div className="icon-line">
-            <img src={MessageIcon}></img>
-            <p>Join a team of UCSD students to ideate and innovate.</p>
-          </div>
-          <div className="icon-line">
-            <img src={ToolIcon}></img>
-            <p>Refine a skill that matters to you.</p>
-          </div>
-        </div>
-        <Pegboard />
+        <HeroSection />
         <div className="tablet-columns quiz-link">
           <p style={{ fontSize: '20px', color: '#646676' }}>Not sure what role to try?</p>
           <button className="quiz-button">TAKE A BRIEF QUIZ</button>
