@@ -2,53 +2,29 @@ import { useEffect, useState } from 'react';
 import './PersonalityQuiz.scss';
 import QuizVector from './QuizVector/QuizVector';
 import { QuizQuestions } from './constants';
-import type { QuizOption } from './constants';
+import type { QuizOption, role } from './constants';
 
 export default function PersonalityQuiz() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  const currentQuestion = QuizQuestions[currentQuestionIndex];
-  const [selectedAnswers, setSelectedAnswers] = useState<QuizOption[]>([]);
-
-  const [answers, setAnswers] = useState(() => {
-    // Load saved answers from localStorage
-    if (typeof window !== 'undefined') {
-      const saved = localStorage.getItem('quizAnswers');
-      return saved ? JSON.parse(saved) : Array(QuizQuestions.length).fill(null);
-    }
-    return Array(QuizQuestions.length).fill(null);
-  });
-
-  // Save answers to localStorage when they change
-  useEffect(() => {
-    localStorage.setItem('quizAnswers', JSON.stringify(answers));
-  }, [answers]);
-
+  const [selectedAnswers, setSelectedAnswers] = useState<(QuizOption | null)[]>(
+    Array(QuizQuestions.length).fill(null)
+  );
   const [selectedOption, setSelectedOption] = useState<QuizOption | null>(null);
 
-  useEffect(() => {
-    console.log(selectedOption);
-  }, [selectedOption]);
-
-
   const selectOption = (option: QuizOption) => {
-    // Toggle selection - if clicking the same option, unselect it
-    const newValue = selectedOption?.id === option.id ? null : option;
-    setSelectedOption(newValue);
-
-    const newAnswers = [...answers];
-    newAnswers[currentQuestionIndex] = newValue;
-    setAnswers(newAnswers);
+    setSelectedAnswers(prevAnswers => {
+      const newAnswers = [...prevAnswers];
+      if (newAnswers[currentQuestionIndex]?.id === option.id) {
+        newAnswers[currentQuestionIndex] = null;
+      } else {
+        newAnswers[currentQuestionIndex] = option;
+      }
+      return newAnswers;
+    });
   };
 
   // continue button -> move to the next question
   const handleContinue = () => {
-    setSelectedAnswers(prevAnswers => 
-        [...prevAnswers,
-        selectedOption],
-    );
-
-    console.log(selectedAnswers);
-
     if (currentQuestionIndex < QuizQuestions.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1); // Move to next question
     }
@@ -61,6 +37,49 @@ export default function PersonalityQuiz() {
     }
   };
 
+  function getTopRole(answers: (QuizOption | null)[]): role | null {
+    // Initialize all role scores to 0
+    const roleScores: Record<role, number> = {
+      PMM: 0,
+      PM: 0,
+      UXR: 0,
+      UXD: 0,
+      SWE: 0,
+      Vis: 0
+    };
+
+    // Sum up scores from all answers
+    answers.forEach(answer => {
+      if (!answer) return;
+
+      Object.entries(answer.pointDist).forEach(([roleKey, points]) => {
+        roleScores[roleKey as role] += points;
+      });
+    });
+
+    // Find the role with the highest score
+    let topRole: role | null = null;
+    let maxScore = -Infinity;
+
+    for (const [roleKey, score] of Object.entries(roleScores) as [role, number][]) {
+      if (score > maxScore) {
+        maxScore = score;
+        topRole = roleKey;
+      }
+    }
+
+    return topRole;
+  }
+
+  function handleReveal() {
+    console.log('YOUR ROLE:', getTopRole(selectedAnswers));
+  }
+
+  useEffect(() => {
+    console.log(selectedAnswers);
+    setSelectedOption(selectedAnswers[currentQuestionIndex]);
+  }, [selectedAnswers, currentQuestionIndex]);
+
   return (
     <section id="quiz-section">
       <div className="quiz-container">
@@ -72,11 +91,11 @@ export default function PersonalityQuiz() {
             </h4>
             <QuizVector />
           </div>
-          <h3 className="question-title">{currentQuestion.question}</h3>
+          <h3 className="question-title">{QuizQuestions[currentQuestionIndex].question}</h3>
         </div>
         <div className="quiz-options">
           <ul>
-            {currentQuestion.option.map(option => (
+            {QuizQuestions[currentQuestionIndex].option.map(option => (
               <li
                 key={option.id}
                 className={selectedOption && selectedOption.id === option.id ? 'selected' : ''}
@@ -93,15 +112,24 @@ export default function PersonalityQuiz() {
           <button className="backBtn" onClick={handleBack} disabled={currentQuestionIndex === 0}>
             Back
           </button>
-          <button
-            className="continueBtn"
-            onClick={handleContinue}
-            disabled={selectedOption === null}
-          >
-            {currentQuestionIndex === QuizQuestions.length - 1 && selectedOption
-              ? 'Reveal Result'
-              : 'Continue'}
-          </button>
+
+          {currentQuestionIndex !== QuizQuestions.length - 1 ? (
+            <button
+              className="continueBtn"
+              onClick={handleContinue}
+              disabled={selectedOption === null}
+            >
+              Continue
+            </button>
+          ) : (
+            <button
+              className="continueBtn"
+              onClick={handleReveal}
+              disabled={selectedOption === null}
+            >
+              Reveal Result
+            </button>
+          )}
         </div>
       </div>
     </section>
