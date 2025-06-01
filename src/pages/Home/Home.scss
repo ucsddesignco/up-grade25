@@ -18,11 +18,14 @@
   > section {
     display: grid;
     /* layout bleed */
-    padding-inline: 16px;
     grid-template-columns: 1fr min(var(--section-max-width, 924px), 100%) 1fr;
 
     > * {
       grid-column: 2;
+      padding-inline: 24px;
+      @media (min-width: 769px) {
+        padding-inline: 0;
+      }
     }
 
     .full-bleed {
@@ -72,14 +75,13 @@
     margin-bottom: var(--XS);
   }
 
-  .home-header {
-    font-family: 'Funnel Display';
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 100%; /* 40px */
-    letter-spacing: 0.4px;
-    text-align: left;
+  .cta-section {
+    > div {
+      padding: 0;
+    }
+    @media (min-width: 769px) {
+      padding-top: 120px;
+    }
   }
 
   .benefits {

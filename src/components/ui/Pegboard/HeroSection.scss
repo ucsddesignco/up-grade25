@@ -107,6 +107,21 @@
 
   #home-pegboard-container {
     margin-block: var(--M);
+    padding: 0;
+  }
+
+  .keen-slider__slide {
+    // Mobile pegboard has extra padding because there are z-index issues with the sticky note
+    min-width: calc(288px + 50px);
+    overflow: visible;
+
+    @media (min-width: 769px) {
+      min-width: calc(624px + 32px);
+    }
+
+    @media (min-width: 1440px) {
+      min-width: calc(1200px + 64px);
+    }
   }
 
   .keen-slider__slide > div {

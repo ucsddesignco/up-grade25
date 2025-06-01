@@ -7,7 +7,7 @@ import './ExpectationsSection.scss';
 function ExpectationsSection() {
   return (
     <section className="expectation-section">
-      <h2 className="home-header">What to Expect</h2>
+      <h2>What to Expect</h2>
       <p className="expectation-text">
         UP-Grade is a 10-week, mentor-driven summer program where student teams work on real-world
         product challenges pitched by industry professionals. Over 10 weeks, you’ll develop the

@@ -17,7 +17,7 @@ function Home() {
         </div>
         <DashedArrow className="full-bleed" />
       </section>
-      <section>
+      <section className="cta-section">
         <div className="mobile-cards">
           <CTACard variation="faq" />
           <CTACard variation="apply" />

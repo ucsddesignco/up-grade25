@@ -16,6 +16,10 @@ function HeroSection() {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const isProgammaticMove = useRef(false);
   const [sliderRef, instanceRef] = useKeenSlider({
+    slides: {
+      perView: 'auto',
+      origin: 'center'
+    },
     loop: true,
     slideChanged() {
       const currentIndex = instanceRef.current?.track.details.rel;
