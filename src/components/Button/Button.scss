@@ -1,5 +1,4 @@
 .cta-button {
-  border: none;
   display: flex;
   padding: 12px 24px;
   justify-content: center;
@@ -8,15 +7,20 @@
   background-color: #353c51;
   color: #fffffe;
   text-transform: uppercase;
-  transition: background-color 0.2s ease-in-out;
+  transition:
+    background-color 0.2s ease-in-out,
+    color 0.2s ease-in-out;
+  border: 2px solid #353c51;
   cursor: pointer;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
   font-family: 'Funnel Display';
+  text-decoration: none;
 
   &:is(:hover, :focus-visible) {
-    background-color: #4f576d;
+    color: #353c51;
+    background-color: #fffffe;
   }
 }

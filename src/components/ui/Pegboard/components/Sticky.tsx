@@ -52,14 +52,14 @@ const BaseSticky = ({
 
   return (
     <svg
+      {...props}
       width="221"
       height="271"
       viewBox="0 0 221 271"
       fill="none"
-      {...props}
       style={{ rotate: '2deg' }}
     >
-      <g clipPath="url(#clip0_8480_11049)">
+      <g clipPath="url(#clip0_8547_8398)">
         <path
           d="M218.645 36.7568H2.64507L2.64453 268.757H168.645L218.645 218.757V36.7568Z"
           fill="#FFFFFE"
@@ -84,7 +84,7 @@ const BaseSticky = ({
         {renderBodyText()}
       </g>
       <defs>
-        <clipPath id="clip0_8480_11049">
+        <clipPath id="clip0_8547_8398">
           <rect width="220" height="270" fill="white" transform="translate(0.644531 0.756836)" />
         </clipPath>
       </defs>

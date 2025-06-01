@@ -8,27 +8,26 @@ export default function Pegboard({ color = '#EBEAE8' }: PegboardProps) {
   return (
     <>
       <div id="mobile-pegboard">
-        <div id="mobile-pegboard-grid" />
         <svg
-          width="294"
+          width="288"
           height="1010"
-          viewBox="0 0 294 1494"
+          viewBox="0 0 288 1010"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <rect x="2" y="2" width="290" height="1490" rx="6" fill={color} />
-          <rect x="2" y="2" width="290" height="1490" rx="6" fill="url(#pattern0_6943_33621)" />
-          <rect x="2" y="2" width="290" height="1490" rx="6" stroke="#353C51" strokeWidth="4" />
+          <rect x="2" y="2" width="284" height="1006" rx="6" fill={color} />
+          <rect x="2" y="2" width="284" height="1006" rx="6" fill="url(#pattern0_8547_8339)" />
+          <rect x="2" y="2" width="284" height="1006" rx="6" stroke="#353C51" strokeWidth="4" />
           <defs>
             <pattern
-              id="pattern0_6943_33621"
+              id="pattern0_8547_8339"
               patternUnits="userSpaceOnUse"
-              viewBox="9903 32429 48 48"
-              width="16.326530612244898%"
-              height="3.2128514056224895%"
+              viewBox="74961 15840 48 48"
+              width="16.666666666666664%"
+              height="4.7524752475247523%"
               patternContentUnits="objectBoundingBox"
             >
-              <rect x="9923" y="32447" width="8" height="12" rx="4" fill="#353C51" />
+              <rect x="74981" y="15858" width="8" height="12" rx="4" fill="#353C51" />
             </pattern>
           </defs>
         </svg>

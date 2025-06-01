@@ -1,0 +1,74 @@
+#home-container {
+  .expectation-section {
+    width: 100%;
+    gap: var(--M) 0;
+  }
+
+  .expectation-text {
+    font-family: 'Funnel Sans';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: left;
+  }
+
+  .expectation-icons {
+    display: flex;
+    flex-direction: column;
+    gap: var(--XS);
+  }
+
+  .expectation-row {
+    display: flex;
+    gap: var(--XS);
+    font-size: 20px;
+    align-items: center;
+    color: #646676;
+  }
+
+  @media (min-width: 769px) {
+    .expectation-section {
+      flex-direction: column;
+      align-items: center;
+      gap: var(--M);
+    }
+
+    .expectation-icons {
+      flex-direction: row;
+      display: flex;
+      gap: var(--XS, 12px) var(--S, 24px);
+      flex-wrap: nowrap;
+    }
+
+    .expectation-row {
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      letter-spacing: 0.24px;
+      color: #646676;
+    }
+
+    .expectation-text {
+      text-align: center;
+    }
+
+    .benefits {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: center;
+      line-height: 0;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .expectation-section {
+      padding: var(--M, 40px) 0px;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--M, 40px);
+    }
+  }
+}
