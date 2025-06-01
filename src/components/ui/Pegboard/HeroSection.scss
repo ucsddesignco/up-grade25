@@ -30,7 +30,7 @@
         gap: 0.25rem;
       }
 
-      @media (min-width: 370px) {
+      @media (min-width: 387px) {
         height: calc(3lh + 5rem);
       }
 
@@ -38,6 +38,7 @@
         margin-inline: auto;
         text-align: center;
         gap: 0;
+        height: calc(2lh + 3.5rem);
 
         > span:first-child {
           display: flex;
@@ -49,7 +50,7 @@
 
       @media (min-width: 1440px) {
         flex-direction: row;
-        height: calc(2lh + 3.5rem);
+        height: calc(1lh + 3.5rem);
         gap: 2rem;
         align-items: center;
 

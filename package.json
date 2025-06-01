@@ -12,6 +12,7 @@
     "lint-check": "eslint && prettier --check ."
   },
   "dependencies": {
+    "@radix-ui/react-dialog": "^1.1.14",
     "@radix-ui/react-select": "^2.2.5",
     "keen-slider": "^6.8.6",
     "react": "^19.1.0",

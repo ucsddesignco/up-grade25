@@ -1,5 +1,5 @@
 #home-container {
-  padding-top: 116px;
+  padding-top: 1rem;
   padding-bottom: 160px;
   display: flex;
   flex-direction: column;
@@ -8,6 +8,8 @@
   --section-max-width: 393px;
 
   @media (min-width: 769px) {
+    padding-top: 116px;
+
     --section-max-width: 641px;
   }
 

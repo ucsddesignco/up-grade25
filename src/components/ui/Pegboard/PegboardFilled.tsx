@@ -1,61 +1,34 @@
-import React from 'react';
+import { memo } from 'react';
 import './PegboardFilled.css';
 import PegboardEmpty from './PegboardEmpty';
 import { Shelf, ShelfMobile, Ruler as BaseRuler, Sticky as BaseSticky } from './components';
-import stickyText from './stickyText.json';
-import { ROLE_COLORS } from './constants';
+import { ROLE_COLORS, STICKY_TEXT } from './constants';
 
 interface PegboardFilledProps {
   role: keyof typeof ROLE_COLORS;
-  boardIndex: number;
 }
 
-interface StickyProps {
-  color: string;
-  body?: string;
-  bodyFontSize?: string;
-  className?: string;
-}
+const PegboardFilled = ({ role }: PegboardFilledProps) => {
+  const stickyTextData = STICKY_TEXT.find(item => item.title === role);
 
-interface RulerProps {
-  color: string;
-  className: string;
-}
-
-const Ruler = ({ color, className }: RulerProps) => (
-  <BaseRuler color={color} className={className} />
-);
-
-const Sticky = ({ color, body, bodyFontSize, className }: StickyProps) => (
-  <BaseSticky color={color} body={body} bodyFontSize={bodyFontSize} className={className} />
-);
-
-const PegboardFilled: React.FC<PegboardFilledProps> = ({ role, boardIndex }) => {
-  if (boardIndex >= 6) {
-    console.warn(`Invalid board index: ${boardIndex}`);
-    return null;
-  }
-
-  // Get sticky text data
-  const stickyTextData = stickyText.stickyText.find(item => item.id === boardIndex);
-
-  // Get component variants for this board
-  const PhotoComponent = ROLE_COLORS[role].photo;
-  const rulerColor = ROLE_COLORS[role].text;
-  const stickyColor = ROLE_COLORS[role].text;
-  const UniqueComponent = ROLE_COLORS[role].unique;
+  const {
+    photo: PhotoComponent,
+    text: textColor,
+    unique: UniqueComponent,
+    pegboard: pegboardColor
+  } = ROLE_COLORS[role];
 
   return (
     <div id="filled-pegboard-container">
-      <PegboardEmpty color={ROLE_COLORS[role].pegboard} />
+      <PegboardEmpty color={pegboardColor} />
 
       <PhotoComponent className="pegboard-item photo-component" />
 
-      <Ruler color={rulerColor} className="pegboard-item ruler-component" />
+      <BaseRuler color={textColor} className="pegboard-item ruler-component" />
 
-      <Sticky
+      <BaseSticky
         className="pegboard-item sticky-component"
-        color={stickyColor}
+        color={textColor}
         body={stickyTextData?.body}
         bodyFontSize={stickyTextData?.bodyFontSize}
       />
@@ -68,4 +41,4 @@ const PegboardFilled: React.FC<PegboardFilledProps> = ({ role, boardIndex }) => 
   );
 };
 
-export default PegboardFilled;
+export default memo(PegboardFilled);

@@ -77,7 +77,7 @@ function HeroSection() {
       <div ref={sliderRef} id="home-pegboard-container" className="keen-slider full-bleed">
         {ROLES.map((role, idx) => (
           <div key={'pegboard' + idx} className="keen-slider__slide">
-            <PegboardFilled role={role} boardIndex={idx} />
+            <PegboardFilled role={role} />
           </div>
         ))}
       </div>
