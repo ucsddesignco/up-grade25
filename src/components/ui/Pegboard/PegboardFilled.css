@@ -2,6 +2,11 @@
   position: relative;
   width: 100%;
   height: 100%;
+  cursor: grab;
+
+  &:active {
+    cursor: grabbing;
+  }
 
   svg {
     max-width: none;
