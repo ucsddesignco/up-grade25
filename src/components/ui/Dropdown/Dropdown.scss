@@ -33,7 +33,7 @@
 
   .selected-role {
     font-size: 1.5rem;
-    height: calc(1lh + 2rem);
+    height: calc(1lh + 2.5rem);
     margin-inline: auto;
     width: 296px;
 
@@ -43,7 +43,7 @@
 
     &.expanded {
       --dot-height: 13px;
-      height: calc(2lh + 2rem);
+      height: calc(2lh + 3rem);
     }
 
     ul {

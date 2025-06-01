@@ -42,19 +42,21 @@ function HeroSection() {
   return (
     <section id="pegboard-section">
       <div id="title-container">
-        <div>
-          <h2 className="title-text">UP-Grade your</h2>
-          <Dropdown
-            selected={selectedIndex}
-            onChange={val => {
-              const newIndex = Number(val);
-              setSelectedIndex(newIndex);
-              isProgammaticMove.current = true;
-              instanceRef.current?.moveToIdx(newIndex);
-            }}
-          />
-        </div>
-        <h2 className="title-text">skills this summer.</h2>
+        <h1 id="title-text">
+          <span>
+            <span>UP-Grade your</span>
+            <Dropdown
+              selected={selectedIndex}
+              onChange={val => {
+                const newIndex = Number(val);
+                setSelectedIndex(newIndex);
+                isProgammaticMove.current = true;
+                instanceRef.current?.moveToIdx(newIndex);
+              }}
+            />
+          </span>
+          <span>skills this summer.</span>
+        </h1>
       </div>
 
       <div className="icon-section">

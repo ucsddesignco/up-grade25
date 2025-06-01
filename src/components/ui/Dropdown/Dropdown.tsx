@@ -54,9 +54,9 @@ export default function Dropdown({ selected, onChange }: DropdownProps) {
             >
               {ROLES.map(role => (
                 <li key={role}>
-                  <h2 className="role-text" style={{ color: ROLE_COLORS[role].text }}>
+                  <p className="role-text" style={{ color: ROLE_COLORS[role].text }}>
                     {role}
-                  </h2>
+                  </p>
                 </li>
               ))}
             </ul>
