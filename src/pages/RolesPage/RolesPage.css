@@ -54,11 +54,10 @@
   position: relative;
   /* helps it be centered of the page */
   margin-inline: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  padding-inline: 4rem;
+  place-items: center;
 }
 
 .phonePegboard {
@@ -89,11 +88,10 @@
     height: 1118px;
     position: relative;
     margin-inline: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-inline: 4rem;
+    padding-block: 1rem;
   }
 
   .quiz-titles {
@@ -121,10 +119,13 @@
     height: 733px;
     position: relative;
     margin-inline: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, min-content);
+    grid-template-rows: repeat(2, min-content);
+    justify-content: space-between;
+    align-content: space-between;
+    padding-inline: 4rem;
+    padding-top: 3rem;
+    padding-bottom: 4rem;
   }
 }
