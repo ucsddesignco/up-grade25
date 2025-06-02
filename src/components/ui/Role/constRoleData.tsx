@@ -65,7 +65,7 @@ export const ROLE_LIST: Record<role, RoleDetails> = {
     color: '#F95984',
     description: 'General description will go right here. General description will go right here.',
     skills: ['Hierarchy', 'Attention to detail', 'Creative Direction', 'Consistency'],
-    lead: ['Visual Identity', 'Design Systems', 'VQA'],
+    lead: ['Visual Identity', 'Design Systems', 'Visual Quality Assurance (VQA'],
     impact: `Visual Designers nurture the cultural relationship 
         between users and products. Their work influences perception,
         usability, and identity. It can be the difference-maker between
