@@ -123,7 +123,6 @@ const Overview = () => {
         </section>
       </main>
 
-      
       <main id="overview-tablet-container">
         <h1 className="tablet-title">Overview</h1>
         <h2 className="tablet-heading1">About</h2>
