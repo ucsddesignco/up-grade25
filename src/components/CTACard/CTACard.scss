@@ -24,9 +24,15 @@
   .cta-card-button {
     width: fit-content;
     background-color: var(--background-color);
+    border: 2px solid var(--background-color);
     color: var(--text-color);
     position: absolute;
     right: 24px;
     bottom: 24px;
+
+    &:is(:hover, :focus-visible) {
+      color: var(--background-color);
+      background-color: var(--text-color);
+    }
   }
 }

@@ -13,7 +13,7 @@ import Button from '../../components/Button/Button';
 
 export default function OverviewDesktop() {
   return (
-    <div className="overview-desktop-container">
+    <div id="overview-desktop-container">
       <h1 className="desktop-title">Overview</h1>
       <div className="about-row">
         <div className="about-col">

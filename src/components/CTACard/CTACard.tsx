@@ -1,4 +1,3 @@
-import { useNavigate } from 'react-router';
 import Button from '../Button/Button';
 import './CTACard.scss';
 import MobileFAQContainer from './SVGs/MobileFAQContainer.svg?react';
@@ -29,7 +28,6 @@ interface CTACardProps {
 }
 
 export default function CTACard({ variation = 'faq', isDesktop = false }: CTACardProps) {
-  const navigate = useNavigate();
   return (
     // prettier-ignore
     <div
@@ -50,13 +48,7 @@ export default function CTACard({ variation = 'faq', isDesktop = false }: CTACar
         <p>{VARIATIONS[variation].header}</p>
       </div>
       <Button
-        onClick={() => {
-          if (VARIATIONS[variation].link.startsWith('http')) {
-            window.open(VARIATIONS[variation].link, '_blank');
-          } else {
-            navigate(VARIATIONS[variation].link);
-          }
-        }}
+        link={VARIATIONS[variation].link}
         text={VARIATIONS[variation].button}
         className="cta-card-button"
       />

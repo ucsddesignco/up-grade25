@@ -3,19 +3,6 @@
   position: relative;
 }
 
-#mobile-pegboard-grid {
-  position: absolute;
-  top: 22px;
-  left: 22px;
-  width: calc(100% - 53px);
-  height: calc(100% - 55px);
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(30, 1fr);
-  pointer-events: none;
-  z-index: 1;
-}
-
 #tablet-pegboard {
   display: none;
 }

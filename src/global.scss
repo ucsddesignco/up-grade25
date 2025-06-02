@@ -1,6 +1,8 @@
 :root {
-  --XL: 40px;
-  --XS: 8px;
+  --XL: 80px;
+  --L: 64px;
+  --M: 40px;
+  --XS: 12px;
 }
 
 *,
@@ -14,7 +16,7 @@
   font-family: 'Funnel Display';
   font-style: normal;
   font-weight: 700;
-  src: url('./assets/fonts/funnel-display-bold.woff2') format('woff2');
+  src: url('/fonts/funnel-display-bold.woff2') format('woff2');
 }
 
 @font-face {
@@ -22,7 +24,7 @@
   font-family: 'Funnel Display';
   font-style: normal;
   font-weight: 500;
-  src: url('./assets/fonts/funnel-display-medium.woff2') format('woff2');
+  src: url('/fonts/funnel-display-medium.woff2') format('woff2');
 }
 
 @font-face {
@@ -30,7 +32,15 @@
   font-family: 'Funnel Sans';
   font-style: normal;
   font-weight: 400;
-  src: url('./assets/fonts/funnel-sans-regular.woff2') format('woff2');
+  src: url('/fonts/funnel-sans-regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Funnel Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/fonts/funnel-sans-semibold.woff2') format('woff2');
 }
 
 @font-face {
@@ -38,7 +48,7 @@
   font-family: 'Funnel Sans';
   font-style: normal;
   font-weight: 700;
-  src: url('./assets/fonts/funnel-sans-bold.woff2') format('woff2');
+  src: url('/fonts/funnel-sans-bold.woff2') format('woff2');
 }
 
 @font-face {
@@ -46,7 +56,7 @@
   font-family: 'Funnel Sans';
   font-style: normal;
   font-weight: 500;
-  src: url('./assets/fonts/funnel-sans-medium.woff2') format('woff2');
+  src: url('/fonts/funnel-sans-medium.woff2') format('woff2');
 }
 
 * {
@@ -77,6 +87,7 @@ html {
 
 body {
   line-height: 1.5;
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
 

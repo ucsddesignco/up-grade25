@@ -1,25 +1,122 @@
 #pegboard-section {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+  margin-inline: auto;
+
+  --section-max-width: 393px;
+
+  @media (min-width: 769px) {
+    --section-max-width: 641px;
+  }
+
+  @media (min-width: 1440px) {
+    --section-max-width: 1018px;
+  }
 
   #title-container {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin-inline: auto;
-    gap: 0.25rem;
+    #title-text {
+      all: unset;
+      font-size: 2.5rem;
+      font-weight: 600;
+      font-family: 'Funnel Sans';
+      line-height: 1.2;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      gap: 0.5rem;
+      height: calc(4lh + 5rem);
 
-    @media (min-width: 1440px) {
+      > span:first-child {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+      }
+
+      @media (min-width: 387px) {
+        height: calc(3lh + 5rem);
+      }
+
+      @media (min-width: 769px) {
+        margin-inline: auto;
+        text-align: center;
+        gap: 0;
+        height: calc(2lh + 3.5rem);
+
+        > span:first-child {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 1.5rem;
+        }
+      }
+
+      @media (min-width: 1440px) {
+        flex-direction: row;
+        height: calc(1lh + 3.5rem);
+        gap: 2rem;
+        align-items: center;
+
+        > div {
+          gap: 2rem;
+        }
+      }
+    }
+  }
+
+  .icon-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: var(--L);
+
+    @media (min-width: 769px) {
       flex-direction: row;
-      height: calc(2lh + 3.5rem);
-      gap: 2rem;
-      align-items: center;
     }
 
-    h2 {
-      font-size: 2.375rem;
-      font-weight: 500;
+    @media (min-width: 1440px) {
+      margin-top: var(--XL);
+      justify-content: space-between;
+    }
+
+    .icon-line {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 12px;
+      &:last-child p {
+        max-width: 30ch;
+
+        @media (min-width: 769px) {
+          max-width: 100%;
+        }
+      }
+    }
+
+    .icon-line > p {
+      font-family: 'Funnel Sans';
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      color: #646676;
+    }
+  }
+
+  #home-pegboard-container {
+    margin-block: var(--M);
+    padding: 0;
+  }
+
+  .keen-slider__slide {
+    // Mobile pegboard has extra padding because there are z-index issues with the sticky note
+    min-width: calc(288px + 50px);
+    overflow: visible;
+
+    @media (min-width: 769px) {
+      min-width: calc(624px + 32px);
+    }
+
+    @media (min-width: 1440px) {
+      min-width: calc(1200px + 64px);
     }
   }
 

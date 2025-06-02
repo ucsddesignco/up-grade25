@@ -4,16 +4,22 @@ import 'keen-slider/keen-slider.min.css';
 import { useKeenSlider } from 'keen-slider/react';
 import { useRef, useState } from 'react';
 import './HeroSection.scss';
-import ToolIcon from '../../../assets/icons/tool.svg';
-import MessageIcon from '../../../assets/icons/message.svg';
-import CalendarGrayIcon from '../../../assets/icons/calendar-gray.svg';
-
-const SLIDE_COLORS = ['#FFF2DC', '#DCEEFF', '#FFE8DC', '#FEE8EB', '#E2F5F9', '#E7F3DD'];
+import ToolIcon from '../../../assets/icons/tool.svg?react';
+import MessageIcon from '../../../assets/icons/message.svg?react';
+import CalendarGrayIcon from '../../../assets/icons/calendar-gray.svg?react';
+import { ROLES } from './constants.tsx';
+import Button from '../../Button/Button.tsx';
+import DashedArrow from '../../DashedArrow/DashedArrow.tsx';
 
 function HeroSection() {
+  // Randomize role order
   const [selectedIndex, setSelectedIndex] = useState(0);
   const isProgammaticMove = useRef(false);
   const [sliderRef, instanceRef] = useKeenSlider({
+    slides: {
+      perView: 'auto',
+      origin: 'center'
+    },
     loop: true,
     slideChanged() {
       const currentIndex = instanceRef.current?.track.details.rel;
@@ -36,55 +42,51 @@ function HeroSection() {
   return (
     <section id="pegboard-section">
       <div id="title-container">
-        <h2>UP-Grade your</h2>
-        <Dropdown
-          selected={selectedIndex}
-          onChange={val => {
-            const newIndex = Number(val);
-            setSelectedIndex(newIndex);
-            isProgammaticMove.current = true;
-            instanceRef.current?.moveToIdx(newIndex);
-          }}
-        />
-        <h2>skills this summer</h2>
+        <h1 id="title-text">
+          <span>
+            <span>UP-Grade your</span>
+            <Dropdown
+              selected={selectedIndex}
+              onChange={val => {
+                const newIndex = Number(val);
+                setSelectedIndex(newIndex);
+                isProgammaticMove.current = true;
+                instanceRef.current?.moveToIdx(newIndex);
+              }}
+            />
+          </span>
+          <span>skills this summer.</span>
+        </h1>
       </div>
 
       <div className="icon-section">
         <div className="icon-line">
-          <img src={CalendarGrayIcon}></img>
+          <CalendarGrayIcon width={20} height={20} viewBox="0 0 32 32" />
           <p>June 30 - Sept 5, 2025 (10 weeks)</p>
         </div>
         <div className="icon-line">
-          <img src={ToolIcon}></img>
+          <ToolIcon />
           <p>Refine a skill that matters to you.</p>
         </div>
         <div className="icon-line">
-          <img src={MessageIcon}></img>
+          <MessageIcon />
           <p>Join a team of UCSD students to ideate and innovate.</p>
-        </div>
-      </div>
-      <div className="icon-section-desktop">
-        <div className="icon-line">
-          <img src={CalendarGrayIcon}></img>
-          <p>June 30 - Sept 5, 2025 (10 weeks)</p>
-        </div>
-        <div className="icon-line">
-          <img src={MessageIcon}></img>
-          <p>Join a team of UCSD students to ideate and innovate.</p>
-        </div>
-        <div className="icon-line">
-          <img src={ToolIcon}></img>
-          <p>Refine a skill that matters to you.</p>
         </div>
       </div>
 
-      <div ref={sliderRef} id="pegboard-container" className="keen-slider">
-        {SLIDE_COLORS.map((color, idx) => (
+      <div ref={sliderRef} id="home-pegboard-container" className="keen-slider full-bleed">
+        {ROLES.map((role, idx) => (
           <div key={'pegboard' + idx} className="keen-slider__slide">
-            <PegboardFilled color={color} boardIndex={idx} />
+            <PegboardFilled role={role} />
           </div>
         ))}
       </div>
+
+      <div className="tablet-columns quiz-link">
+        <p style={{ fontSize: '20px', color: '#646676' }}>Not sure what role to try?</p>
+        <Button text="TAKE A BRIEF QUIZ" link="/quiz" />
+      </div>
+      <DashedArrow className="full-bleed" />
     </section>
   );
 }
