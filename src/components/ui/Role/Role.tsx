@@ -14,7 +14,16 @@ export default function Role({ roleKey, title, SVG }: RoleProps) {
   return (
     <div className="roleComp" onClick={() => navigate(`/roles/${roleKey}`)}>
       <h2 className="roleTitle">{title}</h2>
-      {SVG}
+      <div
+        style={{
+          height: '240px',
+          display: 'flex',
+          alignItems: 'flex-start',
+          justifyContent: 'center'
+        }}
+      >
+        {SVG}
+      </div>
     </div>
   );
 }
