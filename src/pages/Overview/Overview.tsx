@@ -7,7 +7,6 @@ import ClockIcon from '../../assets/icons/icon-clock.svg';
 import Phone from '../../components/Overview/mobile/Phone.tsx';
 import Clock from '../../components/Overview/mobile/Clock.tsx';
 import Paintbrush from '../../components/Overview/mobile/Paintbrush.tsx';
-import ArrowMeasure from '../../components/Overview/mobile/ArrowMeasure.svg';
 
 import FaqCard from '../../components/Overview/mobile/FaqCardMobile.tsx';
 import ApplyCard from '../../components/Overview/mobile/ApplyCardMobile.tsx';
@@ -20,6 +19,7 @@ import DesktopSVG2 from '../../components/Overview/desktop/DesktopSvg2';
 import OverviewText from './OverviewText.json';
 import Button from '../../components/Button/Button.tsx';
 import CTACard from '../../components/CTACard/CTACard.tsx';
+import DashedArrow from '../../components/DashedArrow/DashedArrow.tsx';
 
 const Overview = () => {
   return (
@@ -62,7 +62,7 @@ const Overview = () => {
               Not sure what role to try?
             </h2>
             <Button text="TAKE A BRIEF QUIZ" />
-            <img className="mobile-arrow" src={ArrowMeasure}></img>
+            <DashedArrow className="full-bleed" />
           </div>
 
           <div>
@@ -125,58 +125,66 @@ const Overview = () => {
 
       <main id="overview-tablet-container">
         <h1 className="tablet-title">Overview</h1>
-        <h2 className="tablet-heading1">About</h2>
-        <p className="tablet-body">{OverviewText.about}</p>
+        <div className="tablet-section">
+          <h2 className="tablet-heading1">About</h2>
+          <p className="tablet-body">{OverviewText.about}</p>
 
-        <div className="tablet-columns">
-          <div className="tablet-column">
-            <h3 className="tablet-heading2 tablet-column-heading">
-              {OverviewText['curious-heading']}
-            </h3>
-            <p className="tablet-body">
-              {OverviewText.curious1}
-              {OverviewText.curious2}
-            </p>
-          </div>
-          <div className="tablet-column">
-            <h3 className="tablet-heading2 tablet-column-heading">Why Should I Apply? </h3>
-            <p className="tablet-body">{OverviewText['why-apply']}</p>
-          </div>
-        </div>
-
-        <TabletSVG1 />
-
-        <h2 className="tablet-heading1">The Task</h2>
-        <div className="tablet-columns">
-          <div className="tablet-column">
-            <h3 className="tablet-heading2 tablet-column-heading">
-              {OverviewText['task-heading1']}
-            </h3>
-            <p className="tablet-body">{OverviewText['task-text1']}</p>
-          </div>
-          <div className="tablet-column">
-            <h3 className="tablet-heading2 tablet-column-heading">
-              {OverviewText['task-heading2']}
-            </h3>
-            <p className="tablet-body">{OverviewText['task-text2']}</p>
+          <div className="tablet-columns">
+            <div className="tablet-column">
+              <h3 className="tablet-heading2 tablet-column-heading">
+                {OverviewText['curious-heading']}
+              </h3>
+              <p className="tablet-body">
+                {OverviewText.curious1}
+                {OverviewText.curious2}
+              </p>
+            </div>
+            <div className="tablet-column">
+              <h3 className="tablet-heading2 tablet-column-heading">Why Should I Apply? </h3>
+              <p className="tablet-body">{OverviewText['why-apply']}</p>
+            </div>
           </div>
         </div>
-
-        <div className="tablet-columns quiz-link">
-          <h2 style={{ fontSize: '20px', color: '#646676' }}>Not sure what role to try?</h2>
-          <button className="quiz-button">TAKE A BRIEF QUIZ</button>
+        <div className="">
+          <TabletSVG1 className='tablet-svg'/>
         </div>
-
-        <div className="tablet-columns">
-          <div className="tablet-column">
-            <h3 className="tablet-heading2 tablet-column-heading">{OverviewText['build-fast']}</h3>
-            <p className="tablet-body">{OverviewText['build-fast-text']}</p>
+        <div className="tablet-section">
+          <h2 className="tablet-heading1">The Task</h2>
+          <div className="tablet-columns">
+            <div className="tablet-column">
+              <h3 className="tablet-heading2 tablet-column-heading">
+                {OverviewText['task-heading1']}
+              </h3>
+              <p className="tablet-body">{OverviewText['task-text1']}</p>
+            </div>
+            <div className="tablet-column">
+              <h3 className="tablet-heading2 tablet-column-heading">
+                {OverviewText['task-heading2']}
+              </h3>
+              <p className="tablet-body">{OverviewText['task-text2']}</p>
+            </div>
           </div>
-          <div className="tablet-column">
-            <h3 className="tablet-heading2 tablet-column-heading">
-              {OverviewText['work-with-industry']}
-            </h3>
-            <p className="tablet-body">{OverviewText['work-with-industry-text']}</p>
+        
+
+          <div className="tablet-columns quiz-link">
+            <div className="tablet-quiz-link">
+              <h2 style={{ fontSize: '20px', color: '#646676' }}>Not sure what role to try?</h2>
+              <Button text="TAKE A BRIEF QUIZ" />
+            </div>
+            <DashedArrow className="full-bleed" />
+          </div>
+
+          <div className="tablet-columns">
+            <div className="tablet-column">
+              <h3 className="tablet-heading2 tablet-column-heading">{OverviewText['build-fast']}</h3>
+              <p className="tablet-body">{OverviewText['build-fast-text']}</p>
+            </div>
+            <div className="tablet-column">
+              <h3 className="tablet-heading2 tablet-column-heading">
+                {OverviewText['work-with-industry']}
+              </h3>
+              <p className="tablet-body">{OverviewText['work-with-industry-text']}</p>
+            </div>
           </div>
         </div>
 
