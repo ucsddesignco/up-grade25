@@ -39,6 +39,14 @@
   font-display: swap;
   font-family: 'Funnel Sans';
   font-style: normal;
+  font-weight: 600;
+  src: url('/fonts/funnel-sans-semibold.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Funnel Sans';
+  font-style: normal;
   font-weight: 700;
   src: url('/fonts/funnel-sans-bold.woff2') format('woff2');
 }
