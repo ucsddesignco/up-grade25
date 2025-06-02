@@ -14,11 +14,11 @@ export interface QuizQuesiton {
 export const QuizQuestions: QuizQuesiton[] = [
   {
     id: '1',
-    question: 'Which part of creating a digital product is the most exciting to you?',
+    question: 'Which type of environment would you thrive in the most?',
     option: [
       {
         id: 'a',
-        text: 'Bringing designs to life through code',
+        text: 'A collaborative space where people share stories and experiences',
         pointDist: {
           UXR: 5,
           UXD: 3,
@@ -30,9 +30,64 @@ export const QuizQuestions: QuizQuesiton[] = [
       },
       {
         id: 'b',
-        text: 'Mapping out intuitive user flows',
+        text: 'A creative studio filled with inspiration and reference imagery',
+        pointDist: {
+          UXR: 0,
+          UXD: 3,
+          PM: 0,
+          SWE: 0,
+          VIS: 5,
+          PMM: 1
+        }
+      },
+      {
+        id: 'c',
+        text: 'A structured space with clear goals and organized systems',
+        pointDist: {
+          UXR: 0,
+          UXD: 0,
+          PM: 5,
+          SWE: 1,
+          VIS: 0,
+          PMM: 2
+        }
+      },
+      {
+        id: 'd',
+        text: 'A workshop where you can build, experiment, and problem-solve',
+        pointDist: {
+          UXR: 0,
+          UXD: 2,
+          PM: 0,
+          SWE: 5,
+          VIS: 1,
+          PMM: 0
+        }
+      }
+    ]
+  },
+
+  {
+    id: '2',
+    question: 'If you could be any superhero, who would you want to be?',
+    option: [
+      {
+        id: 'a',
+        text: 'Professor X:  Ability to read minds',
         pointDist: {
           UXR: 5,
+          UXD: 2,
+          PM: 0,
+          SWE: 0,
+          VIS: 0,
+          PMM: 4
+        }
+      },
+      {
+        id: 'b',
+        text: 'Scarlet Witch: Ability to alter reality',
+        pointDist: {
+          UXR: 0,
           UXD: 3,
           PM: 1,
           SWE: 0,
@@ -42,105 +97,26 @@ export const QuizQuestions: QuizQuesiton[] = [
       },
       {
         id: 'c',
-        text: 'Crafting the look and feel',
+        text: 'The Flash: Ability to control time',
         pointDist: {
-          UXR: 5,
-          UXD: 3,
-          PM: 1,
-          SWE: 0,
+          UXR: 0,
+          UXD: 0,
+          PM: 5,
+          SWE: 2,
           VIS: 0,
-          PMM: 0
+          PMM: 1
         }
       },
       {
         id: 'd',
-        text: 'Keeping the team organized',
+        text: 'Green Lantern: Ability to create anything',
         pointDist: {
-          UXR: 5,
-          UXD: 3,
-          PM: 1,
-          SWE: 0,
-          VIS: 0,
-          PMM: 0
-        }
-      },
-      {
-        id: 'e',
-        text: 'Shaping the message and content',
-        pointDist: {
-          UXR: 5,
-          UXD: 3,
-          PM: 1,
-          SWE: 0,
-          VIS: 0,
-          PMM: 0
-        }
-      }
-    ]
-  },
-
-  {
-    id: '2',
-    question: 'What do you prefer when it comes to design?',
-    option: [
-      {
-        id: 'a',
-        text: 'Minimalism',
-        pointDist: {
-          UXR: 5,
-          UXD: 3,
-          PM: 1,
-          SWE: 0,
-          VIS: 0,
-          PMM: 0
-        }
-      },
-      {
-        id: 'b',
-        text: 'Bold and colorful designs',
-        pointDist: {
-          UXR: 5,
-          UXD: 3,
-          PM: 1,
-          SWE: 0,
-          VIS: 0,
-          PMM: 0
-        }
-      },
-      {
-        id: 'c',
-        text: 'Retro vibes',
-        pointDist: {
-          UXR: 5,
-          UXD: 3,
-          PM: 1,
-          SWE: 0,
-          VIS: 0,
-          PMM: 0
-        }
-      },
-      {
-        id: 'd',
-        text: 'Sleek and modern aesthetics',
-        pointDist: {
-          UXR: 5,
-          UXD: 3,
-          PM: 1,
-          SWE: 0,
-          VIS: 0,
-          PMM: 0
-        }
-      },
-      {
-        id: 'e',
-        text: 'Whimsical and playful',
-        pointDist: {
-          UXR: 5,
-          UXD: 3,
-          PM: 1,
-          SWE: 0,
-          VIS: 0,
-          PMM: 0
+          UXR: 0,
+          UXD: 0,
+          PM: 0,
+          SWE: 4,
+          VIS: 3,
+          PMM: 2
         }
       }
     ]
@@ -148,64 +124,52 @@ export const QuizQuestions: QuizQuesiton[] = [
 
   {
     id: '3',
-    question: 'What is your go-to method for solving a problem?',
+    question: 'What draws your attention when experiencing something new?',
     option: [
       {
         id: 'a',
-        text: 'Brainstorming with others',
+        text: 'The story behind it and it connects with people',
         pointDist: {
-          UXR: 5,
-          UXD: 3,
-          PM: 1,
+          UXR: 0,
+          UXD: 2,
+          PM: 5,
           SWE: 0,
           VIS: 0,
-          PMM: 0
+          PMM: 1
         }
       },
       {
         id: 'b',
-        text: 'Researching the issue deeply',
+        text: 'The aesthetics and how it makes you feel visually',
         pointDist: {
           UXR: 5,
-          UXD: 3,
-          PM: 1,
+          UXD: 2,
+          PM: 0,
           SWE: 0,
           VIS: 0,
-          PMM: 0
+          PMM: 1
         }
       },
       {
         id: 'c',
-        text: 'Testing different approaches',
+        text: 'How it works and the systems that make it function',
         pointDist: {
-          UXR: 5,
-          UXD: 3,
-          PM: 1,
+          UXR: 0,
+          UXD: 1,
+          PM: 0,
           SWE: 0,
-          VIS: 0,
-          PMM: 0
+          VIS: 5,
+          PMM: 3
         }
       },
       {
         id: 'd',
-        text: 'Breaking the problem into smaller pieces',
+        text: 'How it could be improved or made more efficient',
         pointDist: {
-          UXR: 5,
-          UXD: 3,
+          UXR: 0,
+          UXD: 2,
           PM: 1,
-          SWE: 0,
-          VIS: 0,
-          PMM: 0
-        }
-      },
-      {
-        id: 'e',
-        text: 'Trusting my gut instinct',
-        pointDist: {
-          UXR: 5,
-          UXD: 3,
-          PM: 1,
-          SWE: 0,
+          SWE: 5,
           VIS: 0,
           PMM: 0
         }
@@ -215,63 +179,51 @@ export const QuizQuestions: QuizQuesiton[] = [
 
   {
     id: '4',
-    question: 'How do you feel about collaboration in a project?',
+    question: 'In a group project, which role naturally appeals to you?',
     option: [
       {
         id: 'a',
-        text: 'I love working with a team and sharing ideas',
+        text: 'The one who keeps everyone on track and makes sure deadlines are met',
         pointDist: {
-          UXR: 5,
-          UXD: 3,
-          PM: 1,
+          UXR: 3,
+          UXD: 1,
+          PM: 0,
           SWE: 0,
           VIS: 0,
-          PMM: 0
+          PMM: 5
         }
       },
       {
         id: 'b',
-        text: 'I prefer working alone to maintain control',
+        text: 'The one who listens to everyone’s ideas and finds the common threads',
         pointDist: {
-          UXR: 5,
-          UXD: 3,
-          PM: 1,
+          UXR: 0,
+          UXD: 2,
+          PM: 0,
           SWE: 0,
-          VIS: 0,
-          PMM: 0
+          VIS: 5,
+          PMM: 2
         }
       },
       {
         id: 'c',
-        text: 'I’m comfortable in both settings',
+        text: 'The one who makes everything look good and creates the final presentation',
         pointDist: {
-          UXR: 5,
-          UXD: 3,
+          UXR: 0,
+          UXD: 2,
           PM: 1,
-          SWE: 0,
+          SWE: 5,
           VIS: 0,
           PMM: 0
         }
       },
       {
         id: 'd',
-        text: 'I prefer to lead the team',
+        text: 'The one who sees how things fit together and brings it to life',
         pointDist: {
-          UXR: 5,
-          UXD: 3,
-          PM: 1,
-          SWE: 0,
-          VIS: 0,
-          PMM: 0
-        }
-      },
-      {
-        id: 'e',
-        text: 'I’m flexible depending on the project',
-        pointDist: {
-          UXR: 5,
-          UXD: 3,
-          PM: 1,
+          UXR: 2,
+          UXD: 4,
+          PM: 3,
           SWE: 0,
           VIS: 0,
           PMM: 0
@@ -282,64 +234,52 @@ export const QuizQuestions: QuizQuesiton[] = [
 
   {
     id: '5',
-    question: 'What’s your ideal work environment?',
+    question: 'If you were planning a road trip, what would be your primary focus?',
     option: [
       {
         id: 'a',
-        text: 'A creative and collaborative space',
+        text: 'Creating the perfect itinerary with the best destinations',
         pointDist: {
-          UXR: 5,
-          UXD: 3,
-          PM: 1,
-          SWE: 0,
+          UXR: 0,
+          UXD: 1,
+          PM: 5,
+          SWE: 2,
           VIS: 0,
           PMM: 0
         }
       },
       {
         id: 'b',
-        text: 'A quiet and focused environment',
+        text: 'Planning around the needs and preferences of the people traveling.',
         pointDist: {
           UXR: 5,
-          UXD: 3,
-          PM: 1,
+          UXD: 1,
+          PM: 0,
           SWE: 0,
           VIS: 0,
-          PMM: 0
+          PMM: 3
         }
       },
       {
         id: 'c',
-        text: 'A dynamic and fast-paced office',
+        text: 'Documenting the journey and memories with photos',
         pointDist: {
-          UXR: 5,
-          UXD: 3,
-          PM: 1,
+          UXR: 0,
+          UXD: 1,
+          PM: 0,
           SWE: 0,
-          VIS: 0,
-          PMM: 0
+          VIS: 5,
+          PMM: 3
         }
       },
       {
         id: 'd',
-        text: 'A remote and flexible work setup',
+        text: 'Packing the car with important gear and gadgets',
         pointDist: {
-          UXR: 5,
-          UXD: 3,
-          PM: 1,
-          SWE: 0,
-          VIS: 0,
-          PMM: 0
-        }
-      },
-      {
-        id: 'e',
-        text: 'A balance of quiet and collaboration',
-        pointDist: {
-          UXR: 5,
-          UXD: 3,
-          PM: 1,
-          SWE: 0,
+          UXR: 0,
+          UXD: 1,
+          PM: 2,
+          SWE: 5,
           VIS: 0,
           PMM: 0
         }
