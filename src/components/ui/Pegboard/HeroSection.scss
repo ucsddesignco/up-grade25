@@ -30,6 +30,11 @@
         gap: 0.25rem;
       }
 
+      #dropdown-container {
+        display: flex;
+        gap: 0.75rem;
+      }
+
       @media (min-width: 387px) {
         height: calc(3lh + 5rem);
       }

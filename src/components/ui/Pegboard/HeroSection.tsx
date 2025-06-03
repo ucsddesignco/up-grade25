@@ -88,18 +88,21 @@ function HeroSection() {
         <h1 id="title-text">
           <span>
             <span>UP-Grade your</span>
-            <Dropdown
-              setIsPlaying={setIsPlaying}
-              selected={selectedIndex}
-              onChange={val => {
-                const newIndex = Number(val);
-                setSelectedIndex(newIndex);
-                isProgammaticMove.current = true;
-                instanceRef.current?.moveToIdx(newIndex);
-              }}
-            />
+            <span id="dropdown-container">
+              <Dropdown
+                setIsPlaying={setIsPlaying}
+                selected={selectedIndex}
+                onChange={val => {
+                  const newIndex = Number(val);
+                  setSelectedIndex(newIndex);
+                  isProgammaticMove.current = true;
+                  instanceRef.current?.moveToIdx(newIndex);
+                }}
+              />
+              <PlayButton isPlaying={isPlaying} setIsPlaying={setIsPlaying} />
+            </span>
           </span>
-          <PlayButton isPlaying={isPlaying} setIsPlaying={setIsPlaying} />
+
           <span>skills this summer.</span>
         </h1>
       </div>
