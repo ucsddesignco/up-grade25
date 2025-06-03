@@ -28,6 +28,7 @@
   .sticky-component {
     left: 96.6px;
     top: 54px;
+    z-index: 3;
   }
 
   .shelf-component {
@@ -50,8 +51,12 @@
     .ruler-component {
       left: 466px;
       top: 443px;
-      rotate: -2deg;
-      transform-origin: top center;
+      /* transform-origin: 36.5px 35px; */
+
+      .clipless-ruler {
+        transform-origin: 35px 35px;
+        transition: transform 0.35s ease-out;
+      }
     }
 
     .sticky-component {

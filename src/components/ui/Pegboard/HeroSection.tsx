@@ -12,9 +12,14 @@ import DashedArrow from '../../DashedArrow/DashedArrow.tsx';
 import PlayButton from './components/PlayButton/PlayButton.tsx';
 import { useSliderConfig } from './hooks/useSliderConfig.ts';
 
+export const SLIDER_ANIMATION_DURATION = 300;
+
 function HeroSection() {
   // Randomize role order
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const prevSelectedIndex = useRef<number | null>(null);
+  const isDragging = useRef(false);
+  const [rotation, setRotation] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
   const isPlayingRef = useRef(isPlaying);
   const isProgammaticMove = useRef(false);
@@ -22,13 +27,34 @@ function HeroSection() {
   const { sliderRef, instanceRef } = useSliderConfig({
     setSelectedIndex,
     isProgammaticMove,
-    isPlayingRef
+    isPlayingRef,
+    setRotation,
+    isDragging
   });
 
   useEffect(() => {
     isPlayingRef.current = isPlaying;
     instanceRef.current?.update();
   }, [isPlaying, instanceRef]);
+
+  useEffect(() => {
+    const previousIndex = prevSelectedIndex.current;
+    prevSelectedIndex.current = selectedIndex;
+    if (isDragging.current) return;
+    if (!isProgammaticMove.current) return;
+    let newRotation = -20;
+    if (previousIndex && previousIndex > selectedIndex) {
+      newRotation *= -1;
+    }
+    setRotation(newRotation);
+    setTimeout(() => {
+      setRotation(newRotation / -1.5);
+      console.log('setRotation', newRotation / -1.5);
+      setTimeout(() => {
+        setRotation(0);
+      }, 200);
+    }, SLIDER_ANIMATION_DURATION);
+  }, [selectedIndex]);
 
   return (
     <section id="pegboard-section">
@@ -73,7 +99,7 @@ function HeroSection() {
       <div ref={sliderRef} id="home-pegboard-container" className="keen-slider full-bleed">
         {ROLES.map((role, idx) => (
           <div key={'pegboard' + idx} className="keen-slider__slide">
-            <PegboardFilled role={role} />
+            <PegboardFilled role={role} rotation={rotation} />
           </div>
         ))}
       </div>

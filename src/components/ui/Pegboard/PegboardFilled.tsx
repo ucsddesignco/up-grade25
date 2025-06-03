@@ -1,14 +1,15 @@
 import { memo } from 'react';
-import './PegboardFilled.css';
+import './PegboardFilled.scss';
 import PegboardEmpty from './PegboardEmpty';
 import { Shelf, ShelfMobile, Ruler as BaseRuler, Sticky as BaseSticky } from './components';
 import { ROLE_COLORS, STICKY_TEXT } from './constants';
 
 interface PegboardFilledProps {
   role: keyof typeof ROLE_COLORS;
+  rotation: number;
 }
 
-const PegboardFilled = ({ role }: PegboardFilledProps) => {
+const PegboardFilled = ({ role, rotation }: PegboardFilledProps) => {
   const stickyTextData = STICKY_TEXT.find(item => item.title === role);
 
   const {
@@ -24,7 +25,7 @@ const PegboardFilled = ({ role }: PegboardFilledProps) => {
 
       <PhotoComponent className="pegboard-item photo-component" />
 
-      <BaseRuler color={textColor} className="pegboard-item ruler-component" />
+      <BaseRuler color={textColor} className="pegboard-item ruler-component" rotation={rotation} />
 
       <BaseSticky
         className="pegboard-item sticky-component"
