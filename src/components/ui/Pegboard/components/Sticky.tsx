@@ -57,7 +57,6 @@ const BaseSticky = ({
       height="271"
       viewBox="0 0 221 271"
       fill="none"
-      style={{ rotate: '2deg' }}
     >
       <g clipPath="url(#clip0_8547_8398)">
         <path
