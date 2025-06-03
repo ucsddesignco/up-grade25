@@ -1,7 +1,6 @@
 import PegboardFilled from './PegboardFilled.tsx';
 import Dropdown from '../Dropdown/Dropdown.tsx';
 import 'keen-slider/keen-slider.min.css';
-import { useKeenSlider } from 'keen-slider/react';
 import { useEffect, useRef, useState } from 'react';
 import './HeroSection.scss';
 import ToolIcon from '../../../assets/icons/tool.svg?react';
@@ -11,6 +10,7 @@ import { ROLES } from './constants.tsx';
 import Button from '../../Button/Button.tsx';
 import DashedArrow from '../../DashedArrow/DashedArrow.tsx';
 import PlayButton from './components/PlayButton/PlayButton.tsx';
+import { useSliderConfig } from './hooks/useSliderConfig.ts';
 
 function HeroSection() {
   // Randomize role order
@@ -19,63 +19,11 @@ function HeroSection() {
   const isPlayingRef = useRef(isPlaying);
   const isProgammaticMove = useRef(false);
 
-  const [sliderRef, instanceRef] = useKeenSlider(
-    {
-      slides: {
-        perView: 'auto',
-        origin: 'center'
-      },
-      loop: true,
-
-      slideChanged() {
-        const currentIndex = instanceRef.current?.track.details.rel;
-        if (currentIndex !== undefined && !isProgammaticMove.current) {
-          setSelectedIndex(currentIndex);
-        }
-      },
-      animationEnded() {
-        if (isProgammaticMove.current) {
-          isProgammaticMove.current = false;
-        }
-      },
-      animationStopped() {
-        if (isProgammaticMove.current) {
-          isProgammaticMove.current = false;
-        }
-      }
-    },
-    [
-      slider => {
-        let timeout: ReturnType<typeof setTimeout>;
-        let mouseOver = false;
-        function clearNextTimeout() {
-          clearTimeout(timeout);
-        }
-        function nextTimeout() {
-          clearTimeout(timeout);
-          if (mouseOver) return;
-          if (!isPlayingRef.current) return;
-          timeout = setTimeout(() => {
-            slider.next();
-          }, 2000);
-        }
-        slider.on('created', () => {
-          slider.container.addEventListener('mouseover', () => {
-            mouseOver = true;
-            clearNextTimeout();
-          });
-          slider.container.addEventListener('mouseout', () => {
-            mouseOver = false;
-            nextTimeout();
-          });
-          nextTimeout();
-        });
-        slider.on('dragStarted', clearNextTimeout);
-        slider.on('animationEnded', nextTimeout);
-        slider.on('updated', nextTimeout);
-      }
-    ]
-  );
+  const { sliderRef, instanceRef } = useSliderConfig({
+    setSelectedIndex,
+    isProgammaticMove,
+    isPlayingRef
+  });
 
   useEffect(() => {
     isPlayingRef.current = isPlaying;
@@ -88,7 +36,7 @@ function HeroSection() {
         <h1 id="title-text">
           <span>
             <span>UP-Grade your</span>
-            <span id="dropdown-container">
+            <span id="dropdown-button-container">
               <Dropdown
                 setIsPlaying={setIsPlaying}
                 selected={selectedIndex}

@@ -111,6 +111,10 @@ button {
   border: none;
   background-color: inherit;
   padding: 0;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 h1,
