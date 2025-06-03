@@ -1,7 +1,6 @@
 import PegboardFilled from './PegboardFilled.tsx';
 import Dropdown from '../Dropdown/Dropdown.tsx';
 import 'keen-slider/keen-slider.min.css';
-import { useKeenSlider } from 'keen-slider/react';
 import { useEffect, useRef, useState } from 'react';
 import './HeroSection.scss';
 import ToolIcon from '../../../assets/icons/tool.svg?react';
@@ -11,76 +10,51 @@ import { ROLES } from './constants.tsx';
 import Button from '../../Button/Button.tsx';
 import DashedArrow from '../../DashedArrow/DashedArrow.tsx';
 import PlayButton from './components/PlayButton/PlayButton.tsx';
+import { useSliderConfig } from './hooks/useSliderConfig.ts';
+
+export const SLIDER_ANIMATION_DURATION = 300;
 
 function HeroSection() {
   // Randomize role order
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const prevSelectedIndex = useRef<number | null>(null);
+  const isDragging = useRef(false);
+  const [rotation, setRotation] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
   const isPlayingRef = useRef(isPlaying);
   const isProgammaticMove = useRef(false);
 
-  const [sliderRef, instanceRef] = useKeenSlider(
-    {
-      slides: {
-        perView: 'auto',
-        origin: 'center'
-      },
-      loop: true,
-
-      slideChanged() {
-        const currentIndex = instanceRef.current?.track.details.rel;
-        if (currentIndex !== undefined && !isProgammaticMove.current) {
-          setSelectedIndex(currentIndex);
-        }
-      },
-      animationEnded() {
-        if (isProgammaticMove.current) {
-          isProgammaticMove.current = false;
-        }
-      },
-      animationStopped() {
-        if (isProgammaticMove.current) {
-          isProgammaticMove.current = false;
-        }
-      }
-    },
-    [
-      slider => {
-        let timeout: ReturnType<typeof setTimeout>;
-        let mouseOver = false;
-        function clearNextTimeout() {
-          clearTimeout(timeout);
-        }
-        function nextTimeout() {
-          clearTimeout(timeout);
-          if (mouseOver) return;
-          if (!isPlayingRef.current) return;
-          timeout = setTimeout(() => {
-            slider.next();
-          }, 2000);
-        }
-        slider.on('created', () => {
-          slider.container.addEventListener('mouseover', () => {
-            mouseOver = true;
-            clearNextTimeout();
-          });
-          slider.container.addEventListener('mouseout', () => {
-            mouseOver = false;
-            nextTimeout();
-          });
-          nextTimeout();
-        });
-        slider.on('dragStarted', clearNextTimeout);
-        slider.on('animationEnded', nextTimeout);
-        slider.on('updated', nextTimeout);
-      }
-    ]
-  );
+  const { sliderRef, instanceRef } = useSliderConfig({
+    setSelectedIndex,
+    isProgammaticMove,
+    isPlayingRef,
+    setRotation,
+    isDragging
+  });
 
   useEffect(() => {
     isPlayingRef.current = isPlaying;
     instanceRef.current?.update();
   }, [isPlaying, instanceRef]);
+
+  useEffect(() => {
+    const previousIndex = prevSelectedIndex.current;
+    prevSelectedIndex.current = selectedIndex;
+    if (isDragging.current) return;
+    if (!isProgammaticMove.current) return;
+    let newRotation = -20;
+    if (previousIndex && previousIndex > selectedIndex) {
+      newRotation *= -1;
+    }
+    setRotation(newRotation);
+    setTimeout(() => {
+      setRotation(newRotation / -1.5);
+      console.log('setRotation', newRotation / -1.5);
+      setTimeout(() => {
+        setRotation(0);
+      }, 200);
+    }, SLIDER_ANIMATION_DURATION);
+  }, [selectedIndex]);
 
   return (
     <section id="pegboard-section">
@@ -88,7 +62,7 @@ function HeroSection() {
         <h1 id="title-text">
           <span>
             <span>UP-Grade your</span>
-            <span id="dropdown-container">
+            <span id="dropdown-button-container">
               <Dropdown
                 setIsPlaying={setIsPlaying}
                 selected={selectedIndex}
@@ -125,7 +99,7 @@ function HeroSection() {
       <div ref={sliderRef} id="home-pegboard-container" className="keen-slider full-bleed">
         {ROLES.map((role, idx) => (
           <div key={'pegboard' + idx} className="keen-slider__slide">
-            <PegboardFilled role={role} />
+            <PegboardFilled role={role} rotation={rotation} />
           </div>
         ))}
       </div>
