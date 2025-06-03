@@ -5,7 +5,7 @@
   flex-direction: column;
   align-items: center;
   gap: var(--XL);
-  color: #353C51;
+  color: #353c51;
 
   @media (min-width: 769px) {
     display: none;
@@ -141,6 +141,7 @@
   }
 
   .mobile-cta-cards {
+    font-family: "Funnel Display";
     padding: var(--XL) 0;
     display: flex;
     flex-direction: column;
@@ -155,14 +156,14 @@
   flex-direction: column;
   align-items: center;
   gap: var(--XL, 40px);
-  color: #353C51;
-  
+  color: #353c51;
+
   @media (min-width: 769px) and (max-width: 1439px) {
     display: flex;
   }
 
   .tablet-title {
-    max-width: 480px;
+    max-width: 800px;
     padding-top: 44px;
     align-self: stretch;
     font-size: 80px;
@@ -175,6 +176,7 @@
     display: flex;
     flex-direction: column;
     gap: var(--M);
+    width: 100%;
   }
 
   .tablet-heading1 {
@@ -193,7 +195,9 @@
   }
 
   .tablet-expectation {
-    align-self: stretch;
+    width: 100%;
+    text-align: left;
+    margin: 0;
     font-size: 32px;
     font-style: normal;
     font-weight: 600;
@@ -216,22 +220,25 @@
     gap: var(--M);
     width: 100%;
   }
+  .tablet-about-cols {
+    gap: 60px;
+  }
 
   .tablet-column {
     flex: 1;
+  }
+
+  .quiz-link {
+    padding: var(--M) 0;
   }
 
   .tablet-quiz-link {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 20px 0;
+    padding: 0 0 12px 0;
     justify-content: center;
     gap: 24px;
-  }
-
-  .tablet-quiz-link > h2 {
-    align-self: center;
   }
 
   .tablet-column-heading {
@@ -247,39 +254,55 @@
     background-color: #353c51;
     color: #fffffe;
   }
-  
-  .tablet-svg  {
+
+  .tablet-svg {
     width: 100%;
+    padding: 0 0 0 20px;
+    border: #353c51 4px;
+    border-style: solid dashed solid dashed;
   }
 
   .timeline-section {
     display: flex;
     flex-direction: row;
     height: 32px;
-    align-items: center;
-    gap: 12px;
+    justify-content: space-between;
+    padding-bottom: 40px;
   }
 
-  .timeline-item > p {
-    align-self: stretch;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
+  .timeline-item {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+
+    p {
+      font-family: 'Funnel Display';
+      align-self: stretch;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+
+    img {
+      height: 32px;
+    }
+
   }
 
   .tablet-callouts {
-    margin: 0;
-    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    gap: var(--M);
   }
 
   .callout {
+    flex: 1;
     border: #353c51 4px;
     border-style: solid dashed solid dashed;
     display: flex;
+    width: fit-content;
     flex-direction: column;
     align-items: center;
     align-self: stretch;
@@ -303,6 +326,14 @@
     line-height: normal;
     text-transform: capitalize;
   }
+
+  .tablet-cta-cards {
+    font-family: "Funnel Display";
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--M);
+  }
 }
 
 #overview-desktop-container {
@@ -314,7 +345,7 @@
   align-items: center;
   gap: var(--XXL, 80px);
   margin: 0 auto;
-  color: #353C51;
+  color: #353c51;
 
   @media (min-width: 1440px) {
     display: flex;

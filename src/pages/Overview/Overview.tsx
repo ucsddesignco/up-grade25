@@ -20,6 +20,7 @@ import OverviewText from './OverviewText.json';
 import Button from '../../components/Button/Button.tsx';
 import CTACard from '../../components/CTACard/CTACard.tsx';
 import DashedArrow from '../../components/DashedArrow/DashedArrow.tsx';
+import QuizVector from '../../components/ui/PersonalityQuiz/QuizVector/QuizVector.tsx';
 
 const Overview = () => {
   return (
@@ -129,7 +130,7 @@ const Overview = () => {
           <h2 className="tablet-heading1">About</h2>
           <p className="tablet-body">{OverviewText.about}</p>
 
-          <div className="tablet-columns">
+          <div className="tablet-columns tablet-about-cols">
             <div className="tablet-column">
               <h3 className="tablet-heading2 tablet-column-heading">
                 {OverviewText['curious-heading']}
@@ -145,8 +146,8 @@ const Overview = () => {
             </div>
           </div>
         </div>
-        <div className="">
-          <TabletSVG1 className='tablet-svg'/>
+        <div className="tablet-svg">
+          <TabletSVG1/>
         </div>
         <div className="tablet-section">
           <h2 className="tablet-heading1">The Task</h2>
@@ -166,7 +167,7 @@ const Overview = () => {
           </div>
         
 
-          <div className="tablet-columns quiz-link">
+          <div className="quiz-link">
             <div className="tablet-quiz-link">
               <h2 style={{ fontSize: '20px', color: '#646676' }}>Not sure what role to try?</h2>
               <Button text="TAKE A BRIEF QUIZ" />
@@ -188,43 +189,56 @@ const Overview = () => {
           </div>
         </div>
 
-        <TabletSVG2 />
+        <div className="tablet-svg">
+          <TabletSVG2/>
+        </div>
 
-        <h2 className="tablet-heading1">Timeline</h2>
-        <div className="timeline-section">
-          <div className="timeline-item">
-            <img src={CalendarIcon}></img>
-            <p>June 30 - Sept 5</p>
+        <div className="tablet-section">
+          <h2 className="tablet-heading1">Timeline</h2>
+          <div>
+            <div className="timeline-section">
+              <div className="timeline-item">
+                <img src={CalendarIcon}></img>
+                <p>June 30 - Sept 5</p>
+              </div>
+              <div className="timeline-item">
+                <img src={WeeksIcon}></img>
+                <p>10 Weeks</p>
+              </div>
+              <div className="timeline-item">
+                <img src={ClockIcon}></img>
+                <p>12-15 hours per week</p>
+              </div>
+            </div>
+            <QuizVector />
           </div>
-          <div className="timeline-item">
-            <img src={WeeksIcon}></img>
-            <p>10 Weeks</p>
-          </div>
-          <div className="timeline-item">
-            <img src={ClockIcon}></img>
-            <p>12-15 hours per week</p>
+          <p className="tablet-body">{OverviewText['timeline-text']}</p>
+        </div>
+        <div className="tablet-section">
+          <h2 className="tablet-expectation">{OverviewText.expectation}</h2>
+          <div className="tablet-callouts">
+            <div className="team-meetings callout">
+              <h1>2x</h1>
+              <p>Team Meetings</p>
+            </div>
+            <div className="mentor-meetings callout">
+              <h1>1x</h1>
+              <p>Mentor Meetings</p>
+            </div>
+            <div className="group-workshops callout">
+              <h1>1x</h1>
+              <p>Group Workshops</p>
+            </div>
           </div>
         </div>
-        <p className="tablet-body">{OverviewText['timeline-text']}</p>
-
-        <h2 className="tablet-expectation">{OverviewText.expectation}</h2>
-        <div className="tablet-callouts">
-          <div className="team-meetings callout">
-            <h1>2x</h1>
-            <p>Team Meetings</p>
-          </div>
-          <div className="mentor-meetings callout">
-            <h1>1x</h1>
-            <p>Mentor Meetings</p>
-          </div>
-          <div className="group-workshops callout">
-            <h1>1x</h1>
-            <p>Group Workshops</p>
-          </div>
-        </div>
-        <FaqCard />
-        <ApplyCard />
+        <section className="tablet-cta-cards">
+          <CTACard variation="faq" isDesktop={true}/>
+          <CTACard variation="apply" isDesktop={true}/>
+        </section>
+        
       </main>
+
+
       <main id="overview-desktop-container">
         <h1 className="desktop-title">Overview</h1>
         <div className="about-row">
