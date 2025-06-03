@@ -2,7 +2,7 @@ import PegboardFilled from './PegboardFilled.tsx';
 import Dropdown from '../Dropdown/Dropdown.tsx';
 import 'keen-slider/keen-slider.min.css';
 import { useKeenSlider } from 'keen-slider/react';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import './HeroSection.scss';
 import ToolIcon from '../../../assets/icons/tool.svg?react';
 import MessageIcon from '../../../assets/icons/message.svg?react';
@@ -10,34 +10,77 @@ import CalendarGrayIcon from '../../../assets/icons/calendar-gray.svg?react';
 import { ROLES } from './constants.tsx';
 import Button from '../../Button/Button.tsx';
 import DashedArrow from '../../DashedArrow/DashedArrow.tsx';
+import PlayButton from './components/PlayButton/PlayButton.tsx';
 
 function HeroSection() {
   // Randomize role order
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(true);
+  const isPlayingRef = useRef(isPlaying);
   const isProgammaticMove = useRef(false);
-  const [sliderRef, instanceRef] = useKeenSlider({
-    slides: {
-      perView: 'auto',
-      origin: 'center'
-    },
-    loop: true,
-    slideChanged() {
-      const currentIndex = instanceRef.current?.track.details.rel;
-      if (currentIndex !== undefined && !isProgammaticMove.current) {
-        setSelectedIndex(currentIndex);
+
+  const [sliderRef, instanceRef] = useKeenSlider(
+    {
+      slides: {
+        perView: 'auto',
+        origin: 'center'
+      },
+      loop: true,
+
+      slideChanged() {
+        const currentIndex = instanceRef.current?.track.details.rel;
+        if (currentIndex !== undefined && !isProgammaticMove.current) {
+          setSelectedIndex(currentIndex);
+        }
+      },
+      animationEnded() {
+        if (isProgammaticMove.current) {
+          isProgammaticMove.current = false;
+        }
+      },
+      animationStopped() {
+        if (isProgammaticMove.current) {
+          isProgammaticMove.current = false;
+        }
       }
     },
-    animationEnded() {
-      if (isProgammaticMove.current) {
-        isProgammaticMove.current = false;
+    [
+      slider => {
+        let timeout: ReturnType<typeof setTimeout>;
+        let mouseOver = false;
+        function clearNextTimeout() {
+          clearTimeout(timeout);
+        }
+        function nextTimeout() {
+          clearTimeout(timeout);
+          if (mouseOver) return;
+          if (!isPlayingRef.current) return;
+          timeout = setTimeout(() => {
+            slider.next();
+          }, 2000);
+        }
+        slider.on('created', () => {
+          slider.container.addEventListener('mouseover', () => {
+            mouseOver = true;
+            clearNextTimeout();
+          });
+          slider.container.addEventListener('mouseout', () => {
+            mouseOver = false;
+            nextTimeout();
+          });
+          nextTimeout();
+        });
+        slider.on('dragStarted', clearNextTimeout);
+        slider.on('animationEnded', nextTimeout);
+        slider.on('updated', nextTimeout);
       }
-    },
-    animationStopped() {
-      if (isProgammaticMove.current) {
-        isProgammaticMove.current = false;
-      }
-    }
-  });
+    ]
+  );
+
+  useEffect(() => {
+    isPlayingRef.current = isPlaying;
+    instanceRef.current?.update();
+  }, [isPlaying, instanceRef]);
 
   return (
     <section id="pegboard-section">
@@ -46,6 +89,7 @@ function HeroSection() {
           <span>
             <span>UP-Grade your</span>
             <Dropdown
+              setIsPlaying={setIsPlaying}
               selected={selectedIndex}
               onChange={val => {
                 const newIndex = Number(val);
@@ -55,6 +99,7 @@ function HeroSection() {
               }}
             />
           </span>
+          <PlayButton isPlaying={isPlaying} setIsPlaying={setIsPlaying} />
           <span>skills this summer.</span>
         </h1>
       </div>
