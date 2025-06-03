@@ -8,9 +8,6 @@ import Phone from '../../components/Overview/mobile/Phone.tsx';
 import Clock from '../../components/Overview/mobile/Clock.tsx';
 import Paintbrush from '../../components/Overview/mobile/Paintbrush.tsx';
 
-import FaqCard from '../../components/Overview/mobile/FaqCardMobile.tsx';
-import ApplyCard from '../../components/Overview/mobile/ApplyCardMobile.tsx';
-
 import TabletSVG1 from '../../components/Overview/tablet/ExpectationCard';
 import TabletSVG2 from '../../components/Overview/tablet/ExpectationCard2';
 import DesktopSVG1 from '../../components/Overview/desktop/DesktopSvg';
@@ -147,7 +144,7 @@ const Overview = () => {
           </div>
         </div>
         <div className="tablet-svg">
-          <TabletSVG1/>
+          <TabletSVG1 />
         </div>
         <div className="tablet-section">
           <h2 className="tablet-heading1">The Task</h2>
@@ -165,7 +162,6 @@ const Overview = () => {
               <p className="tablet-body">{OverviewText['task-text2']}</p>
             </div>
           </div>
-        
 
           <div className="quiz-link">
             <div className="tablet-quiz-link">
@@ -177,7 +173,9 @@ const Overview = () => {
 
           <div className="tablet-columns">
             <div className="tablet-column">
-              <h3 className="tablet-heading2 tablet-column-heading">{OverviewText['build-fast']}</h3>
+              <h3 className="tablet-heading2 tablet-column-heading">
+                {OverviewText['build-fast']}
+              </h3>
               <p className="tablet-body">{OverviewText['build-fast-text']}</p>
             </div>
             <div className="tablet-column">
@@ -190,7 +188,7 @@ const Overview = () => {
         </div>
 
         <div className="tablet-svg">
-          <TabletSVG2/>
+          <TabletSVG2 />
         </div>
 
         <div className="tablet-section">
@@ -232,12 +230,10 @@ const Overview = () => {
           </div>
         </div>
         <section className="tablet-cta-cards">
-          <CTACard variation="faq" isDesktop={true}/>
-          <CTACard variation="apply" isDesktop={true}/>
+          <CTACard variation="faq" isDesktop={true} />
+          <CTACard variation="apply" isDesktop={true} />
         </section>
-        
       </main>
-
 
       <main id="overview-desktop-container">
         <h1 className="desktop-title">Overview</h1>
@@ -264,58 +260,66 @@ const Overview = () => {
           </div>
         </div>
 
-        <h2 className="desktop-heading1">The Task</h2>
-        <div className="desktop-columns">
-          <div className="desktop-column">
-            <h3 className="desktop-heading2 desktop-column-heading">
-              {OverviewText['task-heading1']}
-            </h3>
-            <p className="desktop-body">{OverviewText['task-text1']}</p>
+        <div className="desktop-section">
+          <h2 className="desktop-heading1">The Task</h2>
+          <div className="desktop-columns">
+            <div className="desktop-column">
+              <h3 className="desktop-heading2 desktop-column-heading">
+                {OverviewText['task-heading1']}
+              </h3>
+              <p className="desktop-body">{OverviewText['task-text1']}</p>
+            </div>
+            <div className="desktop-column">
+              <h3 className="desktop-heading2 desktop-column-heading">
+                {OverviewText['task-heading2']}
+              </h3>
+              <p className="desktop-body">{OverviewText['task-text2']}</p>
+            </div>
           </div>
-          <div className="desktop-column">
-            <h3 className="desktop-heading2 desktop-column-heading">
-              {OverviewText['task-heading2']}
-            </h3>
-            <p className="desktop-body">{OverviewText['task-text2']}</p>
-          </div>
-        </div>
 
-        <div className="desktop-columns quiz-link">
-          <h2 style={{ fontSize: '20px', color: '#646676' }}>Not sure what role to try?</h2>
-          <Button text="TAKE A BRIEF QUIZ" />
-        </div>
-
-        <div className="desktop-columns">
-          <div className="desktop-column">
-            <h3 className="desktop-heading2 desktop-column-heading">
-              {OverviewText['build-fast']}
-            </h3>
-            <p className="desktop-body">{OverviewText['build-fast-text']}</p>
+          <div>
+            <div className="desktop-columns quiz-link">
+              <h2 style={{ fontSize: '20px', color: '#646676' }}>Not sure what role to try?</h2>
+              <Button text="TAKE A BRIEF QUIZ" />
+            </div>
+            <DashedArrow className="full-bleed" />
           </div>
-          <div className="desktop-column">
-            <h3 className="desktop-heading2 desktop-column-heading">
-              {OverviewText['work-with-industry']}
-            </h3>
-            <p className="desktop-body">{OverviewText['work-with-industry-text']}</p>
+
+          <div className="desktop-columns">
+            <div className="desktop-column">
+              <h3 className="desktop-heading2 desktop-column-heading">
+                {OverviewText['build-fast']}
+              </h3>
+              <p className="desktop-body">{OverviewText['build-fast-text']}</p>
+            </div>
+            <div className="desktop-column">
+              <h3 className="desktop-heading2 desktop-column-heading">
+                {OverviewText['work-with-industry']}
+              </h3>
+              <p className="desktop-body">{OverviewText['work-with-industry-text']}</p>
+            </div>
           </div>
         </div>
 
         <div className="timeline-row">
           <div className="timeline-col">
             <h2 className="desktop-heading1">Timeline</h2>
-            <div className="timeline-section">
-              <div className="desktop-timeline-item">
-                <img src={CalendarIcon}></img>
-                <p>June 30 - Sept 5</p>
+            <div>
+              <div className="timeline-section">
+                <div className="desktop-timeline-item">
+                  <img src={CalendarIcon}></img>
+                  <p>June 30 - Sept 5</p>
+                </div>
+                <div className="desktop-timeline-item">
+                  <img src={WeeksIcon}></img>
+                  <p>10 Weeks</p>
+                </div>
+                <div className="desktop-timeline-item">
+                  <img src={ClockIcon}></img>
+                  <p>12-15 hours per week</p>
+                </div>
               </div>
-              <div className="desktop-timeline-item">
-                <img src={WeeksIcon}></img>
-                <p>10 Weeks</p>
-              </div>
-              <div className="desktop-timeline-item">
-                <img src={ClockIcon}></img>
-                <p>12-15 hours per week</p>
-              </div>
+              <QuizVector />
             </div>
             <h2 className="desktop-expectation">{OverviewText.expectation}</h2>
             <div className="desktop-callouts">
@@ -337,10 +341,11 @@ const Overview = () => {
             <DesktopSVG2 className="desktop-svg" />
           </div>
         </div>
-        <div className="card-row">
-          <FaqCard />
-          <ApplyCard />
-        </div>
+
+        <section className="desktop-cta-cards">
+          <CTACard variation="faq" isDesktop={true} />
+          <CTACard variation="apply" isDesktop={true} />
+        </section>
       </main>
     </>
   );

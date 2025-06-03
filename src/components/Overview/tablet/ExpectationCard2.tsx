@@ -1,19 +1,20 @@
 import type { SVGProps } from 'react';
 const SvgExpectationCard2 = (props: SVGProps<SVGSVGElement>) => (
   <svg
-    width="641"
-    height="220"
+    width={641}
+    height={220}
     viewBox="0 0 641 220"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    {...props}
   >
     <rect width="641" height="220" fill="#FFFFFE" />
-    <g clip-path="url(#clip0_7832_17430)">
+    <g clipPath="url(#clip0_7832_17430)">
       <path
         d="M484.324 82.0824L492.131 83.9188C500.833 64.3925 522.747 56.3048 542.702 60.9988C562.658 65.6927 578.667 82.701 577.753 104.059L585.561 105.896C587.849 78.697 568.405 58.7273 544.556 53.1176C520.707 47.5079 494.4 56.7155 484.324 82.0824Z"
         fill="#646676"
         stroke="#353C51"
-        stroke-width="4"
+        strokeWidth="4"
       />
       <rect
         x="532.027"
@@ -23,7 +24,7 @@ const SvgExpectationCard2 = (props: SVGProps<SVGSVGElement>) => (
         transform="rotate(-166.763 532.027 128.23)"
         fill="#646676"
         stroke="#353C51"
-        stroke-width="4"
+        strokeWidth="4"
       />
       <rect
         x="525.324"
@@ -34,13 +35,13 @@ const SvgExpectationCard2 = (props: SVGProps<SVGSVGElement>) => (
         transform="rotate(-76.7633 525.324 82.4805)"
         fill="#646676"
         stroke="#353C51"
-        stroke-width="4"
+        strokeWidth="4"
       />
       <path
         d="M457.75 232.792L445.973 221.719L426.849 242.057C423.791 245.309 423.949 250.424 427.201 253.482C430.453 256.54 435.568 256.383 438.626 253.131L457.75 232.792Z"
         fill="#646676"
         stroke="#353C51"
-        stroke-width="4"
+        strokeWidth="4"
       />
       <circle
         cx="513.737"
@@ -49,7 +50,7 @@ const SvgExpectationCard2 = (props: SVGProps<SVGSVGElement>) => (
         transform="rotate(13.2367 513.737 181.97)"
         fill="#10B9DF"
         stroke="#353C51"
-        stroke-width="4"
+        strokeWidth="4"
       />
       <circle
         cx="513.675"
@@ -58,31 +59,31 @@ const SvgExpectationCard2 = (props: SVGProps<SVGSVGElement>) => (
         transform="rotate(13.2367 513.675 182.303)"
         fill="#FFFFFE"
         stroke="#353C51"
-        stroke-width="4"
+        strokeWidth="4"
       />
       <path
         d="M607.316 123.962L601.284 115.693L613.435 106.828C615.719 105.162 618.92 105.663 620.586 107.946C622.252 110.23 621.751 113.431 619.468 115.097L607.316 123.962Z"
         fill="#646676"
         stroke="#353C51"
-        stroke-width="4"
+        strokeWidth="4"
       />
       <path
         d="M566.027 99.6614C565.915 99.7432 565.891 99.9005 565.972 100.013L611.568 162.529C611.65 162.642 611.808 162.666 611.92 162.584C625.386 152.763 628.341 133.884 618.519 120.417L608.195 106.261C598.373 92.7944 579.494 89.8396 566.027 99.6614Z"
         fill="#646676"
         stroke="#353C51"
-        stroke-width="4"
+        strokeWidth="4"
       />
       <path
         d="M455.078 88.1514L464.165 83.4384L457.239 70.0864C455.938 67.5773 452.848 66.5983 450.339 67.8997C447.83 69.2012 446.851 72.2903 448.153 74.7994L455.078 88.1514Z"
         fill="#646676"
         stroke="#353C51"
-        stroke-width="4"
+        strokeWidth="4"
       />
       <path
         d="M502.865 84.8041C502.929 84.9274 502.881 85.0792 502.757 85.1432L434.074 120.779C433.95 120.843 433.799 120.794 433.735 120.671C426.058 105.876 431.829 87.6596 446.624 79.9834L462.177 71.9142C476.972 64.2381 495.188 70.009 502.865 84.8041Z"
         fill="#646676"
         stroke="#353C51"
-        stroke-width="4"
+        strokeWidth="4"
       />
       <path
         d="M522.522 121.56L517.726 141.949L513.415 140.935L517.248 124.638L517.129 124.61L511.771 126.439L512.671 122.616L518.47 120.607L522.522 121.56Z"
@@ -111,7 +112,7 @@ const SvgExpectationCard2 = (props: SVGProps<SVGSVGElement>) => (
         transform="rotate(13.2367 494.608 190.035)"
         fill="#FFFFFE"
         stroke="#353C51"
-        stroke-width="4"
+        strokeWidth="4"
       />
       <circle
         cx="491.093"
@@ -127,7 +128,7 @@ const SvgExpectationCard2 = (props: SVGProps<SVGSVGElement>) => (
         transform="rotate(13.2367 526.284 197.486)"
         fill="#FFFFFE"
         stroke="#353C51"
-        stroke-width="4"
+        strokeWidth="4"
       />
       <circle
         cx="522.812"
@@ -137,7 +138,7 @@ const SvgExpectationCard2 = (props: SVGProps<SVGSVGElement>) => (
         fill="#353C51"
       />
     </g>
-    <g clip-path="url(#clip1_7832_17430)">
+    <g clipPath="url(#clip1_7832_17430)">
       <rect
         x="283.742"
         y="119.014"
@@ -146,7 +147,7 @@ const SvgExpectationCard2 = (props: SVGProps<SVGSVGElement>) => (
         transform="rotate(-52.324 283.742 119.014)"
         fill="#646676"
         stroke="#353C51"
-        stroke-width="4"
+        strokeWidth="4"
       />
       <rect
         x="338.727"
@@ -156,13 +157,13 @@ const SvgExpectationCard2 = (props: SVGProps<SVGSVGElement>) => (
         transform="rotate(-130 338.727 187.236)"
         fill="#FFFFFE"
         stroke="#353C51"
-        stroke-width="4"
+        strokeWidth="4"
       />
       <path
         d="M391.258 122.271L400.45 114.557L417.163 134.474C419.293 137.013 418.962 140.797 416.423 142.927C413.885 145.057 410.1 144.726 407.97 142.188L391.258 122.271Z"
         fill="#FF8B39"
         stroke="#353C51"
-        stroke-width="4"
+        strokeWidth="4"
       />
       <path
         d="M208.475 120.868C240.677 93.847 288.686 98.0473 315.707 130.249L349.059 169.996C356.159 178.458 355.055 191.073 346.593 198.173L284.073 250.634C262.659 268.602 230.735 265.809 212.767 244.396L199.093 228.1C172.073 195.898 176.273 147.888 208.475 120.868Z"
@@ -179,7 +180,7 @@ const SvgExpectationCard2 = (props: SVGProps<SVGSVGElement>) => (
         transform="rotate(-40 257.84 178.74)"
         fill="#FFFFFE"
         stroke="#353C51"
-        stroke-width="4"
+        strokeWidth="4"
       />
       <circle
         cx="257.84"
@@ -188,7 +189,7 @@ const SvgExpectationCard2 = (props: SVGProps<SVGSVGElement>) => (
         transform="rotate(-40 257.84 178.74)"
         fill="#FF8B39"
         stroke="#353C51"
-        stroke-width="4"
+        strokeWidth="4"
       />
       <path
         d="M226.561 240.832C237.211 253.524 256.134 255.179 268.826 244.53L273.742 240.405L285.33 254.215L280.396 258.355C260.089 275.395 229.813 272.746 212.773 252.439L195.73 232.129L209.537 220.544L226.561 240.832Z"
@@ -198,11 +199,11 @@ const SvgExpectationCard2 = (props: SVGProps<SVGSVGElement>) => (
         d="M226.561 240.832L225.029 242.117L225.029 242.117L226.561 240.832ZM268.826 244.53L270.112 246.062L270.112 246.062L268.826 244.53ZM273.742 240.405L275.274 239.119L273.988 237.587L272.456 238.873L273.742 240.405ZM285.33 254.215L286.616 255.747L288.148 254.462L286.862 252.93L285.33 254.215ZM280.396 258.355L281.682 259.887L281.682 259.887L280.396 258.355ZM212.773 252.439L211.24 253.724L211.24 253.724L212.773 252.439ZM195.73 232.129L194.445 230.597L192.913 231.882L194.198 233.414L195.73 232.129ZM209.537 220.544L211.069 219.258L209.784 217.726L208.252 219.012L209.537 220.544ZM226.561 240.832L225.029 242.117C236.389 255.656 256.573 257.421 270.112 246.062L268.826 244.53L267.54 242.997C255.694 252.937 238.033 251.392 228.093 239.546L226.561 240.832ZM268.826 244.53L270.112 246.062L275.027 241.937L273.742 240.405L272.456 238.873L267.54 242.997L268.826 244.53ZM273.742 240.405L272.21 241.69L283.798 255.501L285.33 254.215L286.862 252.93L275.274 239.119L273.742 240.405ZM285.33 254.215L284.045 252.683L279.111 256.823L280.396 258.355L281.682 259.887L286.616 255.747L285.33 254.215ZM280.396 258.355L279.111 256.823C259.649 273.153 230.635 270.614 214.305 251.153L212.773 252.439L211.24 253.724C228.99 274.878 260.528 277.637 281.682 259.887L280.396 258.355ZM212.773 252.439L214.305 251.153L197.263 230.843L195.73 232.129L194.198 233.414L211.24 253.724L212.773 252.439ZM195.73 232.129L197.016 233.661L210.823 222.076L209.537 220.544L208.252 219.012L194.445 230.597L195.73 232.129ZM209.537 220.544L208.005 221.829L225.029 242.117L226.561 240.832L228.093 239.546L211.069 219.258L209.537 220.544Z"
         fill="#353C51"
       />
-      <path d="M349.891 156.981L354.409 162.366" stroke="#353C51" stroke-width="4.8" />
-      <path d="M356.785 151.196L361.304 156.581" stroke="#353C51" stroke-width="4.8" />
-      <path d="M365.977 143.482L370.495 148.867" stroke="#353C51" stroke-width="4.8" />
-      <path d="M375.172 135.77L379.69 141.155" stroke="#353C51" stroke-width="4.8" />
-      <path d="M384.363 128.056L388.882 133.441" stroke="#353C51" stroke-width="4.8" />
+      <path d="M349.891 156.981L354.409 162.366" stroke="#353C51" strokeWidth="4.8" />
+      <path d="M356.785 151.196L361.304 156.581" stroke="#353C51" strokeWidth="4.8" />
+      <path d="M365.977 143.482L370.495 148.867" stroke="#353C51" strokeWidth="4.8" />
+      <path d="M375.172 135.77L379.69 141.155" stroke="#353C51" strokeWidth="4.8" />
+      <path d="M384.363 128.056L388.882 133.441" stroke="#353C51" strokeWidth="4.8" />
       <circle
         cx="292.557"
         cy="203.783"
@@ -210,7 +211,7 @@ const SvgExpectationCard2 = (props: SVGProps<SVGSVGElement>) => (
         transform="rotate(-40 292.557 203.783)"
         fill="#FFFFFE"
         stroke="#353C51"
-        stroke-width="4"
+        strokeWidth="4"
       />
       <circle
         cx="294.713"
@@ -226,7 +227,7 @@ const SvgExpectationCard2 = (props: SVGProps<SVGSVGElement>) => (
         transform="rotate(-40 317.916 182.504)"
         fill="#FFFFFE"
         stroke="#353C51"
-        stroke-width="4"
+        strokeWidth="4"
       />
       <circle
         cx="320.104"
@@ -236,7 +237,7 @@ const SvgExpectationCard2 = (props: SVGProps<SVGSVGElement>) => (
         fill="#353C51"
       />
     </g>
-    <g clip-path="url(#clip2_7832_17430)">
+    <g clipPath="url(#clip2_7832_17430)">
       <path
         d="M164.438 150.01C165.494 152.273 164.633 154.964 162.475 156.219C151.147 162.803 145.071 167.086 142.462 173.361C141.689 175.22 141.153 177.169 140.867 179.162C139.698 187.296 144.373 195.518 153.725 211.963L173.054 245.956C174.108 247.81 173.829 250.154 172.24 251.576C168.636 254.8 164.505 257.556 159.896 259.705C155.647 261.687 151.263 263.025 146.854 263.761C144.714 264.118 142.684 262.82 141.928 260.786L128.214 223.859C121.627 206.125 118.334 197.258 111.352 192.925C109.642 191.863 107.804 191.021 105.883 190.418C99.2326 188.331 91.8429 190.384 78.9284 195.076C76.5798 195.929 73.9639 194.858 72.9079 192.593L55.8606 156.035C54.7403 153.632 55.7797 150.776 58.1823 149.656L140.975 111.049C143.377 109.929 146.233 110.968 147.353 113.371L164.438 150.01Z"
         fill="#F95984"
@@ -259,7 +260,7 @@ const SvgExpectationCard2 = (props: SVGProps<SVGSVGElement>) => (
         transform="matrix(-0.906308 0.422618 0.422618 0.906308 131.105 78.5215)"
         fill="#646676"
         stroke="#353C51"
-        stroke-width="4"
+        strokeWidth="4"
       />
       <rect
         width="100.951"
@@ -267,13 +268,13 @@ const SvgExpectationCard2 = (props: SVGProps<SVGSVGElement>) => (
         transform="matrix(-0.906308 0.422618 0.422618 0.906308 136.008 89.0381)"
         fill="#F95984"
         stroke="#353C51"
-        stroke-width="4"
+        strokeWidth="4"
       />
       <path
         d="M56.7205 48.4401L105.151 25.8564C109.023 24.0509 113.592 25.7944 115.305 29.65L115.462 30.0295L127.831 62.377C129.125 65.7621 127.868 69.3691 125.002 70.6619L124.477 70.894C119.075 73.2134 114.638 73.2855 110.725 72.3834C106.581 71.4277 102.966 69.3791 99.1783 67.359C95.5165 65.4061 91.5896 63.417 87.2763 63.2857C82.9456 63.1539 78.5634 64.8799 73.7866 69.3648L73.3228 69.8074C71.1061 71.9599 68.0912 73.0117 65.2972 72.857C62.6209 72.7087 60.2359 71.4724 58.836 69.1128L58.7039 68.8802L53.2701 58.9859C51.2214 55.2547 52.6428 50.5983 56.3542 48.6227L56.7205 48.4401Z"
         fill="#F95984"
         stroke="#353C51"
-        stroke-width="4"
+        strokeWidth="4"
       />
       <circle
         cx="94.1334"
@@ -282,7 +283,7 @@ const SvgExpectationCard2 = (props: SVGProps<SVGSVGElement>) => (
         transform="rotate(-25 94.1334 152.799)"
         fill="#FFFFFE"
         stroke="#353C51"
-        stroke-width="4"
+        strokeWidth="4"
       />
       <circle
         cx="96.0142"
@@ -298,7 +299,7 @@ const SvgExpectationCard2 = (props: SVGProps<SVGSVGElement>) => (
         transform="rotate(-25 119.622 140.914)"
         fill="#FFFFFE"
         stroke="#353C51"
-        stroke-width="4"
+        strokeWidth="4"
       />
       <circle
         cx="121.506"

@@ -141,7 +141,7 @@
   }
 
   .mobile-cta-cards {
-    font-family: "Funnel Display";
+    font-family: 'Funnel Display';
     padding: var(--XL) 0;
     display: flex;
     flex-direction: column;
@@ -256,10 +256,15 @@
   }
 
   .tablet-svg {
+    margin: 0 auto;
     width: 100%;
     padding: 0 0 0 20px;
     border: #353c51 4px;
     border-style: solid dashed solid dashed;
+
+    svg {
+      margin: 0 auto;
+    }
   }
 
   .timeline-section {
@@ -287,7 +292,6 @@
     img {
       height: 32px;
     }
-
   }
 
   .tablet-callouts {
@@ -328,7 +332,7 @@
   }
 
   .tablet-cta-cards {
-    font-family: "Funnel Display";
+    font-family: 'Funnel Display';
     padding: 40px;
     display: flex;
     flex-direction: column;
@@ -338,14 +342,31 @@
 
 #overview-desktop-container {
   display: none;
-  width: 100%;
   max-width: 1440px;
-  padding: clamp(60px, 8.33vw, 120px) clamp(20px, 5.56vw, 80px);
+  padding: 0px 120px 120px 120px;
   flex-direction: column;
-  align-items: center;
-  gap: var(--XXL, 80px);
+  gap: 120px;
   margin: 0 auto;
   color: #353c51;
+  align-items: center;
+
+  > .quiz-link {
+    display: grid;
+    /* layout bleed */
+    grid-template-columns: 1fr min(var(--section-max-width, 924px), 100%) 1fr;
+
+    > * {
+      grid-column: 2;
+      padding-inline: 24px;
+      @media (min-width: 769px) {
+        padding-inline: 0;
+      }
+    }
+
+    .full-bleed {
+      grid-column: 1 / -1;
+    }
+  }
 
   @media (min-width: 1440px) {
     display: flex;
@@ -359,20 +380,24 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    padding-top: 44px;
   }
 
   .about-row {
     display: flex;
-    max-width: min(1200px, 100%);
-    gap: clamp(20px, 2.78vw, 40px);
+    flex-direction: row;
+    gap: var(--XL);
+    // max-width: min(1200px, 100%);
     align-self: stretch;
+    svg {
+      width: 1180px;
+    }
   }
 
   .about-col {
-    flex: 1;
     display: flex;
     flex-direction: column;
-    gap: clamp(20px, 2.78vw, 40px);
+    justify-content: space-between;
   }
 
   .desktop-heading1 {
@@ -388,6 +413,12 @@
     font-style: normal;
     font-weight: 600;
     line-height: 1.2;
+  }
+
+  .desktop-section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--L);
   }
 
   .desktop-expectation {
@@ -447,18 +478,12 @@
     transition: 0.3s;
   }
 
-  .desktop-svg {
-    margin: 0;
-    width: 100%;
-    object-fit: contain;
-    overflow: visible;
-  }
-
   .timeline-section {
     display: flex;
     flex-direction: row;
     gap: 12px;
     max-width: min(1200px, 100%);
+    padding-bottom: 12px;
   }
 
   .desktop-timeline-item {
@@ -519,20 +544,26 @@
 
   .timeline-row {
     display: flex;
-    width: 100%;
+    flex-direction: row;
     max-width: min(1200px, 100%);
+    width: 100%;
     justify-content: space-between;
-    margin: 0 auto;
   }
 
   .timeline-col {
     display: flex;
     flex-direction: column;
     gap: 40px;
+    min-width: 0;
+    svg {
+      max-width: 400px;
+    }
   }
-
-  .card-row {
+  .desktop-cta-cards {
     display: flex;
-    gap: 40px;
+    flex-direction: row;
+    gap: var(--M);
+    align-items: center;
+    font-family: 'Funnel Display';
   }
 }
