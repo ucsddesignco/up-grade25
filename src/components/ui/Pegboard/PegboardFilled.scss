@@ -25,7 +25,7 @@
   }
 
   .sticky-component {
-    left: 96.6px;
+    left: 102px;
     top: 54px;
     z-index: 3;
     .clipless-sticky {
@@ -47,8 +47,12 @@
   /* Tablet Layout */
   @media (min-width: 769px) {
     .photo-component {
-      left: 63px;
+      left: 66px;
       top: 494px;
+      .clipless-photo {
+        transform-origin: 110.5px 35px;
+        transition: transform 0.35s ease-out;
+      }
     }
 
     .ruler-component {
@@ -63,7 +67,7 @@
     }
 
     .sticky-component {
-      left: 380px;
+      left: 392px;
       top: 53.2px;
       overflow: visible;
       .clipless-sticky {
@@ -86,7 +90,7 @@
   /* Desktop Layout */
   @media (min-width: 1440px) {
     .photo-component {
-      left: 63px;
+      left: 66px;
       top: 254px;
     }
 
@@ -96,7 +100,7 @@
     }
 
     .sticky-component {
-      left: 775px;
+      left: 776px;
       top: 53.2px;
       .clipless-sticky {
         transform-origin: 110.5px 35px;
