@@ -27,7 +27,11 @@ function Home() {
           <CTACard variation="apply" isDesktop={true} />
         </div>
       </section>
-      <Button text="Apply Now" link="http://google.com/" className="apply-button" />
+      <Button
+        text="Apply Now"
+        link="https://forms.gle/1zNawC4iTSCEHEhd7"
+        className="apply-button"
+      />
     </div>
   );
 }

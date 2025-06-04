@@ -18,7 +18,7 @@ const VARIATIONS = {
     button: 'APPLY NOW',
     background: 'white',
     textColor: '#353C51',
-    link: 'http://google.com/'
+    link: 'https://forms.gle/1zNawC4iTSCEHEhd7'
   }
 };
 
