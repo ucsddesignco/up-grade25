@@ -2,9 +2,9 @@ import './Home.scss';
 import HeroSection from '../../components/ui/Pegboard/HeroSection';
 
 import Button from '../../components/Button/Button';
-import CTACard from '../../components/CTACard/CTACard';
 import DashedArrow from '../../components/DashedArrow/DashedArrow';
 import ExpectationsSection from './ExpectationsSection/ExpectationsSection';
+import CTASection from '../../components/CTASection/CTASection';
 function Home() {
   return (
     <div id="home-container">
@@ -17,17 +17,12 @@ function Home() {
         </div>
         <DashedArrow className="full-bleed" />
       </section>
-      <section className="cta-section">
-        <div className="mobile-cards">
-          <CTACard variation="faq" />
-          <CTACard variation="apply" />
-        </div>
-        <div className="cards">
-          <CTACard variation="faq" isDesktop={true} />
-          <CTACard variation="apply" isDesktop={true} />
-        </div>
-      </section>
-      <Button text="Apply Now" link="http://google.com/" className="apply-button" />
+      <CTASection />
+      <Button
+        text="Apply Now"
+        link="https://forms.gle/1zNawC4iTSCEHEhd7"
+        className="apply-button"
+      />
     </div>
   );
 }

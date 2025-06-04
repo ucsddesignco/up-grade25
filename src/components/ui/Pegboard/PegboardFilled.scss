@@ -45,7 +45,7 @@
   }
 
   /* Tablet Layout */
-  @media (min-width: 769px) {
+  @media (min-width: 768px) {
     .photo-component {
       left: 66px;
       top: 494px;
@@ -124,7 +124,7 @@
     display: none;
   }
 
-  @media (min-width: 769px) {
+  @media (min-width: 768px) {
     .ruler-component {
       display: block;
     }
@@ -137,7 +137,7 @@
     }
   }
 
-  @media (min-width: 769px) {
+  @media (min-width: 768px) {
     .shelf-mobile {
       display: none;
     }

@@ -3,6 +3,7 @@ import globals from 'globals';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
 import tseslint from 'typescript-eslint';
+import youMightNotNeedAnEffect from 'eslint-plugin-react-you-might-not-need-an-effect';
 
 export default tseslint.config(
   { ignores: ['dist'] },
@@ -15,10 +16,12 @@ export default tseslint.config(
     },
     plugins: {
       'react-hooks': reactHooks,
-      'react-refresh': reactRefresh
+      'react-refresh': reactRefresh,
+      'react-you-might-not-need-an-effect': youMightNotNeedAnEffect
     },
     rules: {
       ...reactHooks.configs.recommended.rules,
+      'react-you-might-not-need-an-effect/you-might-not-need-an-effect': 'warn',
       'react-refresh/only-export-components': ['warn', { allowConstantExport: true }]
     }
   }

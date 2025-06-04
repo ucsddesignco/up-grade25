@@ -3,7 +3,7 @@ nav {
   padding-left: 1.5rem;
   padding-right: 0.5rem;
 
-  @media (min-width: 769px) {
+  @media (min-width: 768px) {
     padding: 1rem;
   }
 
@@ -23,15 +23,14 @@ nav {
       font-weight: 700;
       letter-spacing: 0.24px;
 
-      @media (min-width: 769px) {
+      @media (min-width: 768px) {
         font-size: 24px;
       }
     }
   }
 
   li {
-    overflow-x: hidden;
-    overflow-y: visible;
+    overflow: hidden;
 
     a {
       text-decoration: none;
@@ -65,7 +64,7 @@ nav {
     justify-content: space-between;
     align-items: center;
 
-    @media (min-width: 769px) {
+    @media (min-width: 768px) {
       display: flex;
     }
 
@@ -87,7 +86,7 @@ nav {
     justify-content: space-between;
     align-items: center;
 
-    @media (min-width: 769px) {
+    @media (min-width: 768px) {
       display: none;
     }
 

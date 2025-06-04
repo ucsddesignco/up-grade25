@@ -46,7 +46,7 @@ const BaseSticky = ({
           fontFamily="Funnel Sans"
           fontWeight="500"
         >
-          - 2024 Up-Grader
+          - 2024 UP-Grader
         </text>
       </>
     );

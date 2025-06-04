@@ -84,7 +84,7 @@ function HeroSection() {
       <div className="icon-section">
         <div className="icon-line">
           <CalendarGrayIcon width={20} height={20} viewBox="0 0 32 32" />
-          <p>June 30 - Sept 5, 2025 (10 weeks)</p>
+          <p>July 7 - Sep 12, 2025 (10 weeks)</p>
         </div>
         <div className="icon-line">
           <ToolIcon />
@@ -98,7 +98,12 @@ function HeroSection() {
 
       <div ref={sliderRef} id="home-pegboard-container" className="keen-slider full-bleed">
         {ROLES.map((role, idx) => (
-          <div key={'pegboard' + idx} className="keen-slider__slide">
+          <div
+            key={'pegboard' + idx}
+            className="keen-slider__slide"
+            onMouseEnter={() => setIsPlaying(false)}
+            onMouseLeave={() => setIsPlaying(true)}
+          >
             <PegboardFilled role={role} rotation={rotation} />
           </div>
         ))}

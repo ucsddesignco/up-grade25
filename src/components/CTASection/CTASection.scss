@@ -1,0 +1,36 @@
+#cta-section {
+  .mobile-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--M);
+    padding-top: 48px;
+
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  .tablet-cards {
+    display: none;
+
+    @media (min-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: var(--M);
+    }
+
+    @media (min-width: 1440px) {
+      flex-direction: row;
+    }
+  }
+
+  > div {
+    padding: 0;
+  }
+  @media (min-width: 768px) {
+    padding-top: 120px;
+  }
+}
