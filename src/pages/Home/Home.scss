@@ -7,7 +7,7 @@
 
   --section-max-width: 393px;
 
-  @media (min-width: 769px) {
+  @media (min-width: 768px) {
     padding-top: 116px;
 
     --section-max-width: 641px;
@@ -25,7 +25,7 @@
     > * {
       grid-column: 2;
       padding-inline: 24px;
-      @media (min-width: 769px) {
+      @media (min-width: 768px) {
         padding-inline: 0;
       }
     }
@@ -40,10 +40,10 @@
     bottom: 2.25rem;
     left: 0;
     right: 0;
-    max-width: min(393px, 90%);
+    max-width: min(321px, 90%);
     margin-inline: auto;
 
-    @media (min-width: 769px) {
+    @media (min-width: 768px) {
       display: none;
     }
   }
@@ -81,7 +81,7 @@
     > div {
       padding: 0;
     }
-    @media (min-width: 769px) {
+    @media (min-width: 768px) {
       padding-top: 120px;
     }
   }
@@ -97,22 +97,11 @@
     gap: 12px;
   }
 
-  .mobile-cards {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--M);
-  }
-
-  .cards {
-    display: none;
-  }
-
   .icon-section-desktop {
     display: none;
   }
 
-  @media (min-width: 769px) {
+  @media (min-width: 768px) {
     .home-container {
       display: flex;
       padding: 160px 64px;

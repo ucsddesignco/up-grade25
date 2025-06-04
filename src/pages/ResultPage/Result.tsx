@@ -1,9 +1,9 @@
 import './Result.css';
 import ResultCard from '../../components/ui/Result/ResultCard';
 import Skills from '../../components/ui/Result/Skills';
-import CTACards from '../../components/ui/CTACards/CTACards';
 import { Navigate, useParams } from 'react-router';
 import type { role } from '../../components/ui/PersonalityQuiz/constants';
+import CTASection from '../../components/CTASection/CTASection';
 
 export default function Result() {
   const roles = ['PMM', 'PM', 'UXR', 'UXD', 'SWE', 'VIS'];
@@ -19,7 +19,7 @@ export default function Result() {
     <section className="result-section">
       <ResultCard role={roleId as role} />
       <Skills role={roleId as role} />
-      <CTACards />
+      <CTASection />
     </section>
   );
 }

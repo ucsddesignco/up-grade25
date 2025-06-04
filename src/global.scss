@@ -1,7 +1,9 @@
 :root {
+  --XXL: 120px;
   --XL: 80px;
   --L: 64px;
   --M: 40px;
+  --S: 24px;
   --XS: 12px;
 }
 
@@ -107,6 +109,16 @@ select {
   font: inherit;
 }
 
+button {
+  border: none;
+  background-color: inherit;
+  padding: 0;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
 h1,
 h2,
 h3,
@@ -126,7 +138,7 @@ h6 {
     'Open Sans',
     'Helvetica Neue',
     sans-serif;
-  text-wrap: balance;
+  text-wrap: pretty;
 }
 
 p,

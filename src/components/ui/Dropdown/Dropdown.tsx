@@ -5,11 +5,12 @@ import DownArrowIcon from '../../../assets/icons/down-arrow.svg?react';
 import { ROLE_COLORS, ROLES } from '../Pegboard/constants';
 
 interface DropdownProps {
+  setIsPlaying: React.Dispatch<React.SetStateAction<boolean>>;
   selected: number;
   onChange: (value: string) => void;
 }
 
-export default function Dropdown({ selected, onChange }: DropdownProps) {
+export default function Dropdown({ setIsPlaying, selected, onChange }: DropdownProps) {
   const currentRole = ROLES[selected];
   const currentRoleIsTall = currentRole.length > 16;
   const roleListRef = useRef<HTMLUListElement>(null);
@@ -25,7 +26,7 @@ export default function Dropdown({ selected, onChange }: DropdownProps) {
     return () => {
       roleList?.removeEventListener('transitionend', handleTransitionEnd);
     };
-  }, [selected]);
+  }, []);
 
   let shouldExpand = false;
   if (navigatingIndex === null && currentRoleIsTall) {
@@ -37,6 +38,9 @@ export default function Dropdown({ selected, onChange }: DropdownProps) {
   return (
     <div className="dropdown-container">
       <Select.Root
+        onOpenChange={() => {
+          setIsPlaying(false);
+        }}
         onValueChange={value => {
           onChange(value);
           setNavigatingIndex(Number(value));

@@ -16,7 +16,7 @@ function ExpectationsSection() {
       <div className="expectation-icons">
         <div className="expectation-row">
           <CalendarGrayIcon />
-          <p>June 30 - Sept 5</p>
+          <p>July 7 - Sep 12</p>
         </div>
         <div className="expectation-row">
           <WeeksIcon />

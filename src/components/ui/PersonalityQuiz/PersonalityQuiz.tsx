@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import './PersonalityQuiz.scss';
 import QuizVector from './QuizVector/QuizVector';
 import { QuizQuestions } from './constants';
@@ -13,7 +13,6 @@ export default function PersonalityQuiz() {
   const [selectedAnswers, setSelectedAnswers] = useState<(QuizOption | null)[]>(
     Array(QuizQuestions.length).fill(null)
   );
-  const [selectedOption, setSelectedOption] = useState<QuizOption | null>(null);
   const selectOption = (option: QuizOption) => {
     setSelectedAnswers(prevAnswers => {
       const newAnswers = [...prevAnswers];
@@ -25,6 +24,8 @@ export default function PersonalityQuiz() {
       return newAnswers;
     });
   };
+
+  const selectedOption = selectedAnswers[currentQuestionIndex];
 
   // continue button -> move to the next question
   const handleContinue = () => {
@@ -79,11 +80,6 @@ export default function PersonalityQuiz() {
     console.log('TOP ROLE: ', topRole);
     navigate(`/roles/${topRole}`);
   }
-
-  useEffect(() => {
-    console.log(selectedAnswers);
-    setSelectedOption(selectedAnswers[currentQuestionIndex]);
-  }, [selectedAnswers, currentQuestionIndex]);
 
   return (
     <section id="quiz-section">
