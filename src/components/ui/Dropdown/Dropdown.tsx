@@ -80,14 +80,7 @@ export default function Dropdown({ setIsPlaying, selected, onChange }: DropdownP
           >
             <Select.Viewport className="SelectViewport">
               {ROLES.map((role, index) => (
-                <Select.Item
-                  onClick={() => {
-                    console.log('clicked');
-                  }}
-                  key={role}
-                  value={String(index)}
-                  className="SelectItem"
-                >
+                <Select.Item key={role} value={String(index)} className="SelectItem">
                   <Select.ItemText className="SelectItemText">{role}</Select.ItemText>
                 </Select.Item>
               ))}

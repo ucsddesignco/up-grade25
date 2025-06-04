@@ -22,6 +22,12 @@
     left: -27px;
     top: 685px;
     transform-origin: top center;
+    overflow: visible;
+
+    .clipless-photo {
+      transform-origin: 110.5px 35px;
+      transition: transform 0.35s ease-out;
+    }
   }
 
   .sticky-component {
@@ -29,9 +35,9 @@
     top: 54px;
     z-index: 3;
     .clipless-sticky {
-        transform-origin: 110.5px 35px;
-        transition: transform 0.35s ease-out;
-      }
+      transform-origin: 110.5px 35px;
+      transition: transform 0.35s ease-out;
+    }
   }
 
   .shelf-component {
@@ -42,11 +48,38 @@
   .unique-component {
     left: 24px;
     top: 349px;
+    transition: transform 0.2s ease-in-out;
+
+    &#measuring-tape {
+      transform-origin: 95px 157px;
+    }
+
+    &#telephone-svg {
+      transform-origin: 133px 150px;
+    }
+
+    &:hover {
+      animation: wiggle 0.4s ease-out forwards;
+    }
+  }
+
+  @keyframes wiggle {
+    33% {
+      transform: scale(1.03) rotate(3deg);
+    }
+    66% {
+      transform: scale(1.03) rotate(-1deg);
+    }
+    100% {
+      transform: scale(1) rotate(0deg);
+    }
   }
 
   /* Tablet Layout */
   @media (min-width: 768px) {
     .photo-component {
+      overflow: visible;
+
       left: 66px;
       top: 494px;
       .clipless-photo {

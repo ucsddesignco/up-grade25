@@ -23,7 +23,7 @@ const PegboardFilled = ({ role, rotation }: PegboardFilledProps) => {
     <div id="filled-pegboard-container">
       <PegboardEmpty color={pegboardColor} />
 
-      <PhotoComponent className="pegboard-item photo-component" />
+      <PhotoComponent className="pegboard-item photo-component" rotation={rotation / 3} />
 
       <BaseRuler color={textColor} className="pegboard-item ruler-component" rotation={rotation} />
 
@@ -32,7 +32,7 @@ const PegboardFilled = ({ role, rotation }: PegboardFilledProps) => {
         color={textColor}
         body={stickyTextData?.body}
         bodyFontSize={stickyTextData?.bodyFontSize}
-        rotation={rotation}
+        rotation={rotation / 4}
       />
 
       <ShelfMobile className="shelf-mobile pegboard-item shelf-component" />
