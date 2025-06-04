@@ -42,7 +42,7 @@ const Overview = () => {
           </div>
         </section>
 
-        <Phone className="mobile-svg" />
+        <Phone className="mobile-svg mobile-phone-svg" />
 
         <div className="mobile-section">
           <h2 className="mobile-heading1">The Task</h2>

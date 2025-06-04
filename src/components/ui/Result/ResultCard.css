@@ -18,7 +18,7 @@
   font-size: clamp(2rem, 2.5vw, 3rem);
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .resultCard {
     width: 360px;
     height: 460;

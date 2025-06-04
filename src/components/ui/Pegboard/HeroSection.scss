@@ -3,7 +3,7 @@
 
   --section-max-width: 393px;
 
-  @media (min-width: 769px) {
+  @media (min-width: 768px) {
     --section-max-width: 641px;
   }
 
@@ -44,7 +44,7 @@
         height: calc(3lh + 5rem);
       }
 
-      @media (min-width: 769px) {
+      @media (min-width: 768px) {
         margin-inline: auto;
         text-align: center;
         gap: 0;
@@ -79,7 +79,7 @@
     gap: 16px;
     margin-top: var(--L);
 
-    @media (min-width: 769px) {
+    @media (min-width: 768px) {
       flex-direction: row;
     }
 
@@ -96,7 +96,7 @@
       &:last-child p {
         max-width: 30ch;
 
-        @media (min-width: 769px) {
+        @media (min-width: 768px) {
           max-width: 100%;
         }
       }
@@ -121,7 +121,7 @@
     min-width: calc(288px + 50px);
     overflow: visible;
 
-    @media (min-width: 769px) {
+    @media (min-width: 768px) {
       min-width: calc(624px + 32px);
     }
 

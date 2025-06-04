@@ -1,4 +1,6 @@
 #overview-page {
+  padding-inline: 24px;
+
   #overview-mobile-container {
     display: flex;
     width: 100%;
@@ -11,7 +13,7 @@
     max-width: 344px;
     margin-inline: auto;
 
-    @media (min-width: 769px) {
+    @media (min-width: 768px) {
       display: none;
     }
 
@@ -34,11 +36,20 @@
     .mobile-title {
       max-width: 480px;
       align-self: stretch;
-      font-size: 64px;
+      font-size: 58px;
       font-style: normal;
       font-weight: 700;
       line-height: 100%; /* 64px */
       letter-spacing: 0.64px;
+
+      @media (min-width: 348px) {
+        font-size: 64px;
+      }
+    }
+
+    // optical alignment
+    .mobile-phone-svg {
+      transform: translateX(-16px);
     }
 
     .mobile-heading1 {
@@ -163,7 +174,7 @@
     max-width: 641px;
     margin-inline: auto;
 
-    @media (min-width: 769px) and (max-width: 1439px) {
+    @media (min-width: 768px) and (max-width: 1439px) {
       display: flex;
     }
 
@@ -363,7 +374,7 @@
       > * {
         grid-column: 2;
         padding-inline: 24px;
-        @media (min-width: 769px) {
+        @media (min-width: 768px) {
           padding-inline: 0;
         }
       }
