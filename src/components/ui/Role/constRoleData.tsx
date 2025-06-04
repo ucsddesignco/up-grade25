@@ -59,6 +59,18 @@ export const ROLE_LIST: Record<role, RoleDetails> = {
     assume. Their insights anchor product decisions in real-world context,
      helping designers avoid bias, build with empathy, and prioritize users.`
   },
+
+  UXD: {
+    role: 'UX Designer',
+    SVG: <MeasuringTape />,
+    color: '#FF8B39',
+    description: 'General description will go right here. General description will go right here.',
+    skills: ['Iterative Thinking', 'User Empathy', 'Data-driven Design'],
+    lead: ['User Flows', 'Product Interaction', 'Wireframing & Prototyping'],
+    impact: `UX Designers translate user behaviors into meaningful digital
+     experiences. By shaping how people interact with products, they influence 
+     accessibility, usability, and engagement.`
+  },
   VIS: {
     role: 'Visual Designer',
     SVG: <Brush />,
@@ -70,16 +82,5 @@ export const ROLE_LIST: Record<role, RoleDetails> = {
         between users and products. Their work influences perception,
         usability, and identity. It can be the difference-maker between
          a good and a delightful experience.`
-  },
-  UXD: {
-    role: 'UX Designer',
-    SVG: <MeasuringTape />,
-    color: '#FF8B39',
-    description: 'General description will go right here. General description will go right here.',
-    skills: ['Iterative Thinking', 'User Empathy', 'Data-driven Design'],
-    lead: ['User Flows', 'Product Interaction', 'Wireframing & Prototyping'],
-    impact: `UX Designers translate user behaviors into meaningful digital
-     experiences. By shaping how people interact with products, they influence 
-     accessibility, usability, and engagement.`
   }
 };

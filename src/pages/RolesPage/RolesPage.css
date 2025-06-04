@@ -50,14 +50,15 @@
 .pegboard-container {
   width: 302px;
   height: 2027px;
-  /* border: 2px solid red; */
   position: relative;
   /* helps it be centered of the page */
   margin-inline: auto;
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  padding-inline: 4rem;
-  place-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2.5rem;
+  padding-bottom: 3.5rem;
 }
 
 .phonePegboard {
@@ -89,9 +90,14 @@
     position: relative;
     margin-inline: auto;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    padding-inline: 4rem;
-    padding-block: 1rem;
+    grid-template-columns: repeat(2, min-content);
+    grid-template-rows: repeat(2, min-content);
+    place-items: center;
+    justify-content: space-between;
+    align-content: space-between;
+    padding-top: 2.5rem;
+    padding-bottom: 4rem;
+    padding-inline: 1.25rem;
   }
 
   .quiz-titles {
@@ -124,8 +130,8 @@
     grid-template-rows: repeat(2, min-content);
     justify-content: space-between;
     align-content: space-between;
-    padding-inline: 4rem;
-    padding-top: 3rem;
-    padding-bottom: 4rem;
+    padding-inline: 4.25rem;
+    padding-top: 2.5rem;
+    padding-bottom: 3.5rem;
   }
 }
