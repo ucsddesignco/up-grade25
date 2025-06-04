@@ -21,23 +21,18 @@
   .photo-component {
     left: -27px;
     top: 685px;
-    transform-origin: top center;
+    transform-origin: center 5px;
+    transition: transform 0.35s ease-out;
     overflow: visible;
-
-    .clipless-photo {
-      transform-origin: 110.5px 35px;
-      transition: transform 0.35s ease-out;
-    }
   }
 
   .sticky-component {
     left: 102px;
     top: 54px;
     z-index: 3;
-    .clipless-sticky {
-      transform-origin: 110.5px 35px;
-      transition: transform 0.35s ease-out;
-    }
+    overflow: visible;
+    transition: transform 0.35s ease-out;
+    transform-origin: center 5px;
   }
 
   .shelf-component {
@@ -103,10 +98,6 @@
       left: 392px;
       top: 53.2px;
       overflow: visible;
-      .clipless-sticky {
-        transform-origin: 110.5px 35px;
-        transition: transform 0.35s ease-out;
-      }
     }
 
     .shelf-component {
