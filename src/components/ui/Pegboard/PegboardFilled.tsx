@@ -32,6 +32,7 @@ const PegboardFilled = ({ role, rotation }: PegboardFilledProps) => {
         color={textColor}
         body={stickyTextData?.body}
         bodyFontSize={stickyTextData?.bodyFontSize}
+        rotation={rotation}
       />
 
       <ShelfMobile className="shelf-mobile pegboard-item shelf-component" />

@@ -28,6 +28,10 @@
     left: 96.6px;
     top: 54px;
     z-index: 3;
+    .clipless-sticky {
+        transform-origin: 110.5px 35px;
+        transition: transform 0.35s ease-out;
+      }
   }
 
   .shelf-component {
@@ -61,6 +65,11 @@
     .sticky-component {
       left: 380px;
       top: 53.2px;
+      overflow: visible;
+      .clipless-sticky {
+        transform-origin: 110.5px 35px;
+        transition: transform 0.35s ease-out;
+      }
     }
 
     .shelf-component {
@@ -89,6 +98,10 @@
     .sticky-component {
       left: 775px;
       top: 53.2px;
+      .clipless-sticky {
+        transform-origin: 110.5px 35px;
+        transition: transform 0.35s ease-out;
+      }
     }
 
     .shelf-component {
