@@ -27,7 +27,7 @@ export default function Navbar() {
               </li>
             ))}
           </ul>
-          <Button text="Apply Now" link="http://google.com/" />
+          <Button text="Apply Now" link="https://forms.gle/1zNawC4iTSCEHEhd7" />
         </div>
       </div>
 
@@ -60,7 +60,7 @@ export default function Navbar() {
                   </li>
                 ))}
               </ul>
-              <Button text="Apply Now" link="http://google.com/" />
+              <Button text="Apply Now" link="https://forms.gle/1zNawC4iTSCEHEhd7" />
             </div>
           </Dialog.Content>
         </Dialog.Root>
