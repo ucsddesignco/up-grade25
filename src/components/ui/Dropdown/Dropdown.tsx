@@ -26,7 +26,7 @@ export default function Dropdown({ setIsPlaying, selected, onChange }: DropdownP
     return () => {
       roleList?.removeEventListener('transitionend', handleTransitionEnd);
     };
-  }, [selected]);
+  }, []);
 
   let shouldExpand = false;
   if (navigatingIndex === null && currentRoleIsTall) {

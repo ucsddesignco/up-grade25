@@ -21,8 +21,8 @@ import QuizVector from '../../components/ui/PersonalityQuiz/QuizVector/QuizVecto
 
 const Overview = () => {
   return (
-    <>
-      <main id="overview-mobile-container">
+    <main id="overview-page">
+      <div id="overview-mobile-container">
         <h1 className="mobile-title">Overview</h1>
         <section className="mobile-section">
           <div>
@@ -80,7 +80,7 @@ const Overview = () => {
           <div className="mobile-timeline-section">
             <div className="mobile-timeline-item">
               <img src={CalendarIcon}></img>
-              <p>June 30 - Sept 5</p>
+              <p>July 7 - Sep 12</p>
             </div>
             <div className="mobile-timeline-item">
               <img src={WeeksIcon}></img>
@@ -119,9 +119,9 @@ const Overview = () => {
             <CTACard variation="apply" />
           </div>
         </section>
-      </main>
+      </div>
 
-      <main id="overview-tablet-container">
+      <div id="overview-tablet-container">
         <h1 className="tablet-title">Overview</h1>
         <div className="tablet-section">
           <h2 className="tablet-heading1">About</h2>
@@ -197,7 +197,7 @@ const Overview = () => {
             <div className="timeline-section">
               <div className="timeline-item">
                 <img src={CalendarIcon}></img>
-                <p>June 30 - Sept 5</p>
+                <p>July 7 - Sep 12</p>
               </div>
               <div className="timeline-item">
                 <img src={WeeksIcon}></img>
@@ -233,9 +233,9 @@ const Overview = () => {
           <CTACard variation="faq" isDesktop={true} />
           <CTACard variation="apply" isDesktop={true} />
         </section>
-      </main>
+      </div>
 
-      <main id="overview-desktop-container">
+      <div id="overview-desktop-container">
         <h1 className="desktop-title">Overview</h1>
         <div className="about-row">
           <div className="about-col">
@@ -302,13 +302,13 @@ const Overview = () => {
         </div>
 
         <div className="timeline-row">
-          <div className="timeline-col">
+          <div className="timeline-col timeline-left">
             <h2 className="desktop-heading1">Timeline</h2>
             <div>
               <div className="timeline-section">
                 <div className="desktop-timeline-item">
                   <img src={CalendarIcon}></img>
-                  <p>June 30 - Sept 5</p>
+                  <p>July 7 - Sep 12</p>
                 </div>
                 <div className="desktop-timeline-item">
                   <img src={WeeksIcon}></img>
@@ -337,7 +337,7 @@ const Overview = () => {
               </div>
             </div>
           </div>
-          <div className="timeline-col">
+          <div className="timeline-col timeline-right">
             <DesktopSVG2 className="desktop-svg" />
           </div>
         </div>
@@ -346,8 +346,8 @@ const Overview = () => {
           <CTACard variation="faq" isDesktop={true} />
           <CTACard variation="apply" isDesktop={true} />
         </section>
-      </main>
-    </>
+      </div>
+    </main>
   );
 };
 
