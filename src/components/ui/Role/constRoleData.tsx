@@ -17,7 +17,8 @@ export const ROLE_LIST: Record<role, RoleDetails> = {
     role: 'Project Manager',
     SVG: <Clock />,
     color: '#10B9DF',
-    description: 'As the Project Manager, you will keep the team organized by overseeing project goals, deadlines, and communication between team members.',
+    description:
+      'As the Project Manager, you will keep the team organized by overseeing project goals, deadlines, and communication between team members.',
     skills: ['Prioritization', 'Communication', 'Innovation', 'Resource Allocation'],
     lead: ['Meetings', 'Tracking Metrics', 'Deliverables', 'Retrospectives'],
     impact: `Project Managers are the glue of leading timelines, syncing communication,
@@ -28,7 +29,8 @@ export const ROLE_LIST: Record<role, RoleDetails> = {
     role: 'Product Marketing Manager',
     SVG: <Telephone />,
     color: '#8BB660',
-    description: 'As the Product Marketing Manager, you will shape the brand’s direction and story.',
+    description:
+      'As the Product Marketing Manager, you will shape the brand’s direction and story.',
     skills: ['Brand Strategy', 'Storytelling', 'Market Awareness', 'Writing'],
     lead: ['Go-to-market Strategy', 'Brand Direction', 'Content & Tone'],
     impact: `Product Marketing sits at the intersection of design, business, 
@@ -40,7 +42,8 @@ export const ROLE_LIST: Record<role, RoleDetails> = {
     role: 'Software Engineer',
     SVG: <Tape />,
     color: '#49A0EB',
-    description: 'In this role, you’ll be responsible for creating visuals that emphasize usability.',
+    description:
+      'In this role, you’ll be responsible for creating visuals that emphasize usability.',
     skills: ['Logical Thinking', 'Code Fluency', 'Optimization', 'Feasibility'],
     lead: ['Managing Handoff', 'Debugging', 'Engineering the Product'],
     impact: `Software Engineers are the architects and builders of the 
@@ -52,7 +55,8 @@ export const ROLE_LIST: Record<role, RoleDetails> = {
     role: 'UX Researcher',
     SVG: <Glass />,
     color: '#F1A210',
-    description: 'As the UX Researcher, you will shape the product direction through structured research methods. You will help your team stay focused on user needs throughout the design process.',
+    description:
+      'As the UX Researcher, you will shape the product direction through structured research methods. You will help your team stay focused on user needs throughout the design process.',
     skills: ['Communication', 'Investigation', 'Forming Insights', 'User Advocacy'],
     lead: ['Interviews & Tests', 'Data Analysis', 'Validating Product Direction'],
     impact: `UX Researchers illuminate what people need, not just what designers 
@@ -64,7 +68,8 @@ export const ROLE_LIST: Record<role, RoleDetails> = {
     role: 'UX Designer',
     SVG: <MeasuringTape />,
     color: '#FF8B39',
-    description: 'As the UX Designer, you are responsible for shaping the overall user experience of your team’s product.',
+    description:
+      'As the UX Designer, you are responsible for shaping the overall user experience of your team’s product.',
     skills: ['Iterative Thinking', 'User Empathy', 'Data-driven Design'],
     lead: ['User Flows', 'Product Interaction', 'Wireframing & Prototyping'],
     impact: `UX Designers translate user behaviors into meaningful digital
@@ -75,7 +80,8 @@ export const ROLE_LIST: Record<role, RoleDetails> = {
     role: 'Visual Designer',
     SVG: <Brush />,
     color: '#F95984',
-    description: 'In this role, you’ll be responsible for creating visuals that emphasize usability.',
+    description:
+      'In this role, you’ll be responsible for creating visuals that emphasize usability.',
     skills: ['Hierarchy', 'Attention to detail', 'Creative Direction', 'Consistency'],
     lead: ['Visual Identity', 'Design Systems', 'Visual Quality Assurance (VQA'],
     impact: `Visual Designers nurture the cultural relationship 

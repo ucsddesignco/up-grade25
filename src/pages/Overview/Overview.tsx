@@ -59,7 +59,7 @@ const Overview = () => {
             <h2 style={{ fontSize: '20px', color: '#646676', textAlign: 'center' }}>
               Not sure what role to try?
             </h2>
-            <Button text="TAKE A BRIEF QUIZ" />
+            <Button text="TAKE A BRIEF QUIZ" link="/quiz" />
             <DashedArrow className="full-bleed" />
           </div>
 
@@ -166,7 +166,7 @@ const Overview = () => {
           <div className="quiz-link">
             <div className="tablet-quiz-link">
               <h2 style={{ fontSize: '20px', color: '#646676' }}>Not sure what role to try?</h2>
-              <Button text="TAKE A BRIEF QUIZ" />
+              <Button text="TAKE A BRIEF QUIZ" link="/quiz" />
             </div>
             <DashedArrow className="full-bleed" />
           </div>
@@ -280,7 +280,7 @@ const Overview = () => {
           <div>
             <div className="desktop-columns quiz-link">
               <h2 style={{ fontSize: '20px', color: '#646676' }}>Not sure what role to try?</h2>
-              <Button text="TAKE A BRIEF QUIZ" />
+              <Button text="TAKE A BRIEF QUIZ" link="/quiz" />
             </div>
             <DashedArrow className="full-bleed" />
           </div>

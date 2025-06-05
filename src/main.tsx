@@ -9,10 +9,12 @@ import Result from './pages/ResultPage/Result.tsx';
 import Overview from './pages/Overview/Overview.tsx';
 import Navbar from './components/Navbar/Navbar.tsx';
 import FAQPage from './pages/FAQpage/FAQpage.tsx';
+import ScrollToTop from './components/ScrollToTop/ScrollToTop.tsx';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <BrowserRouter>
+      <ScrollToTop />
       <Navbar />
       <Routes>
         <Route path="/" element={<App />} />

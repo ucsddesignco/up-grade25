@@ -11,7 +11,6 @@
   border-left: 4px dashed black;
   border-right: 4px dashed black;
   width: 304px;
-  height: 460px;
   padding: var(--S);
   background-color: #fffffe;
 
@@ -37,6 +36,5 @@
 @media (min-width: 768px) {
   .resultCard {
     width: 360px;
-    height: 460px;
   }
 }

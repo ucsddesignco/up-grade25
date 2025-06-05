@@ -97,7 +97,7 @@
 
   .AccordionItem {
     overflow: hidden;
-    border: 4px solid black;
+    border: 4px solid #353c51;
     border-left: none;
     border-right: none;
     position: relative;
@@ -107,7 +107,7 @@
     &::after {
       content: '';
       position: absolute;
-      background-image: linear-gradient(to top, black 50%, transparent 50%);
+      background-image: linear-gradient(to top, #353c51 50%, transparent 50%);
       background-repeat: repeat-y;
       background-size: 4px 10px;
       width: 4px;
