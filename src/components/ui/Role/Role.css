@@ -22,14 +22,18 @@
   text-align: center;
   padding: 0.5rem 0.75rem;
   background-color: #353c51;
-  color: #fff;
-  font-family: 'Funnel Sans';
-  font-size: 24px;
-  font-style: normal;
+  /* padding: 0.2rem 3.5rem; */
+  border-radius: 0.5rem;
   font-weight: 400;
-  line-height: normal;
-  letter-spacing: 0.24px;
-  width: 100%;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  border-radius: 0;
+  font-size: 1.1rem;
+  width: 262px;
+  height: auto;
+  /* text-wrap: nowrap; */
+  max-width: 200px;
+  padding: 0.5rem;
 }
 
 @media (min-width: 768px) {

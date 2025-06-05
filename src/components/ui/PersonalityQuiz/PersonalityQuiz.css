@@ -74,7 +74,3 @@
 .continueBtn:disabled {
   cursor: not-allowed;
 }
-
-.selected {
-  background-color: red;
-}

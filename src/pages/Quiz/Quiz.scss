@@ -1,0 +1,42 @@
+#personality-quiz-intro {
+  margin-top: 1rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 5rem;
+
+  .quiz-title {
+    max-width: 650px;
+    color: #353c51;
+    font-family: 'Funnel Display';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+
+    @media (min-width: 768px) {
+      font-size: 32px;
+      line-height: 35px;
+    }
+  }
+
+  .start-btn {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    text-wrap: nowrap;
+  }
+
+  .familySvg {
+    width: 640px;
+    max-width: none;
+  }
+}
