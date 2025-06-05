@@ -122,7 +122,7 @@ export default function PersonalityQuiz() {
             </button>
           ) : (
             <Button
-              text="Reveal Text"
+              text="Reveal Results"
               className="continueBtn"
               onClick={handleReveal}
               disabled={selectedOption === null}
