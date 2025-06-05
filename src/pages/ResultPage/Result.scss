@@ -1,3 +1,6 @@
 #result-page {
   margin-bottom: var(--XXL);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

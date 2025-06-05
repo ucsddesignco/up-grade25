@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import ArrowVector from './../../components/ui/PersonalityQuiz/ArrowVector';
 import './Quiz.scss';
 import PersonalityQuiz from '../../components/ui/PersonalityQuiz/PersonalityQuiz';
 import Family from '../../components/ui/Role/roleSVGComponents/Family';
@@ -20,7 +19,7 @@ export default function Quiz() {
             Ready to find out which skills you can UP-Grade this summer?
           </h1>
           <Button
-            icon={<ArrowVector />}
+            // icon={<ArrowVector />}
             text="Let's Start!"
             className="start-btn"
             onClick={() => setStarted(true)}

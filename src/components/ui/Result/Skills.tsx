@@ -45,7 +45,7 @@ export default function Skills({ role }: SkillsProps) {
 
         <div className="otherRolesContainer">
           <h4>Not the right one for you?</h4>
-          <Button text="View Other Roles" />
+          <Button text="View Other Roles" link="/roles" />
           <DashedArrow />
         </div>
       </div>
