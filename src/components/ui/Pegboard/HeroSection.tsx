@@ -83,8 +83,8 @@ function HeroSection() {
 
       <div className="icon-section">
         <div className="icon-line">
-          <CalendarGrayIcon width={20} height={20} viewBox="0 0 32 32" />
-          <p>July 7 - Sep 12, 2025 (10 weeks)</p>
+          <CalendarGrayIcon width={24} height={24} viewBox="0 0 32 32" />
+          <p>July 7 - Sept 12, 2025 (10 weeks)</p>
         </div>
         <div className="icon-line">
           <ToolIcon />

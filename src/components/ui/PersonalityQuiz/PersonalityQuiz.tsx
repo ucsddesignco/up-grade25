@@ -5,7 +5,7 @@ import { QuizQuestions } from './constants';
 import type { QuizOption, role } from './constants';
 import { useNavigate } from 'react-router';
 import Button from '../../Button/Button';
-import ArrowVector from './ArrowVector';
+// import ArrowVector from './ArrowVector';
 
 export default function PersonalityQuiz() {
   const navigate = useNavigate();
@@ -126,7 +126,7 @@ export default function PersonalityQuiz() {
               className="continueBtn"
               onClick={handleReveal}
               disabled={selectedOption === null}
-              icon={<ArrowVector />}
+              // icon={<ArrowVector />}
             />
           )}
         </div>

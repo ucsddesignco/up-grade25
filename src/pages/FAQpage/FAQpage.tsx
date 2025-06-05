@@ -29,7 +29,7 @@ export default function FAQPage() {
     {
       question: 'Do I need prior design experience?',
       answer:
-        'No, prior design experience is not required! We welcome participants of all experience levels– whether you’re a seasoned design pro or just starting your creative career.'
+        'No, prior design experience is not required! We welcome participants of all experience levels—whether you’re a seasoned design pro or just starting your creative career.'
     },
     {
       question: 'Will this program be remote or in-person?',
@@ -39,7 +39,7 @@ export default function FAQPage() {
     {
       question: 'When are applications due?',
       answer:
-        'Friday, June 6 at 11:59PM PT. Decisions will be sent out approximately a week after the application deadline.'
+        'Friday, June 13 at 11:59PM PT. Decisions will be sent out approximately a week after the application deadline.'
     }
   ];
 

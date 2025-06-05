@@ -148,6 +148,8 @@
     gap: 1rem;
 
     svg {
+      min-width: 32px;
+      min-height: 32px;
       transition: rotate 0.2s ease-in-out;
     }
 

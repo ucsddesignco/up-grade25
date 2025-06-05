@@ -80,7 +80,7 @@ const Overview = () => {
           <div className="mobile-timeline-section">
             <div className="mobile-timeline-item">
               <img src={CalendarIcon}></img>
-              <p>July 7 - Sep 12</p>
+              <p>July 7 - Sept 12</p>
             </div>
             <div className="mobile-timeline-item">
               <img src={WeeksIcon}></img>
@@ -88,7 +88,7 @@ const Overview = () => {
             </div>
             <div className="mobile-timeline-item">
               <img src={ClockIcon}></img>
-              <p>12-15 hours per week</p>
+              <p>12 - 15 hours per week</p>
             </div>
           </div>
 
@@ -197,7 +197,7 @@ const Overview = () => {
             <div className="timeline-section">
               <div className="timeline-item">
                 <img src={CalendarIcon}></img>
-                <p>July 7 - Sep 12</p>
+                <p>July 7 - Sept 12</p>
               </div>
               <div className="timeline-item">
                 <img src={WeeksIcon}></img>
@@ -205,7 +205,7 @@ const Overview = () => {
               </div>
               <div className="timeline-item">
                 <img src={ClockIcon}></img>
-                <p>12-15 hours per week</p>
+                <p>12 - 15 hours per week</p>
               </div>
             </div>
             <QuizVector />
@@ -308,7 +308,7 @@ const Overview = () => {
               <div className="timeline-section">
                 <div className="desktop-timeline-item">
                   <img src={CalendarIcon}></img>
-                  <p>July 7 - Sep 12</p>
+                  <p>July 7 - Sept 12</p>
                 </div>
                 <div className="desktop-timeline-item">
                   <img src={WeeksIcon}></img>
@@ -316,7 +316,7 @@ const Overview = () => {
                 </div>
                 <div className="desktop-timeline-item">
                   <img src={ClockIcon}></img>
-                  <p>12-15 hours per week</p>
+                  <p>12 - 15 hours per week</p>
                 </div>
               </div>
               <QuizVector />

@@ -128,7 +128,7 @@ export const QuizQuestions: QuizQuesiton[] = [
     option: [
       {
         id: 'a',
-        text: 'The story behind it and it connects with people',
+        text: 'The story behind it and how it connects with people',
         pointDist: {
           UXR: 0,
           UXD: 2,
@@ -250,7 +250,7 @@ export const QuizQuestions: QuizQuesiton[] = [
       },
       {
         id: 'b',
-        text: 'Planning around the needs and preferences of the people traveling.',
+        text: 'Planning around the needs and preferences of the people traveling',
         pointDist: {
           UXR: 5,
           UXD: 1,
