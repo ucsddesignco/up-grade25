@@ -1,0 +1,128 @@
+#filled-pegboard-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: grab;
+
+  &:active {
+    cursor: grabbing;
+  }
+
+  svg {
+    max-width: none;
+  }
+
+  .pegboard-item {
+    position: absolute;
+    z-index: 2;
+  }
+
+  /* Mobile Layout (default) */
+  .photo-component {
+    left: -27px;
+    top: 685px;
+    transform-origin: top center;
+  }
+
+  .sticky-component {
+    left: 96.6px;
+    top: 54px;
+    z-index: 3;
+  }
+
+  .shelf-component {
+    left: -7px;
+    top: 546px;
+  }
+
+  .unique-component {
+    left: 24px;
+    top: 349px;
+  }
+
+  /* Tablet Layout */
+  @media (min-width: 768px) {
+    .photo-component {
+      left: 63px;
+      top: 494px;
+    }
+
+    .ruler-component {
+      left: 466px;
+      top: 443px;
+      /* transform-origin: 36.5px 35px; */
+
+      .clipless-ruler {
+        transform-origin: 35px 35px;
+        transition: transform 0.35s ease-out;
+      }
+    }
+
+    .sticky-component {
+      left: 380px;
+      top: 53.2px;
+    }
+
+    .shelf-component {
+      left: 41px;
+      top: 306px;
+    }
+
+    .unique-component {
+      left: 72px;
+      top: 109px;
+    }
+  }
+
+  /* Desktop Layout */
+  @media (min-width: 1440px) {
+    .photo-component {
+      left: 63px;
+      top: 254px;
+    }
+
+    .ruler-component {
+      left: 468px;
+      top: 64px;
+    }
+
+    .sticky-component {
+      left: 775px;
+      top: 53.2px;
+    }
+
+    .shelf-component {
+      left: 617px;
+      top: 546px;
+    }
+
+    .unique-component {
+      left: 864px;
+      top: 349px;
+    }
+  }
+
+  /* Hide/Show components based on breakpoint */
+  .ruler-component {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    .ruler-component {
+      display: block;
+    }
+  }
+
+  /* Handle mobile shelf swap */
+  @media (max-width: 768px) {
+    .shelf-desktop {
+      display: none;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .shelf-mobile {
+      display: none;
+    }
+  }
+}

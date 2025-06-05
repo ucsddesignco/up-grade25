@@ -1,92 +1,200 @@
-h1 {
-  text-align: center;
-  color: #353c51;
-}
+#faqpage {
+  padding-top: 1.5rem;
+  padding-bottom: calc(2 * var(--XXL));
 
-body {
-  background-color: white;
-}
-
-.AccordionRoot {
-  max-width: 641px;
-}
-.AccordionItem {
-  overflow: hidden;
-  margin-top: 1px;
-  border: 4px solid black;
-  border-left: none;
-  border-right: none;
-  position: relative;
-
-  &::before,
-  &::after {
-    content: '';
+  .left-pegboard,
+  .right-pegboard {
     position: absolute;
-    background-image: linear-gradient(to top, black 50%, transparent 50%);
-    background-repeat: repeat-y;
-    background-size: 4px 10px;
-    width: 4px;
-    height: 100%;
+    display: none;
+    transform: translateY(-25px);
+
+    @media (min-width: 1440px) {
+      display: block;
+    }
   }
 
-  &::after {
-    top: 0;
+  .left-pegboard {
+    left: 0;
+  }
+
+  .right-pegboard {
     right: 0;
   }
-}
 
-.AccordionHeader {
-  display: flex;
-}
+  .faq-pegboard-container {
+    margin-top: var(--XL);
 
-.AccordionQuestion {
-  background-color: transparent;
-  text-align: left;
-  color: #353c51;
-  font-family: inherit;
-  height: 45px;
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 641px;
-  font-size: 15px;
-  border: none;
-  padding: 20px;
-}
-
-.AccordionContent {
-  text-align: left;
-  color: #353c51;
-  overflow: hidden;
-  font-size: 15px;
-  width: 100%;
-  max-width: 641px;
-  padding-inline: 20px;
-}
-
-.AccordionContent[data-state='open'] {
-  animation: slideDown 0.2s cubic-bezier(0.87, 0, 0.13, 1);
-}
-.AccordionContent[data-state='closed'] {
-  animation: slideUp 0.2s cubic-bezier(0.87, 0, 0.13, 1);
-}
-
-@keyframes slideDown {
-  from {
-    height: 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80px;
   }
-  to {
-    height: var(--radix-accordion-content-height);
-  }
-}
 
-@keyframes slideUp {
-  from {
-    height: var(--radix-accordion-content-height);
+  h1 {
+    align-items: center;
+    text-align: left;
+    color: #353c51;
+    margin-inline: auto;
+    padding-inline: 24px;
+    width: 100%;
+    font-family: 'Funnel Display';
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+    .tablet-desktop {
+      display: none;
+    }
+
+    @media (min-width: 768px) {
+      padding-inline: 0;
+      max-width: 641px;
+
+      .mobile {
+        display: none;
+      }
+
+      .tablet-desktop {
+        display: grid;
+        max-width: 600px;
+      }
+    }
+
+    @media (min-width: 1440px) {
+      max-width: 800px;
+      .tablet-desktop {
+        display: flex;
+        flex-direction: column;
+        max-width: 800px;
+      }
+    }
   }
-  to {
-    height: 0;
+
+  body {
+    background-color: white;
+  }
+
+  .AccordionRoot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    width: 100%;
+    margin-inline: auto;
+    padding-inline: 24px;
+    gap: 1.5rem;
+
+    @media (min-width: 768px) {
+      padding-inline: 0;
+      max-width: 641px;
+    }
+
+    @media (min-width: 1440px) {
+      max-width: 800px;
+    }
+  }
+
+  .AccordionItem {
+    overflow: hidden;
+    border: 4px solid black;
+    border-left: none;
+    border-right: none;
+    position: relative;
+    width: 100%;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      background-image: linear-gradient(to top, black 50%, transparent 50%);
+      background-repeat: repeat-y;
+      background-size: 4px 10px;
+      width: 4px;
+      height: 100%;
+    }
+
+    &::after {
+      top: 0;
+      right: 0;
+    }
+  }
+
+  .AccordionItem p {
+    color: #353c51;
+  }
+
+  .AccordionHeader {
+    display: flex;
+  }
+
+  .AccordionQuestion {
+    background-color: transparent;
+    text-align: left;
+    color: #353c51;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 15px;
+    border: none;
+    padding: 20px;
+    font-family: 'Funnel Display';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    gap: 1rem;
+
+    svg {
+      transition: rotate 0.2s ease-in-out;
+    }
+
+    @media (min-width: 768px) {
+      font-size: 32px;
+      line-height: 35px;
+    }
+  }
+
+  .AccordionContent p {
+    font-family: 'Funnel Sans';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 20px;
+    padding-top: 0;
+  }
+
+  .AccordionQuestion[aria-expanded='true'] {
+    svg {
+      rotate: 180deg;
+    }
+  }
+
+  .AccordionContent[data-state='open'] {
+    animation: slideDown 0.2s cubic-bezier(0.87, 0, 0.13, 1);
+  }
+  .AccordionContent[data-state='closed'] {
+    animation: slideUp 0.2s cubic-bezier(0.87, 0, 0.13, 1);
+  }
+
+  @keyframes slideDown {
+    from {
+      height: 0;
+    }
+    to {
+      height: var(--radix-accordion-content-height);
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      height: var(--radix-accordion-content-height);
+    }
+    to {
+      height: 0;
+    }
   }
 }

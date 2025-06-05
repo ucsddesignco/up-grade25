@@ -1,3 +1,12 @@
+:root {
+  --XXL: 120px;
+  --XL: 80px;
+  --L: 64px;
+  --M: 40px;
+  --S: 24px;
+  --XS: 12px;
+}
+
 *,
 *::before,
 *::after {
@@ -9,7 +18,15 @@
   font-family: 'Funnel Display';
   font-style: normal;
   font-weight: 700;
-  src: url('./assets/fonts/funnel-display-bold.woff2') format('woff2');
+  src: url('/fonts/funnel-display-bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Funnel Display';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/fonts/funnel-display-medium.woff2') format('woff2');
 }
 
 @font-face {
@@ -17,7 +34,15 @@
   font-family: 'Funnel Sans';
   font-style: normal;
   font-weight: 400;
-  src: url('./assets/fonts/funnel-sans-regular.woff2') format('woff2');
+  src: url('/fonts/funnel-sans-regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Funnel Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/fonts/funnel-sans-semibold.woff2') format('woff2');
 }
 
 @font-face {
@@ -25,7 +50,7 @@
   font-family: 'Funnel Sans';
   font-style: normal;
   font-weight: 700;
-  src: url('./assets/fonts/funnel-sans-bold.woff2') format('woff2');
+  src: url('/fonts/funnel-sans-bold.woff2') format('woff2');
 }
 
 @font-face {
@@ -33,7 +58,7 @@
   font-family: 'Funnel Sans';
   font-style: normal;
   font-weight: 500;
-  src: url('./assets/fonts/funnel-sans-medium.woff2') format('woff2');
+  src: url('/fonts/funnel-sans-medium.woff2') format('woff2');
 }
 
 * {
@@ -64,6 +89,7 @@ html {
 
 body {
   line-height: 1.5;
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -81,6 +107,16 @@ button,
 textarea,
 select {
   font: inherit;
+}
+
+button {
+  border: none;
+  background-color: inherit;
+  padding: 0;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 h1,
@@ -102,7 +138,7 @@ h6 {
     'Open Sans',
     'Helvetica Neue',
     sans-serif;
-  text-wrap: balance;
+  text-wrap: pretty;
 }
 
 p,

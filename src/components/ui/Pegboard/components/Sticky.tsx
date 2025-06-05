@@ -1,74 +1,58 @@
 import type { SVGProps } from 'react';
 
-interface StickyProps extends SVGProps<SVGSVGElement> {
+interface BaseStickyProps extends SVGProps<SVGSVGElement> {
   color?: string;
-  title?: string;
   body?: string;
-  titleFontSize?: string;
   bodyFontSize?: string;
   style?: React.CSSProperties;
 }
 
-const SvgSticky = ({
+const BaseSticky = ({
   color = '#F1A210',
-  title = 'Title',
   body = 'Body text',
-  titleFontSize = '26px',
   bodyFontSize = '26px',
   ...props
-}: StickyProps) => {
+}: BaseStickyProps) => {
   // Render body text with line breaks
   const renderBodyText = () => {
     const lines = body.split('\n');
-    const lineHeight = parseInt(bodyFontSize) * 1.3;
-    const startY = 120; // Starting Y position for body text
+    const lineHeight = parseInt(bodyFontSize) * 1.15;
+    const startY = 90; // Starting Y position for body text
 
-    return lines.map((line, index) => (
-      <text
-        x="20"
-        key={index}
-        y={startY + index * lineHeight}
-        fill="#353C51"
-        fontSize={bodyFontSize}
-        dominantBaseline="middle"
-        fontFamily="Arial, sans-serif"
-        fontWeight="400"
-      >
-        {line}
-      </text>
-    ));
-  };
-
-  const renderTitleText = () => {
-    const lines = title.split('\n');
-    const lineHeight = parseInt(bodyFontSize) * 1.3;
-    const startY = 90;
-
-    return lines.map((line, index) => (
-      <text
-        x="20"
-        key={index}
-        y={startY + index * lineHeight}
-        fill="#353C51"
-        fontSize={titleFontSize}
-        dominantBaseline="middle"
-        fontWeight="600"
-      >
-        {line}
-      </text>
-    ));
+    return (
+      <>
+        {lines.map((line, index) => (
+          <text
+            x="20"
+            key={index}
+            y={startY + index * lineHeight}
+            fill="#353C51"
+            fontSize={bodyFontSize}
+            dominantBaseline="middle"
+            fontFamily="Funnel Sans"
+            fontWeight="500"
+          >
+            {line}
+          </text>
+        ))}
+        <text
+          x="20"
+          y={245}
+          fill="#353C51"
+          fontSize={bodyFontSize}
+          dominantBaseline="middle"
+          fontFamily="Funnel Sans"
+          fontWeight="500"
+        >
+          - 2024 UP-Grader
+        </text>
+      </>
+    );
   };
 
   return (
-    <svg
-      width="221"
-      height="271"
-      viewBox="0 0 221 271"
-      fill="none"
-      {...props}
-      style={{ rotate: '2deg' }}
-    >
-      <g clipPath="url(#clip0_8480_11049)">
+    <svg {...props} width="221" height="271" viewBox="0 0 221 271" fill="none">
+      <g clipPath="url(#clip0_8547_8398)">
         <path
           d="M218.645 36.7568H2.64507L2.64453 268.757H168.645L218.645 218.757V36.7568Z"
           fill="#FFFFFE"
@@ -90,11 +74,10 @@ const SvgSticky = ({
           stroke="#353C51"
           strokeWidth="4"
         />
-        {renderTitleText()}
         {renderBodyText()}
       </g>
       <defs>
-        <clipPath id="clip0_8480_11049">
+        <clipPath id="clip0_8547_8398">
           <rect width="220" height="270" fill="white" transform="translate(0.644531 0.756836)" />
         </clipPath>
       </defs>
@@ -102,4 +85,4 @@ const SvgSticky = ({
   );
 };
 
-export default SvgSticky;
+export default BaseSticky;

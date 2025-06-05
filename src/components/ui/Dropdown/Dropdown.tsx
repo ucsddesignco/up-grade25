@@ -1,23 +1,18 @@
 import { useEffect, useRef, useState } from 'react';
 import './Dropdown.scss';
 import * as Select from '@radix-ui/react-select';
+import DownArrowIcon from '../../../assets/icons/down-arrow.svg?react';
+import { ROLE_COLORS, ROLES } from '../Pegboard/constants';
 
 interface DropdownProps {
+  setIsPlaying: React.Dispatch<React.SetStateAction<boolean>>;
   selected: number;
   onChange: (value: string) => void;
 }
 
-const ROLES = [
-  'Software Engineering',
-  'Visual Design',
-  'Project Management',
-  'UX Research',
-  'Product Marketing',
-  'UX Design'
-];
-
-export default function Dropdown({ selected, onChange }: DropdownProps) {
-  const currentRoleIsTall = ROLES[selected].length > 16;
+export default function Dropdown({ setIsPlaying, selected, onChange }: DropdownProps) {
+  const currentRole = ROLES[selected];
+  const currentRoleIsTall = currentRole.length > 16;
   const roleListRef = useRef<HTMLUListElement>(null);
   const [navigatingIndex, setNavigatingIndex] = useState<number | null>(null);
 
@@ -31,7 +26,7 @@ export default function Dropdown({ selected, onChange }: DropdownProps) {
     return () => {
       roleList?.removeEventListener('transitionend', handleTransitionEnd);
     };
-  }, [selected]);
+  }, []);
 
   let shouldExpand = false;
   if (navigatingIndex === null && currentRoleIsTall) {
@@ -43,6 +38,9 @@ export default function Dropdown({ selected, onChange }: DropdownProps) {
   return (
     <div className="dropdown-container">
       <Select.Root
+        onOpenChange={() => {
+          setIsPlaying(false);
+        }}
         onValueChange={value => {
           onChange(value);
           setNavigatingIndex(Number(value));
@@ -60,10 +58,13 @@ export default function Dropdown({ selected, onChange }: DropdownProps) {
             >
               {ROLES.map(role => (
                 <li key={role}>
-                  <h2>{role}</h2>
+                  <p className="role-text" style={{ color: ROLE_COLORS[role].text }}>
+                    {role}
+                  </p>
                 </li>
               ))}
             </ul>
+            <DownArrowIcon className="down-arrow-icon" />
           </div>
         </Select.Trigger>
         <Select.Portal>
@@ -71,6 +72,11 @@ export default function Dropdown({ selected, onChange }: DropdownProps) {
             className="SelectContent border-element"
             position="popper"
             sideOffset={15}
+            style={
+              {
+                '--pegboard-color': ROLE_COLORS[currentRole].pegboard
+              } as React.CSSProperties
+            }
           >
             <Select.Viewport className="SelectViewport">
               {ROLES.map((role, index) => (

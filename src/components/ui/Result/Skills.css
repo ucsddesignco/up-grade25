@@ -17,7 +17,7 @@
 
 .skillsContainer ul,
 .leadContainer ul {
-  width: 300px;
+  width: 340px;
   padding: 0rem 1rem;
   margin-top: 1rem;
   list-style: none;
@@ -35,7 +35,6 @@
 
 .skillsContainer li,
 .leadContainer li {
-  background-color: #f95984;
   color: white;
   padding: 0.5rem;
 }
@@ -80,7 +79,7 @@
   margin-top: 1rem;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .skillBoxes {
     flex-direction: row;
     flex-wrap: nowrap;
