@@ -9,7 +9,7 @@ interface UseSliderConfigProps {
   isDragging: RefObject<boolean>;
 }
 
-const AUTOMATIC_SLIDER_INTERVAL = 2000;
+const AUTOMATIC_SLIDER_INTERVAL = 3500;
 const AUTOMATIC_SLIDER_DURATION = 350;
 const ROTATION_FORCE = 13000;
 

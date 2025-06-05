@@ -1,3 +1,4 @@
+import type { ReactElement } from 'react';
 import './Button.scss';
 import { Link } from 'react-router';
 
@@ -6,9 +7,11 @@ interface ButtonProps {
   className?: string;
   onClick?: () => void;
   link?: string;
+  icon?: ReactElement;
+  disabled?: boolean;
 }
 
-const Button = ({ text, className, onClick, link }: ButtonProps) => {
+const Button = ({ text, className, onClick, link, icon, disabled }: ButtonProps) => {
   const isExternalLink = link?.startsWith('http');
   return (
     <>
@@ -21,8 +24,9 @@ const Button = ({ text, className, onClick, link }: ButtonProps) => {
           {text}
         </Link>
       ) : (
-        <button onClick={onClick} className={`cta-button ${className}`}>
-          {text}
+        <button onClick={onClick} className={`cta-button ${className}`} disabled={disabled}>
+          <span>{text}</span>
+          {icon && icon}
         </button>
       )}
     </>

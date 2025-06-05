@@ -1,6 +1,18 @@
 import type { SVGProps } from 'react';
-const SvgPhotoTeal = (props: SVGProps<SVGSVGElement>) => (
-  <svg xmlns="http://www.w3.org/2000/svg" width={300} height={270} fill="none" {...props}>
+
+interface PhotoTealProps extends SVGProps<SVGSVGElement> {
+  rotation: number;
+}
+
+const SvgPhotoTeal = ({ rotation, ...props }: PhotoTealProps) => (
+  <svg
+    style={{ transform: `rotate(${rotation}deg)` }}
+    xmlns="http://www.w3.org/2000/svg"
+    width={300}
+    height={270}
+    fill="none"
+    {...props}
+  >
     <g clipPath="url(#PhotoTeal_svg__a)">
       <path fill="#FFFFFE" d="M0 30h300v240H0z" />
       <path

@@ -1,6 +1,13 @@
 import type { SVGProps } from 'react';
 const SvgUniqueOrange = (props: SVGProps<SVGSVGElement>) => (
-  <svg xmlns="http://www.w3.org/2000/svg" width={240} height={240} fill="none" {...props}>
+  <svg
+    id="measuring-tape"
+    xmlns="http://www.w3.org/2000/svg"
+    width={240}
+    height={240}
+    fill="none"
+    {...props}
+  >
     <path
       fill="#646676"
       stroke="#353C51"

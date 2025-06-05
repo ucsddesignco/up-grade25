@@ -1,6 +1,18 @@
 import type { SVGProps } from 'react';
-const SvgPhotoGreen = (props: SVGProps<SVGSVGElement>) => (
-  <svg xmlns="http://www.w3.org/2000/svg" width={300} height={270} fill="none" {...props}>
+
+interface PhotoGreenProps extends SVGProps<SVGSVGElement> {
+  rotation: number;
+}
+
+const SvgPhotoGreen = ({ rotation, ...props }: PhotoGreenProps) => (
+  <svg
+    style={{ transform: `rotate(${rotation}deg)` }}
+    xmlns="http://www.w3.org/2000/svg"
+    width={300}
+    height={270}
+    fill="none"
+    {...props}
+  >
     <g clipPath="url(#PhotoGreen_svg__a)">
       <path fill="#FFFFFE" d="M0 30h300v240H0z" />
       <path
@@ -54,6 +66,7 @@ const SvgPhotoGreen = (props: SVGProps<SVGSVGElement>) => (
         d="M107.964 184.061c-.349-.791.402-1.622 1.224-1.355l33.344 10.827c.957.311.907 1.682-.07 1.923l-15.314 3.769a1 1 0 0 0-.752.842l-2.135 16.352c-.131 1.003-1.499 1.2-1.907.274z"
       />
     </g>
+
     <defs>
       <clipPath id="PhotoGreen_svg__a">
         <path fill="#fff" d="M0 0h300v270H0z" />

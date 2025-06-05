@@ -1,6 +1,13 @@
 import type { SVGProps } from 'react';
 const SvgUniqueGreen = (props: SVGProps<SVGSVGElement>) => (
-  <svg xmlns="http://www.w3.org/2000/svg" width={256} height={240} fill="none" {...props}>
+  <svg
+    id="telephone-svg"
+    xmlns="http://www.w3.org/2000/svg"
+    width={256}
+    height={240}
+    fill="none"
+    {...props}
+  >
     <rect
       width={25.738}
       height={34.69}

@@ -1,7 +1,19 @@
 import type { SVGProps } from 'react';
-const SvgPhotoPink = (props: SVGProps<SVGSVGElement>) => (
-  <svg xmlns="http://www.w3.org/2000/svg" width={300} height={270} fill="none" {...props}>
-    <g clipPath="url(#PhotoPink_svg__a)">
+
+interface PhotoPinkProps extends SVGProps<SVGSVGElement> {
+  rotation: number;
+}
+
+const SvgPhotoPink = ({ rotation, ...props }: PhotoPinkProps) => (
+  <svg
+    style={{ transform: `rotate(${rotation}deg)` }}
+    xmlns="http://www.w3.org/2000/svg"
+    width={300}
+    height={270}
+    fill="none"
+    {...props}
+  >
+    <g className="clipless-photo" clipPath="url(#PhotoPink_svg__a)">
       <path fill="#FFFFFE" d="M0 30h300v240H0z" />
       <path
         fill="#F95984"
@@ -92,8 +104,9 @@ const SvgPhotoPink = (props: SVGProps<SVGSVGElement>) => (
         d="M163.887 204.252c-4.965 10.731 3.631 8.649 4.407 20.451.512 7.792-9.545 13.637-4.399 19.506 5.694 6.496 13.103-.957 21.682 0 8.346.931 10.526 5.165 18.854 4.09 13.941-1.799 14.805-21.886 13.198-35.867-1.18-10.272-4.442-24.29-14.769-24.226-8.266.052-7.17 9.31-14.458 13.214-12.399 6.642-21.749-3.146-24.515 2.832ZM285.77 215.987c-11.157-2.758-17.378 6.739-25.263 15.11-7.968 8.46-16.798 15.259-13.652 26.453 4.492 15.99 32.012 10.808 42.429-2.12 9.698-12.036 11.482-35.736-3.514-39.443ZM271.033 174.138c-.566-7.99-.222-16.272 7.228-19.192 3.656-1.433 6.128 0 10.055 0 6.381 0 12.255-4.908 16.34 0 4.425 5.316-4.18 10.122-5.028 16.99-.631 5.121 4.233 10.268 0 13.214-3.695 2.572-7.141-3.894-11.312-2.202-4.259 1.727-2.364 7.969-6.599 9.753-7.702 3.245-10.093-10.217-10.684-18.563ZM146.557 201.592c3.752 0 6.797 3.047 6.797 6.81s-3.045 6.809-6.797 6.809a6.804 6.804 0 0 1-6.799-6.809c0-3.763 3.046-6.81 6.799-6.81Z"
       />
       <path stroke="#353C51" strokeWidth={4} d="M2 32h296v236H2z" />
-      <path fill="#646676" stroke="#353C51" strokeWidth={4} d="M134 2h32l-4.571 48h-22.858z" />
     </g>
+    <path fill="#646676" stroke="#353C51" strokeWidth={4} d="M134 2h32l-4.571 48h-22.858z" />
+
     <defs>
       <clipPath id="PhotoPink_svg__a">
         <path fill="#fff" d="M0 0h300v270H0z" />

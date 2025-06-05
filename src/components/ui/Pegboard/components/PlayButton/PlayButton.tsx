@@ -6,6 +6,7 @@ interface PlayButtonProps {
 export default function PlayButton({ isPlaying, setIsPlaying }: PlayButtonProps) {
   return (
     <button
+      className="play-button"
       onClick={() => {
         setIsPlaying(isPlaying => !isPlaying);
       }}

@@ -21,13 +21,18 @@
   .photo-component {
     left: -27px;
     top: 685px;
-    transform-origin: top center;
+    transform-origin: center 5px;
+    transition: transform 0.35s ease-out;
+    overflow: visible;
   }
 
   .sticky-component {
-    left: 96.6px;
+    left: 102px;
     top: 54px;
     z-index: 3;
+    overflow: visible;
+    transition: transform 0.35s ease-out;
+    transform-origin: center 5px;
   }
 
   .shelf-component {
@@ -38,13 +43,44 @@
   .unique-component {
     left: 24px;
     top: 349px;
+    transition: transform 0.2s ease-in-out;
+
+    &#measuring-tape {
+      transform-origin: 95px 157px;
+    }
+
+    &#telephone-svg {
+      transform-origin: 133px 150px;
+    }
+
+    &:hover {
+      animation: wiggle 0.4s ease-out forwards;
+    }
+  }
+
+  @keyframes wiggle {
+    33% {
+      transform: scale(1.03) rotate(3deg);
+    }
+    66% {
+      transform: scale(1.03) rotate(-1deg);
+    }
+    100% {
+      transform: scale(1) rotate(0deg);
+    }
   }
 
   /* Tablet Layout */
   @media (min-width: 768px) {
     .photo-component {
-      left: 63px;
+      overflow: visible;
+
+      left: 66px;
       top: 494px;
+      .clipless-photo {
+        transform-origin: 110.5px 35px;
+        transition: transform 0.35s ease-out;
+      }
     }
 
     .ruler-component {
@@ -59,8 +95,9 @@
     }
 
     .sticky-component {
-      left: 380px;
+      left: 392px;
       top: 53.2px;
+      overflow: visible;
     }
 
     .shelf-component {
@@ -77,7 +114,7 @@
   /* Desktop Layout */
   @media (min-width: 1440px) {
     .photo-component {
-      left: 63px;
+      left: 66px;
       top: 254px;
     }
 
@@ -87,8 +124,12 @@
     }
 
     .sticky-component {
-      left: 775px;
+      left: 776px;
       top: 53.2px;
+      .clipless-sticky {
+        transform-origin: 110.5px 35px;
+        transition: transform 0.35s ease-out;
+      }
     }
 
     .shelf-component {

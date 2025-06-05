@@ -1,6 +1,18 @@
 import type { SVGProps } from 'react';
-const SvgPhotoOrange = (props: SVGProps<SVGSVGElement>) => (
-  <svg xmlns="http://www.w3.org/2000/svg" width={300} height={270} fill="none" {...props}>
+
+interface PhotoOrangeProps extends SVGProps<SVGSVGElement> {
+  rotation: number;
+}
+
+const SvgPhotoOrange = ({ rotation, ...props }: PhotoOrangeProps) => (
+  <svg
+    style={{ transform: `rotate(${rotation}deg)` }}
+    xmlns="http://www.w3.org/2000/svg"
+    width={300}
+    height={270}
+    fill="none"
+    {...props}
+  >
     <g clipPath="url(#PhotoOrange_svg__a)">
       <path fill="#FFFFFE" d="M0 30h300v240H0z" />
       <rect
@@ -77,6 +89,7 @@ const SvgPhotoOrange = (props: SVGProps<SVGSVGElement>) => (
       <path stroke="#353C51" strokeWidth={4} d="M2 32h296v236H2z" />
       <path fill="#646676" stroke="#353C51" strokeWidth={4} d="M134 2h32l-4.571 48h-22.858z" />
     </g>
+
     <defs>
       <clipPath id="PhotoOrange_svg__a">
         <path fill="#fff" d="M0 0h300v270H0z" />

@@ -102,7 +102,7 @@ const Overview = () => {
             </div>
             <div className="mentor-meetings callout">
               <h1>1x</h1>
-              <p>Mentor Meetings</p>
+              <p>Mentor Meeting</p>
             </div>
             <div className="group-workshops callout">
               <h1>1x</h1>
@@ -221,7 +221,7 @@ const Overview = () => {
             </div>
             <div className="mentor-meetings callout">
               <h1>1x</h1>
-              <p>Mentor Meetings</p>
+              <p>Mentor Meeting</p>
             </div>
             <div className="group-workshops callout">
               <h1>1x</h1>
@@ -329,7 +329,7 @@ const Overview = () => {
               </div>
               <div className="mentor-meetings callout">
                 <h1>1x</h1>
-                <p>Mentor Meetings</p>
+                <p>Mentor Meeting</p>
               </div>
               <div className="group-workshops callout">
                 <h1>1x</h1>
