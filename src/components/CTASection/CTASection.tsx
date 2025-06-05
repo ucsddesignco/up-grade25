@@ -1,9 +1,13 @@
 import CTACard from '../CTACard/CTACard';
 import './CTASection.scss';
 
-export default function CTASection() {
+interface CTASectionProps {
+  className?: string;
+}
+
+export default function CTASection({ className }: CTASectionProps) {
   return (
-    <section id="cta-section">
+    <section id="cta-section" className={className}>
       <div className="mobile-cards">
         <CTACard variation="faq" />
         <CTACard variation="apply" />

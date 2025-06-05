@@ -12,10 +12,26 @@
   border-right: 4px dashed black;
   width: 304px;
   height: 460;
+  padding: var(--S);
+  background-color: #fffffe;
+
+  > p {
+    color: #353c51;
+    font-family: 'Funnel Display';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
 }
 
 .resultCard h1 {
-  font-size: clamp(2rem, 2.5vw, 3rem);
+  color: #f95984;
+  font-family: 'Funnel Display';
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 35px;
 }
 
 @media (min-width: 768px) {

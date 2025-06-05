@@ -1,4 +1,4 @@
-import './ResultCard.css';
+import './ResultCard.scss';
 import type { role } from '../PersonalityQuiz/constants';
 import { ROLE_LIST } from '../Role/constRoleData';
 

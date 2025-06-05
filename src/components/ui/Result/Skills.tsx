@@ -1,6 +1,8 @@
-import './Skills.css';
+import './Skills.scss';
 import { ROLE_LIST } from '../Role/constRoleData';
 import type { role } from '../PersonalityQuiz/constants';
+import Button from '../../Button/Button';
+import DashedArrow from '../../DashedArrow/DashedArrow';
 
 interface SkillsProps {
   role: role;
@@ -43,9 +45,8 @@ export default function Skills({ role }: SkillsProps) {
 
         <div className="otherRolesContainer">
           <h4>Not the right one for you?</h4>
-          <li>
-            <a>View Other Roles</a>
-          </li>
+          <Button text="View Other Roles" />
+          <DashedArrow />
         </div>
       </div>
     </div>

@@ -1,4 +1,4 @@
-import './Result.css';
+import './Result.scss';
 import ResultCard from '../../components/ui/Result/ResultCard';
 import Skills from '../../components/ui/Result/Skills';
 import { Navigate, useParams } from 'react-router';
@@ -16,10 +16,10 @@ export default function Result() {
   }
 
   return (
-    <section className="result-section">
+    <section id="result-page">
       <ResultCard role={roleId as role} />
       <Skills role={roleId as role} />
-      <CTASection />
+      <CTASection className="result-cta" />
     </section>
   );
 }
