@@ -106,7 +106,7 @@ const Overview = () => {
             </div>
             <div className="group-workshops callout">
               <h1>1x</h1>
-              <p>Group Workshops</p>
+              <p>Group Workshop</p>
             </div>
           </div>
         </div>
@@ -225,7 +225,7 @@ const Overview = () => {
             </div>
             <div className="group-workshops callout">
               <h1>1x</h1>
-              <p>Group Workshops</p>
+              <p>Group Workshop</p>
             </div>
           </div>
         </div>
@@ -333,7 +333,7 @@ const Overview = () => {
               </div>
               <div className="group-workshops callout">
                 <h1>1x</h1>
-                <p>Group Workshops</p>
+                <p>Group Workshop</p>
               </div>
             </div>
           </div>
