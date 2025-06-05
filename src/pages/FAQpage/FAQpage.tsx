@@ -48,7 +48,8 @@ export default function FAQPage() {
       <main id="faqpage">
         <h1>
           <span className="mobile">FAQ</span>
-          <span className="tablet-desktop">Frequently Asked Questions</span>
+          <span className="tablet">Frequently Asked Questions</span>
+          <span className="desktop">Frequently</span>
         </h1>
         <div className="faq-pegboard-container">
           <SvgLeftPegboard className="left-pegboard" />

@@ -43,19 +43,23 @@
     font-weight: 700;
     line-height: normal;
 
-    .tablet-desktop {
+    .tablet{
       display: none;
+    }
+
+    .desktop{
+      display:none;
     }
 
     @media (min-width: 768px) {
       padding-inline: 0;
       max-width: 641px;
 
-      .mobile {
+      .mobile{
         display: none;
       }
 
-      .tablet-desktop {
+      .tablet{
         display: grid;
         max-width: 600px;
       }
@@ -63,10 +67,18 @@
 
     @media (min-width: 1440px) {
       max-width: 800px;
-      .tablet-desktop {
-        display: flex;
-        flex-direction: column;
-        max-width: 800px;
+      .tablet{
+        display: none;
+        // display: flex;
+        // flex-direction: column;
+        // max-width: 800px;
+      }
+      .desktop{
+        display: block;
+        &::after {
+          content: "\A Asked Questions";
+          white-space: pre;
+        }
       }
     }
   }
