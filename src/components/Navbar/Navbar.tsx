@@ -8,7 +8,8 @@ import * as Dialog from '@radix-ui/react-dialog';
 const NAV_ITEMS = [
   { label: 'Overview', path: '/overview' },
   { label: 'Roles', path: '/roles' },
-  { label: 'FAQ', path: '/faq' }
+  { label: 'FAQ', path: '/faq' },
+  { label: 'Case Studies', path: '/casestudies' }
 ];
 export default function Navbar() {
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
