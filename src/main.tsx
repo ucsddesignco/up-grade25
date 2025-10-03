@@ -11,7 +11,6 @@ import Navbar from './components/Navbar/Navbar.tsx';
 import FAQPage from './pages/FAQpage/FAQpage.tsx';
 import CaseStudies from './pages/CaseStudiesPage/CaseStudies.tsx';
 
-
 // eslint-disable-next-line react-refresh/only-export-components
 function RootLayout() {
   return (
