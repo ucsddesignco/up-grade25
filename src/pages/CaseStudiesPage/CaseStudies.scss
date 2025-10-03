@@ -17,7 +17,7 @@
   flex-direction: column;
   padding: 24px 0;
   transition: 0.3s;
-  gap: 12px;
+  gap: 24px;
   justify-content: space-between;
 
   img {
@@ -27,11 +27,14 @@
     transition: 0.3s;
   }
 
-  img:hover{
-    transform: scale(0.95);    
+  img:hover {
+    transform: scale(1.01);
   }
-
-  a {
+  h3 {
+    line-height: 0.95;
+    padding-bottom: 12px;
+  }
+  .documentationLink {
     padding: 12px;
     background-color: var(--color-content-primary, #353c51);
     color: #fbfaf8;
