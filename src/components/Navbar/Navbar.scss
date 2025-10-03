@@ -22,6 +22,7 @@ nav {
       font-style: normal;
       font-weight: 700;
       letter-spacing: 0.24px;
+      text-wrap: nowrap;
 
       @media (min-width: 768px) {
         font-size: 24px;
@@ -38,6 +39,7 @@ nav {
       position: relative;
       font-family: 'Funnel Display';
       font-weight: 500;
+      text-wrap: nowrap;
 
       &::before {
         content: '';
@@ -64,7 +66,7 @@ nav {
     justify-content: space-between;
     align-items: center;
 
-    @media (min-width: 768px) {
+    @media (min-width: 845px) {
       display: flex;
     }
 
@@ -86,7 +88,7 @@ nav {
     justify-content: space-between;
     align-items: center;
 
-    @media (min-width: 768px) {
+    @media (min-width: 845px) {
       display: none;
     }
 
