@@ -1,6 +1,6 @@
 import './CaseStudies.scss';
 import CaseStudiesCard from './CaseStudiesCard';
-import caseStudies from './CaseStudiesData.json';
+import {caseStudies} from './CaseStudiesData';
 
 const CaseStudies: React.FC = () => {
   return (

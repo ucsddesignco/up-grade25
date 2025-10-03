@@ -1,5 +1,3 @@
-import './CaseStudiesCard.scss';
-
 interface CaseStudiesCardProps {
   projectName: string;
   teamName: string;
@@ -16,7 +14,7 @@ const CaseStudiesCard: React.FC<CaseStudiesCardProps> = ({
 }) => {
   return (
     <div className="case-studies-card">
-      <a href={documentationLink}><img src={imageSrc} alt={projectName}/></a>
+      <a href={documentationLink} target="_blank"><img src={imageSrc} alt={projectName}/></a>
       <div>
         <h3>{projectName}</h3>
         <p>{teamMembers}</p>
