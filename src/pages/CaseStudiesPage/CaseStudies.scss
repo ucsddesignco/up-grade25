@@ -49,14 +49,14 @@
 
 @media (max-width: 1024px) {
   .case-studies-card {
-    flex: 1 1 calc(50% - 24px); 
+    flex: 1 1 calc(50% - 24px);
     max-width: calc(50% - 24px);
   }
 }
 
 @media (max-width: 600px) {
   .case-studies-card {
-    flex: 1 1 100%; 
+    flex: 1 1 100%;
     max-width: 100%;
   }
 }
